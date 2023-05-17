@@ -1,0 +1,2251 @@
+Tue May 16 14:38:47, Info:  Welcome to SeisSol 
+Tue May 16 14:38:47, Info:  Copyright (c) 2012-2021, SeisSol Group 
+Tue May 16 14:38:47, Info:  Built on: Feb 20 2023 12:22:44 
+Tue May 16 14:38:47, Info:  Version: 202103_Sumatra-1175-g703d36c 
+Tue May 16 14:38:47, Info:  Running on: node02 
+Tue May 16 14:38:47, Info:  Using MPI with #ranks: 8 
+Tue May 16 14:38:47, Info:  Using OMP with #threads/rank: 27 
+Tue May 16 14:38:47, Info:  OpenMP worker affinity (this process): "0-2-4-6-8-|0-2-4-6-8-|0-2-4-6-8-|0-2-4-6-8-|0-2-4-6-8-|0-2---" 
+Tue May 16 14:38:47, Info:  OpenMP worker affinity (this node)   : "0123456789|0123456789|0123456789|0123456789|0123456789|0123--" 
+Tue May 16 14:38:47, Info:  Communication thread affinity        : "----------|----------|----------|----------|----------|----4-" 
+Tue May 16 14:38:47, Info:  The stack size ulimit is  2097152 [kb]. 
+Tue May 16 14:38:47, Info:  Input Parameters:
+ 0x2925900 
+Rank:        0 | Info    | <--------------------------------------------------------->
+Rank:        0 | Info    | <                SeisSol MPI initialization               >
+Rank:        0 | Info    | <--------------------------------------------------------->
+Rank:        0 | Info    |  Double precision used for real.
+Rank:        0 | Info    | <--------------------------------------------------------->
+ INFORMATION: The assumed unit number is           6 for stdout and           0 for stderr.
+              If no information follows, please change the value.
+Rank:        0 | Info    | <--------------------------------------------------------->
+Rank:        0 | Info    | <     Start ini_SeisSol ...                               >
+Rank:        0 | Info    | <--------------------------------------------------------->
+Rank:        0 | Info    | <  Parameters read from file: parameters.par              >
+Rank:        0 | Info    | <                                                         >
+Rank:        0 | Info    | No plasticity assumed. 
+Rank:        0 | Info    | No attenuation assumed. 
+Rank:        0 | Info    | No adjoint wavefield generated. 
+Rank:        0 | Info    | Isotropic material is assumed. 
+Rank:        0 | Info    | Read a PUML mesh file
+Rank:        0 | Info    | Volume output is in XDMF format (new implementation)
+Rank:        0 | Info    | Output data are generated at delta T=    5.0000000000000003E-002
+Rank:        0 | Info    | Use POSIX XdmfWriter backend
+Rank:        0 | Info    | Refinement strategy for volume output is Equal Face Area and Face Extraction : 32 subcells per cell
+Tue May 16 14:38:47, Info:  Running mini SeisSol to determine node weight 
+Tue May 16 14:38:47, Info:  Node weights: mean = 25.3022  std = 0.636128  min = 24.1478  median = 25.4508  max = 26.001 
+Tue May 16 14:38:47, Info:  Reading PUML mesh loh.puml.h5 
+Tue May 16 14:38:47, Info:  Found 10391877 cells 
+Tue May 16 14:38:48, Info:  Found 1671305 vertices 
+Tue May 16 14:39:01, Info:  Computing LTS weights. 
+Tue May 16 14:39:08, Info:  Computing LTS weights. Done.  (25388 reductions.)
+      Setup: Max:   0.704, Sum:   5.634, Balance:   1.000
+   Matching: Max:   0.796, Sum:   6.371, Balance:   1.000
+Contraction: Max:   0.563, Sum:   4.502, Balance:   1.000
+   InitPart: Max:   0.007, Sum:   0.057, Balance:   1.000
+    Project: Max:   0.033, Sum:   0.123, Balance:   2.142
+ Initialize: Max:   0.122, Sum:   0.908, Balance:   1.072
+      K-way: Max:   0.486, Sum:   3.886, Balance:   1.000
+      Remap: Max:   0.004, Sum:   0.030, Balance:   1.001
+      Total: Max:   2.692, Sum:  21.533, Balance:   1.000
+Tue May 16 14:39:31, Info:  Reading mesh. Done. 
+Tue May 16 14:39:33, Info:  Mesh initialized in: 45.711 (min: 45.6741, max: 45.7765)
+Tue May 16 14:39:34, Info:  Deriving clusters ids for min. time step width / multiRate: 0.00062003 / 2 
+Tue May 16 14:39:35, Info:  Number of elements in time clusters: 
+Tue May 16 14:39:35, Info:  0: 369398 
+Tue May 16 14:39:35, Info:  1: 5890188 
+Tue May 16 14:39:35, Info:  2: 2366576 
+Tue May 16 14:39:35, Info:  3: 1361490 
+Tue May 16 14:39:35, Info:  4: 404225 
+Tue May 16 14:39:35, Info:  maximum theoretical speedup (compared to GTS): 3.63217 per cell LTS, 2.53362 with the used clustering. 
+Tue May 16 14:39:35, Info:  Number of elements in dynamic rupture time clusters: 
+Tue May 16 14:39:35, Info:  0 (dr): 0 
+Tue May 16 14:39:35, Info:  1 (dr): 0 
+Tue May 16 14:39:35, Info:  2 (dr): 0 
+Tue May 16 14:39:35, Info:  3 (dr): 0 
+Tue May 16 14:39:35, Info:  4 (dr): 0 
+Tue May 16 14:39:35, Info:  Initialize Friction Model 
+Rank:        0 | Info    | Synchronizing copy cell material data.
+Tue May 16 14:39:38, Info:  <---------------------------------------------------------> 
+Tue May 16 14:39:38, Info:  <                      Point sources                      > 
+Tue May 16 14:39:38, Info:  <---------------------------------------------------------> 
+Tue May 16 14:39:38, Info:  Finding meshIds for point sources... 
+Tue May 16 14:39:38, Info:  Cleaning possible double occurring point sources for MPI... 
+Tue May 16 14:39:38, Info:  Mapping point sources to LTS cells... 
+Tue May 16 14:39:38, Info:  .. finished point source initialization. 
+Rank:        0 | Info    | Initializing element local matrices.
+Rank:        0 | Info    | DG initial condition projection... 
+Tue May 16 14:39:40, Info:  Using initial condition  "Zero" . 
+Rank:        0 | Info    | DG initial condition projection done. 
+Rank:        0 | Info    | <--------------------------------------------------------->
+Rank:        0 | Info    | <     Start inioutput_SeisSol ...                         >
+Rank:        0 | Info    | <--------------------------------------------------------->
+Tue May 16 14:39:40, Info:  Initializing free surface integrator. 
+Tue May 16 14:39:40, Info:  Initializing free surface integrator. Done. 
+Tue May 16 14:39:40, Info:  Initializing XDMF wave field output. 
+Tue May 16 14:39:40, Info:  Refinement Strategy is "Divide by 32" 
+Tue May 16 14:39:40, Info:  Refinement class initialized 
+Tue May 16 14:39:40, Info:  VariableSubsampler initialized 
+Tue May 16 14:39:51, Info:  High order output initialized 
+Tue May 16 14:39:51, Info:  Initializing XDMF wave field output. Done. 
+Tue May 16 14:39:51, Info:  Initializing free surface output. 
+Tue May 16 14:39:52, Info:  Record points read from "recordPoints.dat" 
+Tue May 16 14:39:52, Info:  Number of record points = 128 
+Tue May 16 14:39:52, Info:  Finding meshIds for receivers... 
+Tue May 16 14:39:53, Info:  Cleaning possible double occurring receivers for MPI... 
+Tue May 16 14:39:53, Info:  Mapping receivers to LTS cells... 
+Rank:        0 | Info    | <--------------------------------------------------------->
+Rank:        0 | Info    | <     Start calc_SeisSol ...                              >
+Rank:        0 | Info    | <--------------------------------------------------------->
+Tue May 16 14:39:54, Info:  Waiting for last wave field. 
+Tue May 16 14:39:54, Info:  Writing wave field at time 0.
+Tue May 16 14:40:51, Info:  Writing wave field at time 0. Done.
+Tue May 16 14:40:51, Info:  Writing free surface at time 0.
+Tue May 16 14:40:51, Info:  Writing free surface at time 0. Done.
+Tue May 16 14:41:13, Info:  Waiting for last wave field. 
+Tue May 16 14:41:13, Info:  Writing wave field at time 0.05.
+Tue May 16 14:42:13, Info:  Writing wave field at time 0.05. Done.
+Tue May 16 14:42:13, Info:  Writing free surface at time 0.05.
+Tue May 16 14:42:13, Info:  Writing free surface at time 0.05. Done.
+Tue May 16 14:42:20, Info:  Performance since the start: 0.406264 TFLOP/s (rank 0: 48.8308 GFLOP/s, average over ranks: 50.7831 GFLOP/s) 
+Tue May 16 14:42:20, Info:  Performance since last sync point: 0.406264 TFLOP/s (rank 0: 48.8308 GFLOP/s, average over ranks: 50.7831 GFLOP/s) 
+Tue May 16 14:43:07, Info:  Waiting for last wave field. 
+Tue May 16 14:43:07, Info:  Writing wave field at time 0.1.
+Tue May 16 14:43:09, Info:  Writing wave field at time 0.1. Done.
+Tue May 16 14:43:09, Info:  Writing free surface at time 0.1.
+Tue May 16 14:43:09, Info:  Writing free surface at time 0.1. Done.
+Tue May 16 14:43:45, Info:  Performance since the start: 0.5292 TFLOP/s (rank 0: 69.7292 GFLOP/s, average over ranks: 66.15 GFLOP/s) 
+Tue May 16 14:43:45, Info:  Performance since last sync point: 0.769989 TFLOP/s (rank 0: 121.899 GFLOP/s, average over ranks: 96.2486 GFLOP/s) 
+Tue May 16 14:45:01, Info:  Waiting for last wave field. 
+Tue May 16 14:45:01, Info:  Writing wave field at time 0.15.
+Tue May 16 14:45:04, Info:  Writing wave field at time 0.15. Done.
+Tue May 16 14:45:04, Info:  Writing free surface at time 0.15.
+Tue May 16 14:45:04, Info:  Writing free surface at time 0.15. Done.
+Tue May 16 14:45:38, Info:  Performance since the start: 0.514067 TFLOP/s (rank 0: 65.752 GFLOP/s, average over ranks: 64.2583 GFLOP/s) 
+Tue May 16 14:45:38, Info:  Performance since last sync point: 0.489441 TFLOP/s (rank 0: 59.0192 GFLOP/s, average over ranks: 61.1801 GFLOP/s) 
+Tue May 16 14:47:04, Info:  Waiting for last wave field. 
+Tue May 16 14:47:04, Info:  Writing wave field at time 0.2.
+Tue May 16 14:47:07, Info:  Writing wave field at time 0.2. Done.
+Tue May 16 14:47:07, Info:  Writing free surface at time 0.2.
+Tue May 16 14:47:07, Info:  Writing free surface at time 0.2. Done.
+Tue May 16 14:47:44, Info:  Performance since the start: 0.497351 TFLOP/s (rank 0: 62.8649 GFLOP/s, average over ranks: 62.1689 GFLOP/s) 
+Tue May 16 14:47:44, Info:  Performance since last sync point: 0.453503 TFLOP/s (rank 0: 55.5478 GFLOP/s, average over ranks: 56.6879 GFLOP/s) 
+Tue May 16 14:49:17, Info:  Waiting for last wave field. 
+Tue May 16 14:49:17, Info:  Writing wave field at time 0.25.
+Tue May 16 14:49:20, Info:  Writing wave field at time 0.25. Done.
+Tue May 16 14:49:20, Info:  Writing free surface at time 0.25.
+Tue May 16 14:49:20, Info:  Writing free surface at time 0.25. Done.
+Tue May 16 14:49:59, Info:  Performance since the start: 0.479887 TFLOP/s (rank 0: 60.0811 GFLOP/s, average over ranks: 59.9859 GFLOP/s) 
+Tue May 16 14:49:59, Info:  Performance since last sync point: 0.421015 TFLOP/s (rank 0: 51.0405 GFLOP/s, average over ranks: 52.6268 GFLOP/s) 
+Tue May 16 14:51:42, Info:  Waiting for last wave field. 
+Tue May 16 14:51:42, Info:  Writing wave field at time 0.3.
+Tue May 16 14:51:43, Info:  Writing wave field at time 0.3. Done.
+Tue May 16 14:51:43, Info:  Writing free surface at time 0.3.
+Tue May 16 14:51:43, Info:  Writing free surface at time 0.3. Done.
+Tue May 16 14:52:26, Info:  Performance since the start: 0.458696 TFLOP/s (rank 0: 57.5436 GFLOP/s, average over ranks: 57.337 GFLOP/s) 
+Tue May 16 14:52:26, Info:  Performance since last sync point: 0.377207 TFLOP/s (rank 0: 47.5106 GFLOP/s, average over ranks: 47.1508 GFLOP/s) 
+Tue May 16 14:54:15, Info:  Waiting for last wave field. 
+Tue May 16 14:54:15, Info:  Writing wave field at time 0.35.
+Tue May 16 14:55:00, Info:  Writing wave field at time 0.35. Done.
+Tue May 16 14:55:00, Info:  Writing free surface at time 0.35.
+Tue May 16 14:55:00, Info:  Writing free surface at time 0.35. Done.
+Tue May 16 14:55:01, Info:  Performance since the start: 0.43931 TFLOP/s (rank 0: 52.5513 GFLOP/s, average over ranks: 54.9138 GFLOP/s) 
+Tue May 16 14:55:01, Info:  Performance since last sync point: 0.356083 TFLOP/s (rank 0: 34.5611 GFLOP/s, average over ranks: 44.5103 GFLOP/s) 
+Tue May 16 14:57:03, Info:  Waiting for last wave field. 
+Tue May 16 14:57:03, Info:  Writing wave field at time 0.4.
+Tue May 16 14:57:41, Info:  Writing wave field at time 0.4. Done.
+Tue May 16 14:57:41, Info:  Writing free surface at time 0.4.
+Tue May 16 14:57:41, Info:  Writing free surface at time 0.4. Done.
+Tue May 16 14:57:41, Info:  Performance since the start: 0.424917 TFLOP/s (rank 0: 51.0245 GFLOP/s, average over ranks: 53.1146 GFLOP/s) 
+Tue May 16 14:57:41, Info:  Performance since last sync point: 0.346191 TFLOP/s (rank 0: 42.4009 GFLOP/s, average over ranks: 43.2739 GFLOP/s) 
+Tue May 16 14:59:53, Info:  Waiting for last wave field. 
+Tue May 16 14:59:53, Info:  Writing wave field at time 0.45.
+Tue May 16 15:00:38, Info:  Writing wave field at time 0.45. Done.
+Tue May 16 15:00:38, Info:  Writing free surface at time 0.45.
+Tue May 16 15:00:38, Info:  Writing free surface at time 0.45. Done.
+Tue May 16 15:00:38, Info:  Performance since the start: 0.40778 TFLOP/s (rank 0: 49.2462 GFLOP/s, average over ranks: 50.9725 GFLOP/s) 
+Tue May 16 15:00:38, Info:  Performance since last sync point: 0.309352 TFLOP/s (rank 0: 38.5091 GFLOP/s, average over ranks: 38.6691 GFLOP/s) 
+Tue May 16 15:02:54, Info:  Waiting for last wave field. 
+Tue May 16 15:02:54, Info:  Writing wave field at time 0.5.
+Tue May 16 15:03:25, Info:  Writing wave field at time 0.5. Done.
+Tue May 16 15:03:25, Info:  Writing free surface at time 0.5.
+Tue May 16 15:03:25, Info:  Writing free surface at time 0.5. Done.
+Tue May 16 15:03:28, Info:  Performance since the start: 0.39997 TFLOP/s (rank 0: 48.2148 GFLOP/s, average over ranks: 49.9963 GFLOP/s) 
+Tue May 16 15:03:28, Info:  Performance since last sync point: 0.341824 TFLOP/s (rank 0: 40.5684 GFLOP/s, average over ranks: 42.728 GFLOP/s) 
+Tue May 16 15:05:45, Info:  Waiting for last wave field. 
+Tue May 16 15:05:45, Info:  Writing wave field at time 0.55.
+Tue May 16 15:06:35, Info:  Writing wave field at time 0.55. Done.
+Tue May 16 15:06:35, Info:  Writing free surface at time 0.55.
+Tue May 16 15:06:35, Info:  Writing free surface at time 0.55. Done.
+Tue May 16 15:06:36, Info:  Performance since the start: 0.387895 TFLOP/s (rank 0: 46.746 GFLOP/s, average over ranks: 48.4869 GFLOP/s) 
+Tue May 16 15:06:36, Info:  Performance since last sync point: 0.297998 TFLOP/s (rank 0: 35.8308 GFLOP/s, average over ranks: 37.2498 GFLOP/s) 
+Tue May 16 15:09:03, Info:  Waiting for last wave field. 
+Tue May 16 15:09:03, Info:  Writing wave field at time 0.6.
+Tue May 16 15:09:39, Info:  Writing wave field at time 0.6. Done.
+Tue May 16 15:09:39, Info:  Writing free surface at time 0.6.
+Tue May 16 15:09:39, Info:  Writing free surface at time 0.6. Done.
+Tue May 16 15:09:39, Info:  Performance since the start: 0.379944 TFLOP/s (rank 0: 45.74 GFLOP/s, average over ranks: 47.493 GFLOP/s) 
+Tue May 16 15:09:39, Info:  Performance since last sync point: 0.310095 TFLOP/s (rank 0: 36.9845 GFLOP/s, average over ranks: 38.7619 GFLOP/s) 
+Tue May 16 15:12:15, Info:  Waiting for last wave field. 
+Tue May 16 15:12:15, Info:  Writing wave field at time 0.65.
+Tue May 16 15:12:53, Info:  Writing wave field at time 0.65. Done.
+Tue May 16 15:12:53, Info:  Writing free surface at time 0.65.
+Tue May 16 15:12:53, Info:  Writing free surface at time 0.65. Done.
+Tue May 16 15:13:01, Info:  Performance since the start: 0.370511 TFLOP/s (rank 0: 44.6997 GFLOP/s, average over ranks: 46.3139 GFLOP/s) 
+Tue May 16 15:13:01, Info:  Performance since last sync point: 0.285559 TFLOP/s (rank 0: 35.1159 GFLOP/s, average over ranks: 35.6949 GFLOP/s) 
+Tue May 16 15:15:39, Info:  Waiting for last wave field. 
+Tue May 16 15:15:39, Info:  Writing wave field at time 0.7.
+Tue May 16 15:16:19, Info:  Writing wave field at time 0.7. Done.
+Tue May 16 15:16:19, Info:  Writing free surface at time 0.7.
+Tue May 16 15:16:19, Info:  Writing free surface at time 0.7. Done.
+Tue May 16 15:16:19, Info:  Performance since the start: 0.362076 TFLOP/s (rank 0: 43.6134 GFLOP/s, average over ranks: 45.2595 GFLOP/s) 
+Tue May 16 15:16:19, Info:  Performance since last sync point: 0.280092 TFLOP/s (rank 0: 33.1427 GFLOP/s, average over ranks: 35.0115 GFLOP/s) 
+Tue May 16 15:18:53, Info:  Waiting for last wave field. 
+Tue May 16 15:18:53, Info:  Writing wave field at time 0.75.
+Tue May 16 15:18:55, Info:  Writing wave field at time 0.75. Done.
+Tue May 16 15:18:55, Info:  Writing free surface at time 0.75.
+Tue May 16 15:18:55, Info:  Writing free surface at time 0.75. Done.
+Tue May 16 15:18:59, Info:  Performance since the start: 0.360791 TFLOP/s (rank 0: 43.6044 GFLOP/s, average over ranks: 45.0989 GFLOP/s) 
+Tue May 16 15:18:59, Info:  Performance since last sync point: 0.344376 TFLOP/s (rank 0: 43.478 GFLOP/s, average over ranks: 43.047 GFLOP/s) 
+Tue May 16 15:21:52, Info:  Waiting for last wave field. 
+Tue May 16 15:21:52, Info:  Writing wave field at time 0.8.
+Tue May 16 15:21:56, Info:  Writing wave field at time 0.8. Done.
+Tue May 16 15:21:56, Info:  Writing free surface at time 0.8.
+Tue May 16 15:21:56, Info:  Writing free surface at time 0.8. Done.
+Tue May 16 15:21:59, Info:  Performance since the start: 0.357247 TFLOP/s (rank 0: 43.1784 GFLOP/s, average over ranks: 44.6559 GFLOP/s) 
+Tue May 16 15:21:59, Info:  Performance since last sync point: 0.311415 TFLOP/s (rank 0: 37.6603 GFLOP/s, average over ranks: 38.9269 GFLOP/s) 
+Tue May 16 15:24:34, Info:  Waiting for last wave field. 
+Tue May 16 15:24:34, Info:  Writing wave field at time 0.85.
+Tue May 16 15:24:37, Info:  Writing wave field at time 0.85. Done.
+Tue May 16 15:24:37, Info:  Writing free surface at time 0.85.
+Tue May 16 15:24:37, Info:  Writing free surface at time 0.85. Done.
+Tue May 16 15:24:40, Info:  Performance since the start: 0.356823 TFLOP/s (rank 0: 43.1204 GFLOP/s, average over ranks: 44.6029 GFLOP/s) 
+Tue May 16 15:24:40, Info:  Performance since last sync point: 0.35018 TFLOP/s (rank 0: 42.2132 GFLOP/s, average over ranks: 43.7725 GFLOP/s) 
+Tue May 16 15:27:16, Info:  Waiting for last wave field. 
+Tue May 16 15:27:16, Info:  Writing wave field at time 0.9.
+Tue May 16 15:27:17, Info:  Writing wave field at time 0.9. Done.
+Tue May 16 15:27:17, Info:  Writing free surface at time 0.9.
+Tue May 16 15:27:17, Info:  Writing free surface at time 0.9. Done.
+Tue May 16 15:27:43, Info:  Performance since the start: 0.354637 TFLOP/s (rank 0: 43.0845 GFLOP/s, average over ranks: 44.3297 GFLOP/s) 
+Tue May 16 15:27:43, Info:  Performance since last sync point: 0.322512 TFLOP/s (rank 0: 42.4834 GFLOP/s, average over ranks: 40.314 GFLOP/s) 
+Tue May 16 15:30:32, Info:  Waiting for last wave field. 
+Tue May 16 15:30:32, Info:  Writing wave field at time 0.95.
+Tue May 16 15:30:34, Info:  Writing wave field at time 0.95. Done.
+Tue May 16 15:30:34, Info:  Writing free surface at time 0.95.
+Tue May 16 15:30:34, Info:  Writing free surface at time 0.95. Done.
+Tue May 16 15:31:05, Info:  Performance since the start: 0.349843 TFLOP/s (rank 0: 42.5333 GFLOP/s, average over ranks: 43.7304 GFLOP/s) 
+Tue May 16 15:31:05, Info:  Performance since last sync point: 0.281387 TFLOP/s (rank 0: 34.572 GFLOP/s, average over ranks: 35.1734 GFLOP/s) 
+Tue May 16 15:34:51, Info:  Waiting for last wave field. 
+Tue May 16 15:34:51, Info:  Writing wave field at time 1.
+Tue May 16 15:34:53, Info:  Writing wave field at time 1. Done.
+Tue May 16 15:34:53, Info:  Writing free surface at time 1.
+Tue May 16 15:34:53, Info:  Writing free surface at time 1. Done.
+Tue May 16 15:35:10, Info:  Performance since the start: 0.340606 TFLOP/s (rank 0: 41.2671 GFLOP/s, average over ranks: 42.5758 GFLOP/s) 
+Tue May 16 15:35:10, Info:  Performance since last sync point: 0.227541 TFLOP/s (rank 0: 26.3583 GFLOP/s, average over ranks: 28.4427 GFLOP/s) 
+Tue May 16 15:39:13, Info:  Waiting for last wave field. 
+Tue May 16 15:39:13, Info:  Writing wave field at time 1.05.
+Tue May 16 15:39:14, Info:  Writing wave field at time 1.05. Done.
+Tue May 16 15:39:14, Info:  Writing free surface at time 1.05.
+Tue May 16 15:39:14, Info:  Writing free surface at time 1.05. Done.
+Tue May 16 15:39:23, Info:  Performance since the start: 0.332003 TFLOP/s (rank 0: 40.1436 GFLOP/s, average over ranks: 41.5004 GFLOP/s) 
+Tue May 16 15:39:23, Info:  Performance since last sync point: 0.220731 TFLOP/s (rank 0: 25.9906 GFLOP/s, average over ranks: 27.5914 GFLOP/s) 
+Tue May 16 15:43:51, Info:  Waiting for last wave field. 
+Tue May 16 15:43:51, Info:  Writing wave field at time 1.1.
+Tue May 16 15:43:53, Info:  Writing wave field at time 1.1. Done.
+Tue May 16 15:43:53, Info:  Writing free surface at time 1.1.
+Tue May 16 15:43:53, Info:  Writing free surface at time 1.1. Done.
+Tue May 16 15:44:00, Info:  Performance since the start: 0.322646 TFLOP/s (rank 0: 39.0087 GFLOP/s, average over ranks: 40.3308 GFLOP/s) 
+Tue May 16 15:44:00, Info:  Performance since last sync point: 0.20269 TFLOP/s (rank 0: 24.4774 GFLOP/s, average over ranks: 25.3362 GFLOP/s) 
+Tue May 16 15:48:44, Info:  Waiting for last wave field. 
+Tue May 16 15:48:44, Info:  Writing wave field at time 1.15.
+Tue May 16 15:48:46, Info:  Writing wave field at time 1.15. Done.
+Tue May 16 15:48:46, Info:  Writing free surface at time 1.15.
+Tue May 16 15:48:46, Info:  Writing free surface at time 1.15. Done.
+Tue May 16 15:49:07, Info:  Performance since the start: 0.312671 TFLOP/s (rank 0: 37.8859 GFLOP/s, average over ranks: 39.0838 GFLOP/s) 
+Tue May 16 15:49:07, Info:  Performance since last sync point: 0.186183 TFLOP/s (rank 0: 23.1964 GFLOP/s, average over ranks: 23.2729 GFLOP/s) 
+Tue May 16 15:54:09, Info:  Waiting for last wave field. 
+Tue May 16 15:54:09, Info:  Writing wave field at time 1.2.
+Tue May 16 15:54:12, Info:  Writing wave field at time 1.2. Done.
+Tue May 16 15:54:12, Info:  Writing free surface at time 1.2.
+Tue May 16 15:54:12, Info:  Writing free surface at time 1.2. Done.
+Tue May 16 15:54:22, Info:  Performance since the start: 0.302946 TFLOP/s (rank 0: 36.6468 GFLOP/s, average over ranks: 37.8683 GFLOP/s) 
+Tue May 16 15:54:22, Info:  Performance since last sync point: 0.176659 TFLOP/s (rank 0: 20.9149 GFLOP/s, average over ranks: 22.0824 GFLOP/s) 
+Tue May 16 15:58:12, Info:  Waiting for last wave field. 
+Tue May 16 15:58:12, Info:  Writing wave field at time 1.25.
+Tue May 16 15:58:14, Info:  Writing wave field at time 1.25. Done.
+Tue May 16 15:58:14, Info:  Writing free surface at time 1.25.
+Tue May 16 15:58:14, Info:  Writing free surface at time 1.25. Done.
+Tue May 16 15:58:39, Info:  Performance since the start: 0.298815 TFLOP/s (rank 0: 36.2014 GFLOP/s, average over ranks: 37.3518 GFLOP/s) 
+Tue May 16 15:58:39, Info:  Performance since last sync point: 0.225282 TFLOP/s (rank 0: 28.0262 GFLOP/s, average over ranks: 28.1603 GFLOP/s) 
+Tue May 16 16:02:22, Info:  Waiting for last wave field. 
+Tue May 16 16:02:22, Info:  Writing wave field at time 1.3.
+Tue May 16 16:02:26, Info:  Writing wave field at time 1.3. Done.
+Tue May 16 16:02:26, Info:  Writing free surface at time 1.3.
+Tue May 16 16:02:26, Info:  Writing free surface at time 1.3. Done.
+Tue May 16 16:02:54, Info:  Performance since the start: 0.294864 TFLOP/s (rank 0: 35.7363 GFLOP/s, average over ranks: 36.858 GFLOP/s) 
+Tue May 16 16:02:54, Info:  Performance since last sync point: 0.221634 TFLOP/s (rank 0: 27.0483 GFLOP/s, average over ranks: 27.7043 GFLOP/s) 
+Tue May 16 16:06:36, Info:  Waiting for last wave field. 
+Tue May 16 16:06:36, Info:  Writing wave field at time 1.35.
+Tue May 16 16:06:39, Info:  Writing wave field at time 1.35. Done.
+Tue May 16 16:06:39, Info:  Writing free surface at time 1.35.
+Tue May 16 16:06:39, Info:  Writing free surface at time 1.35. Done.
+Tue May 16 16:07:04, Info:  Performance since the start: 0.291406 TFLOP/s (rank 0: 35.3076 GFLOP/s, average over ranks: 36.4257 GFLOP/s) 
+Tue May 16 16:07:04, Info:  Performance since last sync point: 0.223337 TFLOP/s (rank 0: 26.9134 GFLOP/s, average over ranks: 27.9171 GFLOP/s) 
+Tue May 16 16:10:59, Info:  Waiting for last wave field. 
+Tue May 16 16:10:59, Info:  Writing wave field at time 1.4.
+Tue May 16 16:11:33, Info:  Writing wave field at time 1.4. Done.
+Tue May 16 16:11:33, Info:  Writing free surface at time 1.4.
+Tue May 16 16:11:33, Info:  Writing free surface at time 1.4. Done.
+Tue May 16 16:11:39, Info:  Performance since the start: 0.286937 TFLOP/s (rank 0: 34.6599 GFLOP/s, average over ranks: 35.8671 GFLOP/s) 
+Tue May 16 16:11:39, Info:  Performance since last sync point: 0.203063 TFLOP/s (rank 0: 23.1793 GFLOP/s, average over ranks: 25.3829 GFLOP/s) 
+Tue May 16 16:15:46, Info:  Waiting for last wave field. 
+Tue May 16 16:15:46, Info:  Writing wave field at time 1.45.
+Tue May 16 16:16:23, Info:  Writing wave field at time 1.45. Done.
+Tue May 16 16:16:23, Info:  Writing free surface at time 1.45.
+Tue May 16 16:16:23, Info:  Writing free surface at time 1.45. Done.
+Tue May 16 16:16:34, Info:  Performance since the start: 0.282189 TFLOP/s (rank 0: 34.0974 GFLOP/s, average over ranks: 35.2736 GFLOP/s) 
+Tue May 16 16:16:34, Info:  Performance since last sync point: 0.192851 TFLOP/s (rank 0: 23.4441 GFLOP/s, average over ranks: 24.1064 GFLOP/s) 
+Tue May 16 16:20:49, Info:  Waiting for last wave field. 
+Tue May 16 16:20:49, Info:  Writing wave field at time 1.5.
+Tue May 16 16:20:54, Info:  Writing wave field at time 1.5. Done.
+Tue May 16 16:20:54, Info:  Writing free surface at time 1.5.
+Tue May 16 16:20:54, Info:  Writing free surface at time 1.5. Done.
+Tue May 16 16:21:29, Info:  Performance since the start: 0.278048 TFLOP/s (rank 0: 33.697 GFLOP/s, average over ranks: 34.756 GFLOP/s) 
+Tue May 16 16:21:29, Info:  Performance since last sync point: 0.195245 TFLOP/s (rank 0: 25.1368 GFLOP/s, average over ranks: 24.4056 GFLOP/s) 
+Tue May 16 16:27:25, Info:  Waiting for last wave field. 
+Tue May 16 16:27:25, Info:  Writing wave field at time 1.55.
+Tue May 16 16:27:27, Info:  Writing wave field at time 1.55. Done.
+Tue May 16 16:27:27, Info:  Writing free surface at time 1.55.
+Tue May 16 16:27:27, Info:  Writing free surface at time 1.55. Done.
+Tue May 16 16:27:41, Info:  Performance since the start: 0.2705 TFLOP/s (rank 0: 32.7007 GFLOP/s, average over ranks: 33.8125 GFLOP/s) 
+Tue May 16 16:27:41, Info:  Performance since last sync point: 0.149268 TFLOP/s (rank 0: 17.3292 GFLOP/s, average over ranks: 18.6585 GFLOP/s) 
+Tue May 16 16:34:22, Info:  Waiting for last wave field. 
+Tue May 16 16:34:22, Info:  Writing wave field at time 1.6.
+Tue May 16 16:34:24, Info:  Writing wave field at time 1.6. Done.
+Tue May 16 16:34:24, Info:  Writing free surface at time 1.6.
+Tue May 16 16:34:24, Info:  Writing free surface at time 1.6. Done.
+Tue May 16 16:34:37, Info:  Performance since the start: 0.262301 TFLOP/s (rank 0: 31.7072 GFLOP/s, average over ranks: 32.7877 GFLOP/s) 
+Tue May 16 16:34:37, Info:  Performance since last sync point: 0.135237 TFLOP/s (rank 0: 16.3285 GFLOP/s, average over ranks: 16.9047 GFLOP/s) 
+Tue May 16 16:40:53, Info:  Waiting for last wave field. 
+Tue May 16 16:40:53, Info:  Writing wave field at time 1.65.
+Tue May 16 16:40:59, Info:  Writing wave field at time 1.65. Done.
+Tue May 16 16:40:59, Info:  Writing free surface at time 1.65.
+Tue May 16 16:40:59, Info:  Writing free surface at time 1.65. Done.
+Tue May 16 16:41:09, Info:  Performance since the start: 0.255747 TFLOP/s (rank 0: 30.9191 GFLOP/s, average over ranks: 31.9683 GFLOP/s) 
+Tue May 16 16:41:09, Info:  Performance since last sync point: 0.142118 TFLOP/s (rank 0: 17.2214 GFLOP/s, average over ranks: 17.7648 GFLOP/s) 
+Tue May 16 16:45:54, Info:  Waiting for last wave field. 
+Tue May 16 16:45:54, Info:  Writing wave field at time 1.7.
+Tue May 16 16:45:59, Info:  Writing wave field at time 1.7. Done.
+Tue May 16 16:45:59, Info:  Writing free surface at time 1.7.
+Tue May 16 16:45:59, Info:  Writing free surface at time 1.7. Done.
+Tue May 16 16:46:27, Info:  Performance since the start: 0.252766 TFLOP/s (rank 0: 30.5927 GFLOP/s, average over ranks: 31.5958 GFLOP/s) 
+Tue May 16 16:46:27, Info:  Performance since last sync point: 0.182732 TFLOP/s (rank 0: 22.6895 GFLOP/s, average over ranks: 22.8416 GFLOP/s) 
+Tue May 16 16:51:12, Info:  Waiting for last wave field. 
+Tue May 16 16:51:12, Info:  Writing wave field at time 1.75.
+Tue May 16 16:51:15, Info:  Writing wave field at time 1.75. Done.
+Tue May 16 16:51:15, Info:  Writing free surface at time 1.75.
+Tue May 16 16:51:15, Info:  Writing free surface at time 1.75. Done.
+Tue May 16 16:51:18, Info:  Performance since the start: 0.250262 TFLOP/s (rank 0: 30.2292 GFLOP/s, average over ranks: 31.2827 GFLOP/s) 
+Tue May 16 16:51:18, Info:  Performance since last sync point: 0.187617 TFLOP/s (rank 0: 21.5306 GFLOP/s, average over ranks: 23.4522 GFLOP/s) 
+Tue May 16 16:56:20, Info:  Waiting for last wave field. 
+Tue May 16 16:56:20, Info:  Writing wave field at time 1.8.
+Tue May 16 16:56:22, Info:  Writing wave field at time 1.8. Done.
+Tue May 16 16:56:22, Info:  Writing free surface at time 1.8.
+Tue May 16 16:56:22, Info:  Writing free surface at time 1.8. Done.
+Tue May 16 16:56:26, Info:  Performance since the start: 0.247711 TFLOP/s (rank 0: 29.9253 GFLOP/s, average over ranks: 30.9639 GFLOP/s) 
+Tue May 16 16:56:26, Info:  Performance since last sync point: 0.182588 TFLOP/s (rank 0: 22.1362 GFLOP/s, average over ranks: 22.8235 GFLOP/s) 
+Tue May 16 17:01:14, Info:  Waiting for last wave field. 
+Tue May 16 17:01:14, Info:  Writing wave field at time 1.85.
+Tue May 16 17:01:16, Info:  Writing wave field at time 1.85. Done.
+Tue May 16 17:01:16, Info:  Writing free surface at time 1.85.
+Tue May 16 17:01:16, Info:  Writing free surface at time 1.85. Done.
+Tue May 16 17:01:23, Info:  Performance since the start: 0.245739 TFLOP/s (rank 0: 29.693 GFLOP/s, average over ranks: 30.7174 GFLOP/s) 
+Tue May 16 17:01:23, Info:  Performance since last sync point: 0.191014 TFLOP/s (rank 0: 23.2079 GFLOP/s, average over ranks: 23.8768 GFLOP/s) 
+Tue May 16 17:06:11, Info:  Waiting for last wave field. 
+Tue May 16 17:06:11, Info:  Writing wave field at time 1.9.
+Tue May 16 17:06:14, Info:  Writing wave field at time 1.9. Done.
+Tue May 16 17:06:14, Info:  Writing free surface at time 1.9.
+Tue May 16 17:06:14, Info:  Writing free surface at time 1.9. Done.
+Tue May 16 17:06:19, Info:  Performance since the start: 0.243848 TFLOP/s (rank 0: 29.4597 GFLOP/s, average over ranks: 30.481 GFLOP/s) 
+Tue May 16 17:06:19, Info:  Performance since last sync point: 0.189809 TFLOP/s (rank 0: 22.8245 GFLOP/s, average over ranks: 23.7261 GFLOP/s) 
+Tue May 16 17:11:18, Info:  Waiting for last wave field. 
+Tue May 16 17:11:18, Info:  Writing wave field at time 1.95.
+Tue May 16 17:11:44, Info:  Writing wave field at time 1.95. Done.
+Tue May 16 17:11:44, Info:  Writing free surface at time 1.95.
+Tue May 16 17:11:44, Info:  Writing free surface at time 1.95. Done.
+Tue May 16 17:11:44, Info:  Performance since the start: 0.241529 TFLOP/s (rank 0: 29.1408 GFLOP/s, average over ranks: 30.1911 GFLOP/s) 
+Tue May 16 17:11:44, Info:  Performance since last sync point: 0.177576 TFLOP/s (rank 0: 20.647 GFLOP/s, average over ranks: 22.197 GFLOP/s) 
+Tue May 16 17:16:52, Info:  Waiting for last wave field. 
+Tue May 16 17:16:52, Info:  Writing wave field at time 2.
+Tue May 16 17:17:01, Info:  Writing wave field at time 2. Done.
+Tue May 16 17:17:01, Info:  Writing free surface at time 2.
+Tue May 16 17:17:01, Info:  Writing free surface at time 2. Done.
+Tue May 16 17:17:02, Info:  Performance since the start: 0.239169 TFLOP/s (rank 0: 28.8814 GFLOP/s, average over ranks: 29.8962 GFLOP/s) 
+Tue May 16 17:17:02, Info:  Performance since last sync point: 0.173307 TFLOP/s (rank 0: 21.4382 GFLOP/s, average over ranks: 21.6633 GFLOP/s) 
+Tue May 16 17:22:15, Info:  Waiting for last wave field. 
+Tue May 16 17:22:15, Info:  Writing wave field at time 2.05.
+Tue May 16 17:22:30, Info:  Writing wave field at time 2.05. Done.
+Tue May 16 17:22:30, Info:  Writing free surface at time 2.05.
+Tue May 16 17:22:30, Info:  Writing free surface at time 2.05. Done.
+Tue May 16 17:22:32, Info:  Performance since the start: 0.236923 TFLOP/s (rank 0: 28.6061 GFLOP/s, average over ranks: 29.6154 GFLOP/s) 
+Tue May 16 17:22:32, Info:  Performance since last sync point: 0.172233 TFLOP/s (rank 0: 20.7106 GFLOP/s, average over ranks: 21.5291 GFLOP/s) 
+Tue May 16 17:27:48, Info:  Waiting for last wave field. 
+Tue May 16 17:27:48, Info:  Writing wave field at time 2.1.
+Tue May 16 17:28:15, Info:  Writing wave field at time 2.1. Done.
+Tue May 16 17:28:15, Info:  Writing free surface at time 2.1.
+Tue May 16 17:28:15, Info:  Writing free surface at time 2.1. Done.
+Tue May 16 17:28:15, Info:  Performance since the start: 0.23456 TFLOP/s (rank 0: 28.3024 GFLOP/s, average over ranks: 29.32 GFLOP/s) 
+Tue May 16 17:28:15, Info:  Performance since last sync point: 0.166535 TFLOP/s (rank 0: 19.7179 GFLOP/s, average over ranks: 20.8169 GFLOP/s) 
+Tue May 16 17:33:33, Info:  Waiting for last wave field. 
+Tue May 16 17:33:33, Info:  Writing wave field at time 2.15.
+Tue May 16 17:34:06, Info:  Writing wave field at time 2.15. Done.
+Tue May 16 17:34:06, Info:  Writing free surface at time 2.15.
+Tue May 16 17:34:06, Info:  Writing free surface at time 2.15. Done.
+Tue May 16 17:34:08, Info:  Performance since the start: 0.232121 TFLOP/s (rank 0: 28.0035 GFLOP/s, average over ranks: 29.0152 GFLOP/s) 
+Tue May 16 17:34:08, Info:  Performance since last sync point: 0.161576 TFLOP/s (rank 0: 19.4007 GFLOP/s, average over ranks: 20.197 GFLOP/s) 
+Tue May 16 17:39:24, Info:  Waiting for last wave field. 
+Tue May 16 17:39:24, Info:  Writing wave field at time 2.2.
+Tue May 16 17:39:45, Info:  Writing wave field at time 2.2. Done.
+Tue May 16 17:39:45, Info:  Writing free surface at time 2.2.
+Tue May 16 17:39:45, Info:  Writing free surface at time 2.2. Done.
+Tue May 16 17:39:45, Info:  Performance since the start: 0.22996 TFLOP/s (rank 0: 27.7547 GFLOP/s, average over ranks: 28.745 GFLOP/s) 
+Tue May 16 17:39:45, Info:  Performance since last sync point: 0.164309 TFLOP/s (rank 0: 20.0805 GFLOP/s, average over ranks: 20.5387 GFLOP/s) 
+Tue May 16 17:44:58, Info:  Waiting for last wave field. 
+Tue May 16 17:44:58, Info:  Writing wave field at time 2.25.
+Tue May 16 17:45:17, Info:  Writing wave field at time 2.25. Done.
+Tue May 16 17:45:17, Info:  Writing free surface at time 2.25.
+Tue May 16 17:45:17, Info:  Writing free surface at time 2.25. Done.
+Tue May 16 17:45:17, Info:  Performance since the start: 0.228145 TFLOP/s (rank 0: 27.5377 GFLOP/s, average over ranks: 28.5181 GFLOP/s) 
+Tue May 16 17:45:17, Info:  Performance since last sync point: 0.169347 TFLOP/s (rank 0: 20.4894 GFLOP/s, average over ranks: 21.1684 GFLOP/s) 
+Tue May 16 17:50:31, Info:  Waiting for last wave field. 
+Tue May 16 17:50:31, Info:  Writing wave field at time 2.3.
+Tue May 16 17:50:50, Info:  Writing wave field at time 2.3. Done.
+Tue May 16 17:50:50, Info:  Writing free surface at time 2.3.
+Tue May 16 17:50:50, Info:  Writing free surface at time 2.3. Done.
+Tue May 16 17:50:54, Info:  Performance since the start: 0.226386 TFLOP/s (rank 0: 27.3312 GFLOP/s, average over ranks: 28.2983 GFLOP/s) 
+Tue May 16 17:50:54, Info:  Performance since last sync point: 0.168105 TFLOP/s (rank 0: 20.4369 GFLOP/s, average over ranks: 21.0131 GFLOP/s) 
+Tue May 16 17:56:15, Info:  Waiting for last wave field. 
+Tue May 16 17:56:15, Info:  Writing wave field at time 2.35.
+Tue May 16 17:56:25, Info:  Writing wave field at time 2.35. Done.
+Tue May 16 17:56:25, Info:  Writing free surface at time 2.35.
+Tue May 16 17:56:25, Info:  Writing free surface at time 2.35. Done.
+Tue May 16 17:56:26, Info:  Performance since the start: 0.224691 TFLOP/s (rank 0: 27.1321 GFLOP/s, average over ranks: 28.0864 GFLOP/s) 
+Tue May 16 17:56:26, Info:  Performance since last sync point: 0.167163 TFLOP/s (rank 0: 20.3204 GFLOP/s, average over ranks: 20.8954 GFLOP/s) 
+Tue May 16 18:01:52, Info:  Waiting for last wave field. 
+Tue May 16 18:01:52, Info:  Writing wave field at time 2.4.
+Tue May 16 18:02:08, Info:  Writing wave field at time 2.4. Done.
+Tue May 16 18:02:08, Info:  Writing free surface at time 2.4.
+Tue May 16 18:02:08, Info:  Writing free surface at time 2.4. Done.
+Tue May 16 18:02:08, Info:  Performance since the start: 0.22305 TFLOP/s (rank 0: 26.9271 GFLOP/s, average over ranks: 27.8812 GFLOP/s) 
+Tue May 16 18:02:08, Info:  Performance since last sync point: 0.16604 TFLOP/s (rank 0: 19.8724 GFLOP/s, average over ranks: 20.7551 GFLOP/s) 
+Tue May 16 18:07:39, Info:  Waiting for last wave field. 
+Tue May 16 18:07:39, Info:  Writing wave field at time 2.45.
+Tue May 16 18:07:58, Info:  Writing wave field at time 2.45. Done.
+Tue May 16 18:07:58, Info:  Writing free surface at time 2.45.
+Tue May 16 18:07:58, Info:  Writing free surface at time 2.45. Done.
+Tue May 16 18:07:58, Info:  Performance since the start: 0.221344 TFLOP/s (rank 0: 26.7172 GFLOP/s, average over ranks: 27.668 GFLOP/s) 
+Tue May 16 18:07:58, Info:  Performance since last sync point: 0.161913 TFLOP/s (rank 0: 19.4414 GFLOP/s, average over ranks: 20.2392 GFLOP/s) 
+Tue May 16 18:13:34, Info:  Waiting for last wave field. 
+Tue May 16 18:13:34, Info:  Writing wave field at time 2.5.
+Tue May 16 18:13:51, Info:  Writing wave field at time 2.5. Done.
+Tue May 16 18:13:51, Info:  Writing free surface at time 2.5.
+Tue May 16 18:13:51, Info:  Writing free surface at time 2.5. Done.
+Tue May 16 18:13:51, Info:  Performance since the start: 0.219631 TFLOP/s (rank 0: 26.5126 GFLOP/s, average over ranks: 27.4539 GFLOP/s) 
+Tue May 16 18:13:51, Info:  Performance since last sync point: 0.159263 TFLOP/s (rank 0: 19.2792 GFLOP/s, average over ranks: 19.9079 GFLOP/s) 
+Tue May 16 18:19:28, Info:  Waiting for last wave field. 
+Tue May 16 18:19:28, Info:  Writing wave field at time 2.55.
+Tue May 16 18:19:41, Info:  Writing wave field at time 2.55. Done.
+Tue May 16 18:19:41, Info:  Writing free surface at time 2.55.
+Tue May 16 18:19:41, Info:  Writing free surface at time 2.55. Done.
+Tue May 16 18:19:41, Info:  Performance since the start: 0.218021 TFLOP/s (rank 0: 26.3257 GFLOP/s, average over ranks: 27.2527 GFLOP/s) 
+Tue May 16 18:19:41, Info:  Performance since last sync point: 0.159547 TFLOP/s (rank 0: 19.4649 GFLOP/s, average over ranks: 19.9434 GFLOP/s) 
+Tue May 16 18:25:19, Info:  Waiting for last wave field. 
+Tue May 16 18:25:19, Info:  Writing wave field at time 2.6.
+Tue May 16 18:25:33, Info:  Writing wave field at time 2.6. Done.
+Tue May 16 18:25:33, Info:  Writing free surface at time 2.6.
+Tue May 16 18:25:33, Info:  Writing free surface at time 2.6. Done.
+Tue May 16 18:25:33, Info:  Performance since the start: 0.216533 TFLOP/s (rank 0: 26.1429 GFLOP/s, average over ranks: 27.0666 GFLOP/s) 
+Tue May 16 18:25:33, Info:  Performance since last sync point: 0.16062 TFLOP/s (rank 0: 19.3061 GFLOP/s, average over ranks: 20.0775 GFLOP/s) 
+Tue May 16 18:31:12, Info:  Waiting for last wave field. 
+Tue May 16 18:31:12, Info:  Writing wave field at time 2.65.
+Tue May 16 18:31:37, Info:  Writing wave field at time 2.65. Done.
+Tue May 16 18:31:37, Info:  Writing free surface at time 2.65.
+Tue May 16 18:31:37, Info:  Writing free surface at time 2.65. Done.
+Tue May 16 18:31:45, Info:  Performance since the start: 0.214905 TFLOP/s (rank 0: 25.9491 GFLOP/s, average over ranks: 26.8631 GFLOP/s) 
+Tue May 16 18:31:45, Info:  Performance since last sync point: 0.154602 TFLOP/s (rank 0: 18.7279 GFLOP/s, average over ranks: 19.3253 GFLOP/s) 
+Tue May 16 18:38:15, Info:  Waiting for last wave field. 
+Tue May 16 18:38:15, Info:  Writing wave field at time 2.7.
+Tue May 16 18:38:50, Info:  Writing wave field at time 2.7. Done.
+Tue May 16 18:38:50, Info:  Writing free surface at time 2.7.
+Tue May 16 18:38:50, Info:  Writing free surface at time 2.7. Done.
+Tue May 16 18:38:50, Info:  Performance since the start: 0.212445 TFLOP/s (rank 0: 25.6395 GFLOP/s, average over ranks: 26.5556 GFLOP/s) 
+Tue May 16 18:38:50, Info:  Performance since last sync point: 0.132235 TFLOP/s (rank 0: 15.7083 GFLOP/s, average over ranks: 16.5294 GFLOP/s) 
+Tue May 16 18:45:23, Info:  Waiting for last wave field. 
+Tue May 16 18:45:23, Info:  Writing wave field at time 2.75.
+Tue May 16 18:45:57, Info:  Writing wave field at time 2.75. Done.
+Tue May 16 18:45:57, Info:  Writing free surface at time 2.75.
+Tue May 16 18:45:57, Info:  Writing free surface at time 2.75. Done.
+Tue May 16 18:45:57, Info:  Performance since the start: 0.210112 TFLOP/s (rank 0: 25.3593 GFLOP/s, average over ranks: 26.264 GFLOP/s) 
+Tue May 16 18:45:57, Info:  Performance since last sync point: 0.1319 TFLOP/s (rank 0: 15.9476 GFLOP/s, average over ranks: 16.4875 GFLOP/s) 
+Tue May 16 18:51:42, Info:  Waiting for last wave field. 
+Tue May 16 18:51:42, Info:  Writing wave field at time 2.8.
+Tue May 16 18:51:54, Info:  Writing wave field at time 2.8. Done.
+Tue May 16 18:51:54, Info:  Writing free surface at time 2.8.
+Tue May 16 18:51:54, Info:  Writing free surface at time 2.8. Done.
+Tue May 16 18:51:55, Info:  Performance since the start: 0.208731 TFLOP/s (rank 0: 25.2106 GFLOP/s, average over ranks: 26.0914 GFLOP/s) 
+Tue May 16 18:51:55, Info:  Performance since last sync point: 0.153502 TFLOP/s (rank 0: 19.0611 GFLOP/s, average over ranks: 19.1878 GFLOP/s) 
+Tue May 16 18:57:40, Info:  Waiting for last wave field. 
+Tue May 16 18:57:40, Info:  Writing wave field at time 2.85.
+Tue May 16 18:58:11, Info:  Writing wave field at time 2.85. Done.
+Tue May 16 18:58:11, Info:  Writing free surface at time 2.85.
+Tue May 16 18:58:11, Info:  Writing free surface at time 2.85. Done.
+Tue May 16 18:58:15, Info:  Performance since the start: 0.207334 TFLOP/s (rank 0: 25.0374 GFLOP/s, average over ranks: 25.9167 GFLOP/s) 
+Tue May 16 18:58:15, Info:  Performance since last sync point: 0.15089 TFLOP/s (rank 0: 18.0833 GFLOP/s, average over ranks: 18.8612 GFLOP/s) 
+Tue May 16 19:03:59, Info:  Waiting for last wave field. 
+Tue May 16 19:03:59, Info:  Writing wave field at time 2.9.
+Tue May 16 19:04:12, Info:  Writing wave field at time 2.9. Done.
+Tue May 16 19:04:12, Info:  Writing free surface at time 2.9.
+Tue May 16 19:04:12, Info:  Writing free surface at time 2.9. Done.
+Tue May 16 19:04:19, Info:  Performance since the start: 0.206089 TFLOP/s (rank 0: 24.8961 GFLOP/s, average over ranks: 25.7611 GFLOP/s) 
+Tue May 16 19:04:19, Info:  Performance since last sync point: 0.153592 TFLOP/s (rank 0: 18.8371 GFLOP/s, average over ranks: 19.199 GFLOP/s) 
+Tue May 16 19:10:03, Info:  Waiting for last wave field. 
+Tue May 16 19:10:03, Info:  Writing wave field at time 2.95.
+Tue May 16 19:10:38, Info:  Writing wave field at time 2.95. Done.
+Tue May 16 19:10:38, Info:  Writing free surface at time 2.95.
+Tue May 16 19:10:38, Info:  Writing free surface at time 2.95. Done.
+Tue May 16 19:10:46, Info:  Performance since the start: 0.20472 TFLOP/s (rank 0: 24.7234 GFLOP/s, average over ranks: 25.59 GFLOP/s) 
+Tue May 16 19:10:46, Info:  Performance since last sync point: 0.147865 TFLOP/s (rank 0: 17.6294 GFLOP/s, average over ranks: 18.4831 GFLOP/s) 
+Tue May 16 19:16:28, Info:  Waiting for last wave field. 
+Tue May 16 19:16:28, Info:  Writing wave field at time 3.
+Tue May 16 19:17:14, Info:  Writing wave field at time 3. Done.
+Tue May 16 19:17:14, Info:  Writing free surface at time 3.
+Tue May 16 19:17:14, Info:  Writing free surface at time 3. Done.
+Tue May 16 19:17:15, Info:  Performance since the start: 0.203314 TFLOP/s (rank 0: 24.5448 GFLOP/s, average over ranks: 25.4142 GFLOP/s) 
+Tue May 16 19:17:15, Info:  Performance since last sync point: 0.144687 TFLOP/s (rank 0: 17.2084 GFLOP/s, average over ranks: 18.0859 GFLOP/s) 
+Tue May 16 19:22:54, Info:  Waiting for last wave field. 
+Tue May 16 19:22:54, Info:  Writing wave field at time 3.05.
+Tue May 16 19:23:27, Info:  Writing wave field at time 3.05. Done.
+Tue May 16 19:23:27, Info:  Writing free surface at time 3.05.
+Tue May 16 19:23:27, Info:  Writing free surface at time 3.05. Done.
+Tue May 16 19:23:55, Info:  Performance since the start: 0.201975 TFLOP/s (rank 0: 24.4063 GFLOP/s, average over ranks: 25.2468 GFLOP/s) 
+Tue May 16 19:23:55, Info:  Performance since last sync point: 0.144896 TFLOP/s (rank 0: 18.2345 GFLOP/s, average over ranks: 18.112 GFLOP/s) 
+Tue May 16 19:29:31, Info:  Waiting for last wave field. 
+Tue May 16 19:29:31, Info:  Writing wave field at time 3.1.
+Tue May 16 19:30:08, Info:  Writing wave field at time 3.1. Done.
+Tue May 16 19:30:08, Info:  Writing free surface at time 3.1.
+Tue May 16 19:30:08, Info:  Writing free surface at time 3.1. Done.
+Tue May 16 19:30:39, Info:  Performance since the start: 0.200561 TFLOP/s (rank 0: 24.2356 GFLOP/s, average over ranks: 25.0701 GFLOP/s) 
+Tue May 16 19:30:39, Info:  Performance since last sync point: 0.140551 TFLOP/s (rank 0: 16.9872 GFLOP/s, average over ranks: 17.5689 GFLOP/s) 
+Tue May 16 19:36:10, Info:  Waiting for last wave field. 
+Tue May 16 19:36:10, Info:  Writing wave field at time 3.15.
+Tue May 16 19:36:42, Info:  Writing wave field at time 3.15. Done.
+Tue May 16 19:36:42, Info:  Writing free surface at time 3.15.
+Tue May 16 19:36:42, Info:  Writing free surface at time 3.15. Done.
+Tue May 16 19:37:00, Info:  Performance since the start: 0.199343 TFLOP/s (rank 0: 24.081 GFLOP/s, average over ranks: 24.9179 GFLOP/s) 
+Tue May 16 19:37:00, Info:  Performance since last sync point: 0.144885 TFLOP/s (rank 0: 17.2558 GFLOP/s, average over ranks: 18.1106 GFLOP/s) 
+Tue May 16 19:42:27, Info:  Waiting for last wave field. 
+Tue May 16 19:42:27, Info:  Writing wave field at time 3.2.
+Tue May 16 19:43:00, Info:  Writing wave field at time 3.2. Done.
+Tue May 16 19:43:00, Info:  Writing free surface at time 3.2.
+Tue May 16 19:43:00, Info:  Writing free surface at time 3.2. Done.
+Tue May 16 19:43:12, Info:  Performance since the start: 0.198325 TFLOP/s (rank 0: 23.955 GFLOP/s, average over ranks: 24.7906 GFLOP/s) 
+Tue May 16 19:43:12, Info:  Performance since last sync point: 0.150063 TFLOP/s (rank 0: 18.018 GFLOP/s, average over ranks: 18.7578 GFLOP/s) 
+Tue May 16 19:48:35, Info:  Waiting for last wave field. 
+Tue May 16 19:48:35, Info:  Writing wave field at time 3.25.
+Tue May 16 19:48:50, Info:  Writing wave field at time 3.25. Done.
+Tue May 16 19:48:50, Info:  Writing free surface at time 3.25.
+Tue May 16 19:48:50, Info:  Writing free surface at time 3.25. Done.
+Tue May 16 19:48:50, Info:  Performance since the start: 0.197636 TFLOP/s (rank 0: 23.8705 GFLOP/s, average over ranks: 24.7045 GFLOP/s) 
+Tue May 16 19:48:50, Info:  Performance since last sync point: 0.161918 TFLOP/s (rank 0: 19.4716 GFLOP/s, average over ranks: 20.2397 GFLOP/s) 
+Tue May 16 19:54:07, Info:  Waiting for last wave field. 
+Tue May 16 19:54:07, Info:  Writing wave field at time 3.3.
+Tue May 16 19:54:16, Info:  Writing wave field at time 3.3. Done.
+Tue May 16 19:54:16, Info:  Writing free surface at time 3.3.
+Tue May 16 19:54:16, Info:  Writing free surface at time 3.3. Done.
+Tue May 16 19:54:37, Info:  Performance since the start: 0.197086 TFLOP/s (rank 0: 23.8187 GFLOP/s, average over ranks: 24.6358 GFLOP/s) 
+Tue May 16 19:54:37, Info:  Performance since last sync point: 0.167019 TFLOP/s (rank 0: 20.8737 GFLOP/s, average over ranks: 20.8773 GFLOP/s) 
+Tue May 16 19:59:48, Info:  Waiting for last wave field. 
+Tue May 16 19:59:48, Info:  Writing wave field at time 3.35.
+Tue May 16 19:59:57, Info:  Writing wave field at time 3.35. Done.
+Tue May 16 19:59:57, Info:  Writing free surface at time 3.35.
+Tue May 16 19:59:57, Info:  Writing free surface at time 3.35. Done.
+Tue May 16 20:00:28, Info:  Performance since the start: 0.196473 TFLOP/s (rank 0: 23.7504 GFLOP/s, average over ranks: 24.5592 GFLOP/s) 
+Tue May 16 20:00:28, Info:  Performance since last sync point: 0.163051 TFLOP/s (rank 0: 19.9715 GFLOP/s, average over ranks: 20.3813 GFLOP/s) 
+Tue May 16 20:05:32, Info:  Waiting for last wave field. 
+Tue May 16 20:05:32, Info:  Writing wave field at time 3.4.
+Tue May 16 20:05:39, Info:  Writing wave field at time 3.4. Done.
+Tue May 16 20:05:39, Info:  Writing free surface at time 3.4.
+Tue May 16 20:05:39, Info:  Writing free surface at time 3.4. Done.
+Tue May 16 20:06:08, Info:  Performance since the start: 0.195935 TFLOP/s (rank 0: 23.6829 GFLOP/s, average over ranks: 24.4919 GFLOP/s) 
+Tue May 16 20:06:08, Info:  Performance since last sync point: 0.165549 TFLOP/s (rank 0: 19.897 GFLOP/s, average over ranks: 20.6936 GFLOP/s) 
+Tue May 16 20:11:05, Info:  Waiting for last wave field. 
+Tue May 16 20:11:05, Info:  Writing wave field at time 3.45.
+Tue May 16 20:11:09, Info:  Writing wave field at time 3.45. Done.
+Tue May 16 20:11:09, Info:  Writing free surface at time 3.45.
+Tue May 16 20:11:09, Info:  Writing free surface at time 3.45. Done.
+Tue May 16 20:11:26, Info:  Performance since the start: 0.195572 TFLOP/s (rank 0: 23.6315 GFLOP/s, average over ranks: 24.4466 GFLOP/s) 
+Tue May 16 20:11:26, Info:  Performance since last sync point: 0.173797 TFLOP/s (rank 0: 20.5937 GFLOP/s, average over ranks: 21.7246 GFLOP/s) 
+Tue May 16 20:16:14, Info:  Waiting for last wave field. 
+Tue May 16 20:16:14, Info:  Writing wave field at time 3.5.
+Tue May 16 20:16:21, Info:  Writing wave field at time 3.5. Done.
+Tue May 16 20:16:21, Info:  Writing free surface at time 3.5.
+Tue May 16 20:16:21, Info:  Writing free surface at time 3.5. Done.
+Tue May 16 20:16:28, Info:  Performance since the start: 0.195401 TFLOP/s (rank 0: 23.6041 GFLOP/s, average over ranks: 24.4252 GFLOP/s) 
+Tue May 16 20:16:28, Info:  Performance since last sync point: 0.184311 TFLOP/s (rank 0: 21.8556 GFLOP/s, average over ranks: 23.0388 GFLOP/s) 
+Tue May 16 20:21:19, Info:  Waiting for last wave field. 
+Tue May 16 20:21:19, Info:  Writing wave field at time 3.55.
+Tue May 16 20:21:25, Info:  Writing wave field at time 3.55. Done.
+Tue May 16 20:21:25, Info:  Writing free surface at time 3.55.
+Tue May 16 20:21:25, Info:  Writing free surface at time 3.55. Done.
+Tue May 16 20:21:35, Info:  Performance since the start: 0.195223 TFLOP/s (rank 0: 23.5854 GFLOP/s, average over ranks: 24.4029 GFLOP/s) 
+Tue May 16 20:21:35, Info:  Performance since last sync point: 0.183507 TFLOP/s (rank 0: 22.3408 GFLOP/s, average over ranks: 22.9384 GFLOP/s) 
+Tue May 16 20:26:12, Info:  Waiting for last wave field. 
+Tue May 16 20:26:12, Info:  Writing wave field at time 3.6.
+Tue May 16 20:26:19, Info:  Writing wave field at time 3.6. Done.
+Tue May 16 20:26:19, Info:  Writing free surface at time 3.6.
+Tue May 16 20:26:19, Info:  Writing free surface at time 3.6. Done.
+Tue May 16 20:26:21, Info:  Performance since the start: 0.19524 TFLOP/s (rank 0: 23.5801 GFLOP/s, average over ranks: 24.405 GFLOP/s) 
+Tue May 16 20:26:21, Info:  Performance since last sync point: 0.196623 TFLOP/s (rank 0: 23.2163 GFLOP/s, average over ranks: 24.5778 GFLOP/s) 
+Tue May 16 20:30:44, Info:  Waiting for last wave field. 
+Tue May 16 20:30:44, Info:  Writing wave field at time 3.65.
+Tue May 16 20:30:52, Info:  Writing wave field at time 3.65. Done.
+Tue May 16 20:30:52, Info:  Writing free surface at time 3.65.
+Tue May 16 20:30:52, Info:  Writing free surface at time 3.65. Done.
+Tue May 16 20:30:56, Info:  Performance since the start: 0.195346 TFLOP/s (rank 0: 23.5977 GFLOP/s, average over ranks: 24.4182 GFLOP/s) 
+Tue May 16 20:30:56, Info:  Performance since last sync point: 0.203406 TFLOP/s (rank 0: 24.9313 GFLOP/s, average over ranks: 25.4258 GFLOP/s) 
+Tue May 16 20:35:07, Info:  Waiting for last wave field. 
+Tue May 16 20:35:07, Info:  Writing wave field at time 3.7.
+Tue May 16 20:35:15, Info:  Writing wave field at time 3.7. Done.
+Tue May 16 20:35:15, Info:  Writing free surface at time 3.7.
+Tue May 16 20:35:15, Info:  Writing free surface at time 3.7. Done.
+Tue May 16 20:35:19, Info:  Performance since the start: 0.19561 TFLOP/s (rank 0: 23.6258 GFLOP/s, average over ranks: 24.4513 GFLOP/s) 
+Tue May 16 20:35:19, Info:  Performance since last sync point: 0.21716 TFLOP/s (rank 0: 25.8754 GFLOP/s, average over ranks: 27.1451 GFLOP/s) 
+Tue May 16 20:39:19, Info:  Waiting for last wave field. 
+Tue May 16 20:39:19, Info:  Writing wave field at time 3.75.
+Tue May 16 20:39:31, Info:  Writing wave field at time 3.75. Done.
+Tue May 16 20:39:31, Info:  Writing free surface at time 3.75.
+Tue May 16 20:39:31, Info:  Writing free surface at time 3.75. Done.
+Tue May 16 20:39:38, Info:  Performance since the start: 0.195839 TFLOP/s (rank 0: 23.6609 GFLOP/s, average over ranks: 24.4799 GFLOP/s) 
+Tue May 16 20:39:38, Info:  Performance since last sync point: 0.214588 TFLOP/s (rank 0: 26.5828 GFLOP/s, average over ranks: 26.8235 GFLOP/s) 
+Tue May 16 20:43:29, Info:  Waiting for last wave field. 
+Tue May 16 20:43:29, Info:  Writing wave field at time 3.8.
+Tue May 16 20:43:37, Info:  Writing wave field at time 3.8. Done.
+Tue May 16 20:43:37, Info:  Writing free surface at time 3.8.
+Tue May 16 20:43:37, Info:  Writing free surface at time 3.8. Done.
+Tue May 16 20:43:48, Info:  Performance since the start: 0.196213 TFLOP/s (rank 0: 23.7059 GFLOP/s, average over ranks: 24.5267 GFLOP/s) 
+Tue May 16 20:43:48, Info:  Performance since last sync point: 0.229097 TFLOP/s (rank 0: 27.6521 GFLOP/s, average over ranks: 28.6371 GFLOP/s) 
+Tue May 16 20:47:27, Info:  Waiting for last wave field. 
+Tue May 16 20:47:27, Info:  Writing wave field at time 3.85.
+Tue May 16 20:47:35, Info:  Writing wave field at time 3.85. Done.
+Tue May 16 20:47:35, Info:  Writing free surface at time 3.85.
+Tue May 16 20:47:35, Info:  Writing free surface at time 3.85. Done.
+Tue May 16 20:47:51, Info:  Performance since the start: 0.196613 TFLOP/s (rank 0: 23.7588 GFLOP/s, average over ranks: 24.5766 GFLOP/s) 
+Tue May 16 20:47:51, Info:  Performance since last sync point: 0.232617 TFLOP/s (rank 0: 28.6098 GFLOP/s, average over ranks: 29.0771 GFLOP/s) 
+Tue May 16 20:51:20, Info:  Waiting for last wave field. 
+Tue May 16 20:51:20, Info:  Writing wave field at time 3.9.
+Tue May 16 20:51:29, Info:  Writing wave field at time 3.9. Done.
+Tue May 16 20:51:29, Info:  Writing free surface at time 3.9.
+Tue May 16 20:51:29, Info:  Writing free surface at time 3.9. Done.
+Tue May 16 20:51:35, Info:  Performance since the start: 0.197159 TFLOP/s (rank 0: 23.8145 GFLOP/s, average over ranks: 24.6449 GFLOP/s) 
+Tue May 16 20:51:35, Info:  Performance since last sync point: 0.251348 TFLOP/s (rank 0: 29.0676 GFLOP/s, average over ranks: 31.4185 GFLOP/s) 
+Tue May 16 20:54:52, Info:  Waiting for last wave field. 
+Tue May 16 20:54:52, Info:  Writing wave field at time 3.95.
+Tue May 16 20:55:02, Info:  Writing wave field at time 3.95. Done.
+Tue May 16 20:55:02, Info:  Writing free surface at time 3.95.
+Tue May 16 20:55:02, Info:  Writing free surface at time 3.95. Done.
+Tue May 16 20:55:07, Info:  Performance since the start: 0.197809 TFLOP/s (rank 0: 23.8922 GFLOP/s, average over ranks: 24.7262 GFLOP/s) 
+Tue May 16 20:55:07, Info:  Performance since last sync point: 0.266335 TFLOP/s (rank 0: 32.0407 GFLOP/s, average over ranks: 33.2919 GFLOP/s) 
+Tue May 16 20:58:13, Info:  Waiting for last wave field. 
+Tue May 16 20:58:13, Info:  Writing wave field at time 4.
+Tue May 16 20:58:20, Info:  Writing wave field at time 4. Done.
+Tue May 16 20:58:20, Info:  Writing free surface at time 4.
+Tue May 16 20:58:20, Info:  Writing free surface at time 4. Done.
+Tue May 16 20:58:24, Info:  Performance since the start: 0.198525 TFLOP/s (rank 0: 23.9835 GFLOP/s, average over ranks: 24.8156 GFLOP/s) 
+Tue May 16 20:58:24, Info:  Performance since last sync point: 0.278263 TFLOP/s (rank 0: 34.3594 GFLOP/s, average over ranks: 34.7828 GFLOP/s) 
+Tue May 16 21:01:19, Info:  Waiting for last wave field. 
+Tue May 16 21:01:19, Info:  Writing wave field at time 4.05.
+Tue May 16 21:01:27, Info:  Writing wave field at time 4.05. Done.
+Tue May 16 21:01:27, Info:  Writing free surface at time 4.05.
+Tue May 16 21:01:27, Info:  Writing free surface at time 4.05. Done.
+Tue May 16 21:01:33, Info:  Performance since the start: 0.199368 TFLOP/s (rank 0: 24.0847 GFLOP/s, average over ranks: 24.9211 GFLOP/s) 
+Tue May 16 21:01:33, Info:  Performance since last sync point: 0.302118 TFLOP/s (rank 0: 36.3546 GFLOP/s, average over ranks: 37.7648 GFLOP/s) 
+Tue May 16 21:04:19, Info:  Waiting for last wave field. 
+Tue May 16 21:04:19, Info:  Writing wave field at time 4.1.
+Tue May 16 21:04:24, Info:  Writing wave field at time 4.1. Done.
+Tue May 16 21:04:24, Info:  Writing free surface at time 4.1.
+Tue May 16 21:04:24, Info:  Writing free surface at time 4.1. Done.
+Tue May 16 21:04:26, Info:  Performance since the start: 0.200318 TFLOP/s (rank 0: 24.1952 GFLOP/s, average over ranks: 25.0397 GFLOP/s) 
+Tue May 16 21:04:26, Info:  Performance since last sync point: 0.326608 TFLOP/s (rank 0: 38.5058 GFLOP/s, average over ranks: 40.826 GFLOP/s) 
+Tue May 16 21:07:04, Info:  Waiting for last wave field. 
+Tue May 16 21:07:04, Info:  Writing wave field at time 4.15.
+Tue May 16 21:07:13, Info:  Writing wave field at time 4.15. Done.
+Tue May 16 21:07:13, Info:  Writing free surface at time 4.15.
+Tue May 16 21:07:13, Info:  Writing free surface at time 4.15. Done.
+Tue May 16 21:07:31, Info:  Performance since the start: 0.201154 TFLOP/s (rank 0: 24.3114 GFLOP/s, average over ranks: 25.1443 GFLOP/s) 
+Tue May 16 21:07:31, Info:  Performance since last sync point: 0.306772 TFLOP/s (rank 0: 40.1065 GFLOP/s, average over ranks: 38.3465 GFLOP/s) 
+Tue May 16 21:10:01, Info:  Waiting for last wave field. 
+Tue May 16 21:10:01, Info:  Writing wave field at time 4.2.
+Tue May 16 21:10:07, Info:  Writing wave field at time 4.2. Done.
+Tue May 16 21:10:07, Info:  Writing free surface at time 4.2.
+Tue May 16 21:10:07, Info:  Writing free surface at time 4.2. Done.
+Tue May 16 21:10:21, Info:  Performance since the start: 0.202119 TFLOP/s (rank 0: 24.4214 GFLOP/s, average over ranks: 25.2649 GFLOP/s) 
+Tue May 16 21:10:21, Info:  Performance since last sync point: 0.336427 TFLOP/s (rank 0: 39.1155 GFLOP/s, average over ranks: 42.0534 GFLOP/s) 
+Tue May 16 21:12:44, Info:  Waiting for last wave field. 
+Tue May 16 21:12:44, Info:  Writing wave field at time 4.25.
+Tue May 16 21:12:53, Info:  Writing wave field at time 4.25. Done.
+Tue May 16 21:12:53, Info:  Writing free surface at time 4.25.
+Tue May 16 21:12:53, Info:  Writing free surface at time 4.25. Done.
+Tue May 16 21:13:05, Info:  Performance since the start: 0.203089 TFLOP/s (rank 0: 24.5391 GFLOP/s, average over ranks: 25.3862 GFLOP/s) 
+Tue May 16 21:13:05, Info:  Performance since last sync point: 0.340352 TFLOP/s (rank 0: 41.2154 GFLOP/s, average over ranks: 42.544 GFLOP/s) 
+Tue May 16 21:15:20, Info:  Waiting for last wave field. 
+Tue May 16 21:15:20, Info:  Writing wave field at time 4.3.
+Tue May 16 21:15:29, Info:  Writing wave field at time 4.3. Done.
+Tue May 16 21:15:29, Info:  Writing free surface at time 4.3.
+Tue May 16 21:15:29, Info:  Writing free surface at time 4.3. Done.
+Tue May 16 21:15:41, Info:  Performance since the start: 0.204128 TFLOP/s (rank 0: 24.6644 GFLOP/s, average over ranks: 25.516 GFLOP/s) 
+Tue May 16 21:15:41, Info:  Performance since last sync point: 0.361027 TFLOP/s (rank 0: 43.5772 GFLOP/s, average over ranks: 45.1284 GFLOP/s) 
+Tue May 16 21:17:49, Info:  Waiting for last wave field. 
+Tue May 16 21:17:49, Info:  Writing wave field at time 4.35.
+Tue May 16 21:17:54, Info:  Writing wave field at time 4.35. Done.
+Tue May 16 21:17:54, Info:  Writing free surface at time 4.35.
+Tue May 16 21:17:54, Info:  Writing free surface at time 4.35. Done.
+Tue May 16 21:17:59, Info:  Performance since the start: 0.205282 TFLOP/s (rank 0: 24.799 GFLOP/s, average over ranks: 25.6603 GFLOP/s) 
+Tue May 16 21:17:59, Info:  Performance since last sync point: 0.399943 TFLOP/s (rank 0: 46.7271 GFLOP/s, average over ranks: 49.9929 GFLOP/s) 
+Tue May 16 21:19:59, Info:  Waiting for last wave field. 
+Tue May 16 21:19:59, Info:  Writing wave field at time 4.4.
+Tue May 16 21:20:06, Info:  Writing wave field at time 4.4. Done.
+Tue May 16 21:20:06, Info:  Writing free surface at time 4.4.
+Tue May 16 21:20:06, Info:  Writing free surface at time 4.4. Done.
+Tue May 16 21:20:20, Info:  Performance since the start: 0.206472 TFLOP/s (rank 0: 24.9463 GFLOP/s, average over ranks: 25.809 GFLOP/s) 
+Tue May 16 21:20:20, Info:  Performance since last sync point: 0.416858 TFLOP/s (rank 0: 51.6469 GFLOP/s, average over ranks: 52.1072 GFLOP/s) 
+Tue May 16 21:22:14, Info:  Waiting for last wave field. 
+Tue May 16 21:22:14, Info:  Writing wave field at time 4.45.
+Tue May 16 21:22:20, Info:  Writing wave field at time 4.45. Done.
+Tue May 16 21:22:20, Info:  Writing free surface at time 4.45.
+Tue May 16 21:22:20, Info:  Writing free surface at time 4.45. Done.
+Tue May 16 21:22:26, Info:  Performance since the start: 0.207686 TFLOP/s (rank 0: 25.0901 GFLOP/s, average over ranks: 25.9607 GFLOP/s) 
+Tue May 16 21:22:26, Info:  Performance since last sync point: 0.430734 TFLOP/s (rank 0: 50.9094 GFLOP/s, average over ranks: 53.8417 GFLOP/s) 
+Tue May 16 21:24:12, Info:  Waiting for last wave field. 
+Tue May 16 21:24:12, Info:  Writing wave field at time 4.5.
+Tue May 16 21:24:32, Info:  Writing wave field at time 4.5. Done.
+Tue May 16 21:24:32, Info:  Writing free surface at time 4.5.
+Tue May 16 21:24:32, Info:  Writing free surface at time 4.5. Done.
+Tue May 16 21:24:40, Info:  Performance since the start: 0.208844 TFLOP/s (rank 0: 25.2342 GFLOP/s, average over ranks: 26.1055 GFLOP/s) 
+Tue May 16 21:24:40, Info:  Performance since last sync point: 0.414809 TFLOP/s (rank 0: 51.6113 GFLOP/s, average over ranks: 51.8511 GFLOP/s) 
+Tue May 16 21:26:20, Info:  Waiting for last wave field. 
+Tue May 16 21:26:20, Info:  Writing wave field at time 4.55.
+Tue May 16 21:26:32, Info:  Writing wave field at time 4.55. Done.
+Tue May 16 21:26:32, Info:  Writing free surface at time 4.55.
+Tue May 16 21:26:32, Info:  Writing free surface at time 4.55. Done.
+Tue May 16 21:26:38, Info:  Performance since the start: 0.210159 TFLOP/s (rank 0: 25.3891 GFLOP/s, average over ranks: 26.2698 GFLOP/s) 
+Tue May 16 21:26:38, Info:  Performance since last sync point: 0.484977 TFLOP/s (rank 0: 56.7554 GFLOP/s, average over ranks: 60.6221 GFLOP/s) 
+Tue May 16 21:28:11, Info:  Waiting for last wave field. 
+Tue May 16 21:28:11, Info:  Writing wave field at time 4.6.
+Tue May 16 21:28:23, Info:  Writing wave field at time 4.6. Done.
+Tue May 16 21:28:23, Info:  Writing free surface at time 4.6.
+Tue May 16 21:28:23, Info:  Writing free surface at time 4.6. Done.
+Tue May 16 21:28:37, Info:  Performance since the start: 0.211463 TFLOP/s (rank 0: 25.5515 GFLOP/s, average over ranks: 26.4329 GFLOP/s) 
+Tue May 16 21:28:37, Info:  Performance since last sync point: 0.486853 TFLOP/s (rank 0: 61.1436 GFLOP/s, average over ranks: 60.8566 GFLOP/s) 
+Tue May 16 21:30:04, Info:  Waiting for last wave field. 
+Tue May 16 21:30:04, Info:  Writing wave field at time 4.65.
+Tue May 16 21:30:14, Info:  Writing wave field at time 4.65. Done.
+Tue May 16 21:30:14, Info:  Writing free surface at time 4.65.
+Tue May 16 21:30:14, Info:  Writing free surface at time 4.65. Done.
+Tue May 16 21:30:19, Info:  Performance since the start: 0.212849 TFLOP/s (rank 0: 25.7131 GFLOP/s, average over ranks: 26.6061 GFLOP/s) 
+Tue May 16 21:30:19, Info:  Performance since last sync point: 0.537493 TFLOP/s (rank 0: 61.477 GFLOP/s, average over ranks: 67.1866 GFLOP/s) 
+Tue May 16 21:31:40, Info:  Waiting for last wave field. 
+Tue May 16 21:31:40, Info:  Writing wave field at time 4.7.
+Tue May 16 21:31:53, Info:  Writing wave field at time 4.7. Done.
+Tue May 16 21:31:53, Info:  Writing free surface at time 4.7.
+Tue May 16 21:31:53, Info:  Writing free surface at time 4.7. Done.
+Tue May 16 21:32:02, Info:  Performance since the start: 0.21425 TFLOP/s (rank 0: 25.8855 GFLOP/s, average over ranks: 26.7812 GFLOP/s) 
+Tue May 16 21:32:02, Info:  Performance since last sync point: 0.552462 TFLOP/s (rank 0: 68.7916 GFLOP/s, average over ranks: 69.0577 GFLOP/s) 
+Tue May 16 21:33:16, Info:  Waiting for last wave field. 
+Tue May 16 21:33:16, Info:  Writing wave field at time 4.75.
+Tue May 16 21:33:23, Info:  Writing wave field at time 4.75. Done.
+Tue May 16 21:33:23, Info:  Writing free surface at time 4.75.
+Tue May 16 21:33:23, Info:  Writing free surface at time 4.75. Done.
+Tue May 16 21:33:37, Info:  Performance since the start: 0.215723 TFLOP/s (rank 0: 26.0662 GFLOP/s, average over ranks: 26.9654 GFLOP/s) 
+Tue May 16 21:33:37, Info:  Performance since last sync point: 0.612236 TFLOP/s (rank 0: 75.7616 GFLOP/s, average over ranks: 76.5295 GFLOP/s) 
+Tue May 16 21:34:44, Info:  Waiting for last wave field. 
+Tue May 16 21:34:44, Info:  Writing wave field at time 4.8.
+Tue May 16 21:35:04, Info:  Writing wave field at time 4.8. Done.
+Tue May 16 21:35:04, Info:  Writing free surface at time 4.8.
+Tue May 16 21:35:04, Info:  Writing free surface at time 4.8. Done.
+Tue May 16 21:35:23, Info:  Performance since the start: 0.217063 TFLOP/s (rank 0: 26.2333 GFLOP/s, average over ranks: 27.1329 GFLOP/s) 
+Tue May 16 21:35:23, Info:  Performance since last sync point: 0.52992 TFLOP/s (rank 0: 67.0985 GFLOP/s, average over ranks: 66.24 GFLOP/s) 
+Tue May 16 21:36:24, Info:  Waiting for last wave field. 
+Tue May 16 21:36:24, Info:  Writing wave field at time 4.85.
+Tue May 16 21:36:34, Info:  Writing wave field at time 4.85. Done.
+Tue May 16 21:36:34, Info:  Writing free surface at time 4.85.
+Tue May 16 21:36:34, Info:  Writing free surface at time 4.85. Done.
+Tue May 16 21:36:49, Info:  Performance since the start: 0.218568 TFLOP/s (rank 0: 26.4117 GFLOP/s, average over ranks: 27.3211 GFLOP/s) 
+Tue May 16 21:36:49, Info:  Performance since last sync point: 0.654921 TFLOP/s (rank 0: 76.1027 GFLOP/s, average over ranks: 81.8652 GFLOP/s) 
+Tue May 16 21:37:44, Info:  Waiting for last wave field. 
+Tue May 16 21:37:44, Info:  Writing wave field at time 4.9.
+Tue May 16 21:37:54, Info:  Writing wave field at time 4.9. Done.
+Tue May 16 21:37:54, Info:  Writing free surface at time 4.9.
+Tue May 16 21:37:54, Info:  Writing free surface at time 4.9. Done.
+Tue May 16 21:38:18, Info:  Performance since the start: 0.220085 TFLOP/s (rank 0: 26.5984 GFLOP/s, average over ranks: 27.5106 GFLOP/s) 
+Tue May 16 21:38:18, Info:  Performance since last sync point: 0.67997 TFLOP/s (rank 0: 84.5858 GFLOP/s, average over ranks: 84.9962 GFLOP/s) 
+Tue May 16 21:39:07, Info:  Waiting for last wave field. 
+Tue May 16 21:39:07, Info:  Writing wave field at time 4.95.
+Tue May 16 21:39:17, Info:  Writing wave field at time 4.95. Done.
+Tue May 16 21:39:17, Info:  Writing free surface at time 4.95.
+Tue May 16 21:39:17, Info:  Writing free surface at time 4.95. Done.
+Tue May 16 21:39:34, Info:  Performance since the start: 0.221629 TFLOP/s (rank 0: 26.7815 GFLOP/s, average over ranks: 27.7036 GFLOP/s) 
+Tue May 16 21:39:34, Info:  Performance since last sync point: 0.713034 TFLOP/s (rank 0: 82.3366 GFLOP/s, average over ranks: 89.1292 GFLOP/s) 
+Tue May 16 21:40:18, Info:  Waiting for last wave field. 
+Tue May 16 21:40:18, Info:  Writing wave field at time 5.
+Tue May 16 21:40:34, Info:  Writing wave field at time 5. Done.
+Tue May 16 21:40:34, Info:  Writing free surface at time 5.
+Tue May 16 21:40:34, Info:  Writing free surface at time 5. Done.
+Tue May 16 21:40:47, Info:  Performance since the start: 0.223184 TFLOP/s (rank 0: 26.9692 GFLOP/s, average over ranks: 27.8981 GFLOP/s) 
+Tue May 16 21:40:47, Info:  Performance since last sync point: 0.73265 TFLOP/s (rank 0: 88.0967 GFLOP/s, average over ranks: 91.5813 GFLOP/s) 
+Tue May 16 21:41:27, Info:  Waiting for last wave field. 
+Tue May 16 21:41:27, Info:  Writing wave field at time 5.05.
+Tue May 16 21:41:43, Info:  Writing wave field at time 5.05. Done.
+Tue May 16 21:41:43, Info:  Writing free surface at time 5.05.
+Tue May 16 21:41:43, Info:  Writing free surface at time 5.05. Done.
+Tue May 16 21:41:58, Info:  Performance since the start: 0.2248 TFLOP/s (rank 0: 27.1652 GFLOP/s, average over ranks: 28.1 GFLOP/s) 
+Tue May 16 21:41:58, Info:  Performance since last sync point: 0.814492 TFLOP/s (rank 0: 99.381 GFLOP/s, average over ranks: 101.811 GFLOP/s) 
+Tue May 16 21:42:36, Info:  Waiting for last wave field. 
+Tue May 16 21:42:36, Info:  Writing wave field at time 5.1.
+Tue May 16 21:42:48, Info:  Writing wave field at time 5.1. Done.
+Tue May 16 21:42:48, Info:  Writing free surface at time 5.1.
+Tue May 16 21:42:48, Info:  Writing free surface at time 5.1. Done.
+Tue May 16 21:43:13, Info:  Performance since the start: 0.226368 TFLOP/s (rank 0: 27.3631 GFLOP/s, average over ranks: 28.296 GFLOP/s) 
+Tue May 16 21:43:13, Info:  Performance since last sync point: 0.770025 TFLOP/s (rank 0: 103.592 GFLOP/s, average over ranks: 96.2532 GFLOP/s) 
+Tue May 16 21:43:47, Info:  Waiting for last wave field. 
+Tue May 16 21:43:47, Info:  Writing wave field at time 5.15.
+Tue May 16 21:44:01, Info:  Writing wave field at time 5.15. Done.
+Tue May 16 21:44:01, Info:  Writing free surface at time 5.15.
+Tue May 16 21:44:01, Info:  Writing free surface at time 5.15. Done.
+Tue May 16 21:44:06, Info:  Performance since the start: 0.228064 TFLOP/s (rank 0: 27.5524 GFLOP/s, average over ranks: 28.508 GFLOP/s) 
+Tue May 16 21:44:06, Info:  Performance since last sync point: 0.984852 TFLOP/s (rank 0: 93.5404 GFLOP/s, average over ranks: 123.106 GFLOP/s) 
+Tue May 16 21:44:38, Info:  Waiting for last wave field. 
+Tue May 16 21:44:38, Info:  Writing wave field at time 5.2.
+Tue May 16 21:44:49, Info:  Writing wave field at time 5.2. Done.
+Tue May 16 21:44:49, Info:  Writing free surface at time 5.2.
+Tue May 16 21:44:49, Info:  Writing free surface at time 5.2. Done.
+Tue May 16 21:45:00, Info:  Performance since the start: 0.229828 TFLOP/s (rank 0: 27.7671 GFLOP/s, average over ranks: 28.7285 GFLOP/s) 
+Tue May 16 21:45:00, Info:  Performance since last sync point: 1.13283 TFLOP/s (rank 0: 140.897 GFLOP/s, average over ranks: 141.603 GFLOP/s) 
+Tue May 16 21:45:30, Info:  Waiting for last wave field. 
+Tue May 16 21:45:30, Info:  Writing wave field at time 5.25.
+Tue May 16 21:45:42, Info:  Writing wave field at time 5.25. Done.
+Tue May 16 21:45:42, Info:  Writing free surface at time 5.25.
+Tue May 16 21:45:42, Info:  Writing free surface at time 5.25. Done.
+Tue May 16 21:46:00, Info:  Performance since the start: 0.23151 TFLOP/s (rank 0: 27.9764 GFLOP/s, average over ranks: 28.9387 GFLOP/s) 
+Tue May 16 21:46:00, Info:  Performance since last sync point: 0.972682 TFLOP/s (rank 0: 129.501 GFLOP/s, average over ranks: 121.585 GFLOP/s) 
+Tue May 16 21:46:28, Info:  Waiting for last wave field. 
+Tue May 16 21:46:28, Info:  Writing wave field at time 5.3.
+Tue May 16 21:46:45, Info:  Writing wave field at time 5.3. Done.
+Tue May 16 21:46:45, Info:  Writing free surface at time 5.3.
+Tue May 16 21:46:45, Info:  Writing free surface at time 5.3. Done.
+Tue May 16 21:47:05, Info:  Performance since the start: 0.233102 TFLOP/s (rank 0: 28.1727 GFLOP/s, average over ranks: 29.1378 GFLOP/s) 
+Tue May 16 21:47:05, Info:  Performance since last sync point: 0.841945 TFLOP/s (rank 0: 106.985 GFLOP/s, average over ranks: 105.243 GFLOP/s) 
+Tue May 16 21:47:31, Info:  Waiting for last wave field. 
+Tue May 16 21:47:31, Info:  Writing wave field at time 5.35.
+Tue May 16 21:47:46, Info:  Writing wave field at time 5.35. Done.
+Tue May 16 21:47:46, Info:  Writing free surface at time 5.35.
+Tue May 16 21:47:46, Info:  Writing free surface at time 5.35. Done.
+Tue May 16 21:48:08, Info:  Performance since the start: 0.234805 TFLOP/s (rank 0: 28.372 GFLOP/s, average over ranks: 29.3506 GFLOP/s) 
+Tue May 16 21:48:08, Info:  Performance since last sync point: 1.12002 TFLOP/s (rank 0: 113.432 GFLOP/s, average over ranks: 140.003 GFLOP/s) 
+Tue May 16 21:48:33, Info:  Waiting for last wave field. 
+Tue May 16 21:48:33, Info:  Writing wave field at time 5.4.
+Tue May 16 21:48:45, Info:  Writing wave field at time 5.4. Done.
+Tue May 16 21:48:45, Info:  Writing free surface at time 5.4.
+Tue May 16 21:48:45, Info:  Writing free surface at time 5.4. Done.
+Tue May 16 21:48:57, Info:  Performance since the start: 0.236479 TFLOP/s (rank 0: 28.5714 GFLOP/s, average over ranks: 29.5599 GFLOP/s) 
+Tue May 16 21:48:57, Info:  Performance since last sync point: 1.01003 TFLOP/s (rank 0: 115.079 GFLOP/s, average over ranks: 126.254 GFLOP/s) 
+Tue May 16 21:49:20, Info:  Waiting for last wave field. 
+Tue May 16 21:49:20, Info:  Writing wave field at time 5.45.
+Tue May 16 21:49:30, Info:  Writing wave field at time 5.45. Done.
+Tue May 16 21:49:30, Info:  Writing free surface at time 5.45.
+Tue May 16 21:49:30, Info:  Writing free surface at time 5.45. Done.
+Tue May 16 21:49:57, Info:  Performance since the start: 0.238184 TFLOP/s (rank 0: 28.7851 GFLOP/s, average over ranks: 29.773 GFLOP/s) 
+Tue May 16 21:49:57, Info:  Performance since last sync point: 1.08917 TFLOP/s (rank 0: 149.87 GFLOP/s, average over ranks: 136.146 GFLOP/s) 
+Tue May 16 21:50:19, Info:  Waiting for last wave field. 
+Tue May 16 21:50:19, Info:  Writing wave field at time 5.5.
+Tue May 16 21:50:25, Info:  Writing wave field at time 5.5. Done.
+Tue May 16 21:50:25, Info:  Writing free surface at time 5.5.
+Tue May 16 21:50:25, Info:  Writing free surface at time 5.5. Done.
+Tue May 16 21:50:36, Info:  Performance since the start: 0.239931 TFLOP/s (rank 0: 28.9871 GFLOP/s, average over ranks: 29.9914 GFLOP/s) 
+Tue May 16 21:50:36, Info:  Performance since last sync point: 1.22723 TFLOP/s (rank 0: 123.302 GFLOP/s, average over ranks: 153.404 GFLOP/s) 
+Tue May 16 21:50:57, Info:  Waiting for last wave field. 
+Tue May 16 21:50:57, Info:  Writing wave field at time 5.55.
+Tue May 16 21:51:11, Info:  Writing wave field at time 5.55. Done.
+Tue May 16 21:51:11, Info:  Writing free surface at time 5.55.
+Tue May 16 21:51:11, Info:  Writing free surface at time 5.55. Done.
+Tue May 16 21:51:26, Info:  Performance since the start: 0.241674 TFLOP/s (rank 0: 29.1989 GFLOP/s, average over ranks: 30.2093 GFLOP/s) 
+Tue May 16 21:51:26, Info:  Performance since last sync point: 1.21368 TFLOP/s (rank 0: 148.819 GFLOP/s, average over ranks: 151.71 GFLOP/s) 
+Tue May 16 21:51:45, Info:  Waiting for last wave field. 
+Tue May 16 21:51:45, Info:  Writing wave field at time 5.6.
+Tue May 16 21:51:54, Info:  Writing wave field at time 5.6. Done.
+Tue May 16 21:51:54, Info:  Writing free surface at time 5.6.
+Tue May 16 21:51:54, Info:  Writing free surface at time 5.6. Done.
+Tue May 16 21:52:17, Info:  Performance since the start: 0.243407 TFLOP/s (rank 0: 29.413 GFLOP/s, average over ranks: 30.4259 GFLOP/s) 
+Tue May 16 21:52:17, Info:  Performance since last sync point: 1.19916 TFLOP/s (rank 0: 158.078 GFLOP/s, average over ranks: 149.895 GFLOP/s) 
+Tue May 16 21:52:35, Info:  Waiting for last wave field. 
+Tue May 16 21:52:35, Info:  Writing wave field at time 5.65.
+Tue May 16 21:52:43, Info:  Writing wave field at time 5.65. Done.
+Tue May 16 21:52:43, Info:  Writing free surface at time 5.65.
+Tue May 16 21:52:43, Info:  Writing free surface at time 5.65. Done.
+Tue May 16 21:53:02, Info:  Performance since the start: 0.245138 TFLOP/s (rank 0: 29.6197 GFLOP/s, average over ranks: 30.6423 GFLOP/s) 
+Tue May 16 21:53:02, Info:  Performance since last sync point: 1.20713 TFLOP/s (rank 0: 139.142 GFLOP/s, average over ranks: 150.891 GFLOP/s) 
+Tue May 16 21:53:19, Info:  Waiting for last wave field. 
+Tue May 16 21:53:19, Info:  Writing wave field at time 5.7.
+Tue May 16 21:53:43, Info:  Writing wave field at time 5.7. Done.
+Tue May 16 21:53:43, Info:  Writing free surface at time 5.7.
+Tue May 16 21:53:43, Info:  Writing free surface at time 5.7. Done.
+Tue May 16 21:53:59, Info:  Performance since the start: 0.246721 TFLOP/s (rank 0: 29.8132 GFLOP/s, average over ranks: 30.8401 GFLOP/s) 
+Tue May 16 21:53:59, Info:  Performance since last sync point: 0.924296 TFLOP/s (rank 0: 113.788 GFLOP/s, average over ranks: 115.537 GFLOP/s) 
+Tue May 16 21:54:16, Info:  Waiting for last wave field. 
+Tue May 16 21:54:16, Info:  Writing wave field at time 5.75.
+Tue May 16 21:54:37, Info:  Writing wave field at time 5.75. Done.
+Tue May 16 21:54:37, Info:  Writing free surface at time 5.75.
+Tue May 16 21:54:37, Info:  Writing free surface at time 5.75. Done.
+Tue May 16 21:55:03, Info:  Performance since the start: 0.248295 TFLOP/s (rank 0: 30.012 GFLOP/s, average over ranks: 31.0368 GFLOP/s) 
+Tue May 16 21:55:03, Info:  Performance since last sync point: 0.915212 TFLOP/s (rank 0: 125.217 GFLOP/s, average over ranks: 114.402 GFLOP/s) 
+Tue May 16 21:55:18, Info:  Waiting for last wave field. 
+Tue May 16 21:55:18, Info:  Writing wave field at time 5.8.
+Tue May 16 21:55:36, Info:  Writing wave field at time 5.8. Done.
+Tue May 16 21:55:36, Info:  Writing free surface at time 5.8.
+Tue May 16 21:55:36, Info:  Writing free surface at time 5.8. Done.
+Tue May 16 21:55:36, Info:  Performance since the start: 0.250085 TFLOP/s (rank 0: 30.2044 GFLOP/s, average over ranks: 31.2606 GFLOP/s) 
+Tue May 16 21:55:36, Info:  Performance since last sync point: 1.57311 TFLOP/s (rank 0: 114.961 GFLOP/s, average over ranks: 196.639 GFLOP/s) 
+Tue May 16 21:55:51, Info:  Waiting for last wave field. 
+Tue May 16 21:55:51, Info:  Writing wave field at time 5.85.
+Tue May 16 21:56:03, Info:  Writing wave field at time 5.85. Done.
+Tue May 16 21:56:03, Info:  Writing free surface at time 5.85.
+Tue May 16 21:56:03, Info:  Writing free surface at time 5.85. Done.
+Tue May 16 21:56:15, Info:  Performance since the start: 0.251855 TFLOP/s (rank 0: 30.4339 GFLOP/s, average over ranks: 31.4819 GFLOP/s) 
+Tue May 16 21:56:15, Info:  Performance since last sync point: 1.49943 TFLOP/s (rank 0: 256.575 GFLOP/s, average over ranks: 187.429 GFLOP/s) 
+Tue May 16 21:56:29, Info:  Waiting for last wave field. 
+Tue May 16 21:56:29, Info:  Writing wave field at time 5.9.
+Tue May 16 21:56:53, Info:  Writing wave field at time 5.9. Done.
+Tue May 16 21:56:53, Info:  Writing free surface at time 5.9.
+Tue May 16 21:56:53, Info:  Writing free surface at time 5.9. Done.
+Tue May 16 21:56:53, Info:  Performance since the start: 0.253688 TFLOP/s (rank 0: 30.6355 GFLOP/s, average over ranks: 31.711 GFLOP/s) 
+Tue May 16 21:56:53, Info:  Performance since last sync point: 1.96506 TFLOP/s (rank 0: 136.138 GFLOP/s, average over ranks: 245.633 GFLOP/s) 
+Tue May 16 21:57:07, Info:  Waiting for last wave field. 
+Tue May 16 21:57:07, Info:  Writing wave field at time 5.95.
+Tue May 16 21:57:23, Info:  Writing wave field at time 5.95. Done.
+Tue May 16 21:57:23, Info:  Writing free surface at time 5.95.
+Tue May 16 21:57:23, Info:  Writing free surface at time 5.95. Done.
+Tue May 16 21:57:26, Info:  Performance since the start: 0.255463 TFLOP/s (rank 0: 30.8597 GFLOP/s, average over ranks: 31.9328 GFLOP/s) 
+Tue May 16 21:57:26, Info:  Performance since last sync point: 1.50062 TFLOP/s (rank 0: 226.438 GFLOP/s, average over ranks: 187.577 GFLOP/s) 
+Tue May 16 21:57:39, Info:  Waiting for last wave field. 
+Tue May 16 21:57:39, Info:  Writing wave field at time 6.
+Tue May 16 21:57:55, Info:  Writing wave field at time 6. Done.
+Tue May 16 21:57:55, Info:  Writing free surface at time 6.
+Tue May 16 21:57:55, Info:  Writing free surface at time 6. Done.
+Tue May 16 21:57:58, Info:  Performance since the start: 0.257281 TFLOP/s (rank 0: 31.0808 GFLOP/s, average over ranks: 32.1601 GFLOP/s) 
+Tue May 16 21:57:58, Info:  Performance since last sync point: 1.6955 TFLOP/s (rank 0: 210.647 GFLOP/s, average over ranks: 211.938 GFLOP/s) 
+Tue May 16 21:58:11, Info:  Waiting for last wave field. 
+Tue May 16 21:58:11, Info:  Writing wave field at time 6.05.
+Tue May 16 21:58:25, Info:  Writing wave field at time 6.05. Done.
+Tue May 16 21:58:25, Info:  Writing free surface at time 6.05.
+Tue May 16 21:58:25, Info:  Writing free surface at time 6.05. Done.
+Tue May 16 21:58:31, Info:  Performance since the start: 0.259108 TFLOP/s (rank 0: 31.3043 GFLOP/s, average over ranks: 32.3885 GFLOP/s) 
+Tue May 16 21:58:31, Info:  Performance since last sync point: 1.75936 TFLOP/s (rank 0: 228.214 GFLOP/s, average over ranks: 219.92 GFLOP/s) 
+Tue May 16 21:58:44, Info:  Waiting for last wave field. 
+Tue May 16 21:58:44, Info:  Writing wave field at time 6.1.
+Tue May 16 21:58:54, Info:  Writing wave field at time 6.1. Done.
+Tue May 16 21:58:54, Info:  Writing free surface at time 6.1.
+Tue May 16 21:58:54, Info:  Writing free surface at time 6.1. Done.
+Tue May 16 21:59:00, Info:  Performance since the start: 0.260971 TFLOP/s (rank 0: 31.528 GFLOP/s, average over ranks: 32.6213 GFLOP/s) 
+Tue May 16 21:59:00, Info:  Performance since last sync point: 2.0069 TFLOP/s (rank 0: 233.099 GFLOP/s, average over ranks: 250.862 GFLOP/s) 
+Tue May 16 21:59:12, Info:  Waiting for last wave field. 
+Tue May 16 21:59:12, Info:  Writing wave field at time 6.15.
+Tue May 16 21:59:55, Info:  Writing wave field at time 6.15. Done.
+Tue May 16 21:59:55, Info:  Writing free surface at time 6.15.
+Tue May 16 21:59:55, Info:  Writing free surface at time 6.15. Done.
+Tue May 16 22:00:03, Info:  Performance since the start: 0.262548 TFLOP/s (rank 0: 31.7134 GFLOP/s, average over ranks: 32.8185 GFLOP/s) 
+Tue May 16 22:00:03, Info:  Performance since last sync point: 1.04424 TFLOP/s (rank 0: 112.152 GFLOP/s, average over ranks: 130.531 GFLOP/s) 
+Tue May 16 22:00:15, Info:  Waiting for last wave field. 
+Tue May 16 22:00:15, Info:  Writing wave field at time 6.2.
+Tue May 16 22:01:06, Info:  Writing wave field at time 6.2. Done.
+Tue May 16 22:01:06, Info:  Writing free surface at time 6.2.
+Tue May 16 22:01:06, Info:  Writing free surface at time 6.2. Done.
+Tue May 16 22:01:07, Info:  Performance since the start: 0.264023 TFLOP/s (rank 0: 31.8854 GFLOP/s, average over ranks: 33.0029 GFLOP/s) 
+Tue May 16 22:01:07, Info:  Performance since last sync point: 0.855846 TFLOP/s (rank 0: 95.8468 GFLOP/s, average over ranks: 106.981 GFLOP/s) 
+Tue May 16 22:01:19, Info:  Waiting for last wave field. 
+Tue May 16 22:01:19, Info:  Writing wave field at time 6.25.
+Tue May 16 22:01:32, Info:  Writing wave field at time 6.25. Done.
+Tue May 16 22:01:32, Info:  Writing free surface at time 6.25.
+Tue May 16 22:01:32, Info:  Writing free surface at time 6.25. Done.
+Tue May 16 22:01:38, Info:  Performance since the start: 0.265796 TFLOP/s (rank 0: 32.1116 GFLOP/s, average over ranks: 33.2245 GFLOP/s) 
+Tue May 16 22:01:38, Info:  Performance since last sync point: 1.71918 TFLOP/s (rank 0: 266.516 GFLOP/s, average over ranks: 214.898 GFLOP/s) 
+Tue May 16 22:01:50, Info:  Waiting for last wave field. 
+Tue May 16 22:01:50, Info:  Writing wave field at time 6.3.
+Tue May 16 22:02:29, Info:  Writing wave field at time 6.3. Done.
+Tue May 16 22:02:29, Info:  Writing free surface at time 6.3.
+Tue May 16 22:02:29, Info:  Writing free surface at time 6.3. Done.
+Tue May 16 22:02:40, Info:  Performance since the start: 0.267344 TFLOP/s (rank 0: 32.2989 GFLOP/s, average over ranks: 33.418 GFLOP/s) 
+Tue May 16 22:02:40, Info:  Performance since last sync point: 0.994389 TFLOP/s (rank 0: 119.206 GFLOP/s, average over ranks: 124.299 GFLOP/s) 
+Tue May 16 22:02:52, Info:  Waiting for last wave field. 
+Tue May 16 22:02:52, Info:  Writing wave field at time 6.35.
+Tue May 16 22:03:11, Info:  Writing wave field at time 6.35. Done.
+Tue May 16 22:03:11, Info:  Writing free surface at time 6.35.
+Tue May 16 22:03:11, Info:  Writing free surface at time 6.35. Done.
+Tue May 16 22:03:24, Info:  Performance since the start: 0.269023 TFLOP/s (rank 0: 32.5037 GFLOP/s, average over ranks: 33.6279 GFLOP/s) 
+Tue May 16 22:03:24, Info:  Performance since last sync point: 1.29026 TFLOP/s (rank 0: 161.659 GFLOP/s, average over ranks: 161.283 GFLOP/s) 
+Tue May 16 22:03:35, Info:  Waiting for last wave field. 
+Tue May 16 22:03:35, Info:  Writing wave field at time 6.4.
+Tue May 16 22:04:22, Info:  Writing wave field at time 6.4. Done.
+Tue May 16 22:04:22, Info:  Writing free surface at time 6.4.
+Tue May 16 22:04:22, Info:  Writing free surface at time 6.4. Done.
+Tue May 16 22:04:30, Info:  Performance since the start: 0.270534 TFLOP/s (rank 0: 32.6718 GFLOP/s, average over ranks: 33.8168 GFLOP/s) 
+Tue May 16 22:04:30, Info:  Performance since last sync point: 1.01965 TFLOP/s (rank 0: 95.2617 GFLOP/s, average over ranks: 127.457 GFLOP/s) 
+Tue May 16 22:04:41, Info:  Waiting for last wave field. 
+Tue May 16 22:04:41, Info:  Writing wave field at time 6.45.
+Tue May 16 22:05:40, Info:  Writing wave field at time 6.45. Done.
+Tue May 16 22:05:40, Info:  Writing free surface at time 6.45.
+Tue May 16 22:05:40, Info:  Writing free surface at time 6.45. Done.
+Tue May 16 22:05:53, Info:  Performance since the start: 0.271791 TFLOP/s (rank 0: 32.8313 GFLOP/s, average over ranks: 33.9738 GFLOP/s) 
+Tue May 16 22:05:53, Info:  Performance since last sync point: 0.672685 TFLOP/s (rank 0: 87.5293 GFLOP/s, average over ranks: 84.0856 GFLOP/s) 
+Tue May 16 22:06:04, Info:  Waiting for last wave field. 
+Tue May 16 22:06:04, Info:  Writing wave field at time 6.5.
+Tue May 16 22:06:50, Info:  Writing wave field at time 6.5. Done.
+Tue May 16 22:06:50, Info:  Writing free surface at time 6.5.
+Tue May 16 22:06:50, Info:  Writing free surface at time 6.5. Done.
+Tue May 16 22:07:19, Info:  Performance since the start: 0.273052 TFLOP/s (rank 0: 32.999 GFLOP/s, average over ranks: 34.1315 GFLOP/s) 
+Tue May 16 22:07:19, Info:  Performance since last sync point: 0.686293 TFLOP/s (rank 0: 96.7007 GFLOP/s, average over ranks: 85.7867 GFLOP/s) 
+Tue May 16 22:07:30, Info:  Waiting for last wave field. 
+Tue May 16 22:07:30, Info:  Writing wave field at time 6.55.
+Tue May 16 22:08:25, Info:  Writing wave field at time 6.55. Done.
+Tue May 16 22:08:25, Info:  Writing free surface at time 6.55.
+Tue May 16 22:08:25, Info:  Writing free surface at time 6.55. Done.
+Tue May 16 22:08:27, Info:  Performance since the start: 0.274421 TFLOP/s (rank 0: 33.136 GFLOP/s, average over ranks: 34.3027 GFLOP/s) 
+Tue May 16 22:08:27, Info:  Performance since last sync point: 0.816553 TFLOP/s (rank 0: 71.9792 GFLOP/s, average over ranks: 102.069 GFLOP/s) 
+Tue May 16 22:08:38, Info:  Waiting for last wave field. 
+Tue May 16 22:08:38, Info:  Writing wave field at time 6.6.
+Tue May 16 22:09:35, Info:  Writing wave field at time 6.6. Done.
+Tue May 16 22:09:35, Info:  Writing free surface at time 6.6.
+Tue May 16 22:09:35, Info:  Writing free surface at time 6.6. Done.
+Tue May 16 22:09:46, Info:  Performance since the start: 0.27577 TFLOP/s (rank 0: 33.3019 GFLOP/s, average over ranks: 34.4712 GFLOP/s) 
+Tue May 16 22:09:46, Info:  Performance since last sync point: 0.781102 TFLOP/s (rank 0: 96.8434 GFLOP/s, average over ranks: 97.6378 GFLOP/s) 
+Tue May 16 22:09:57, Info:  Waiting for last wave field. 
+Tue May 16 22:09:57, Info:  Writing wave field at time 6.65.
+Tue May 16 22:10:23, Info:  Writing wave field at time 6.65. Done.
+Tue May 16 22:10:23, Info:  Writing free surface at time 6.65.
+Tue May 16 22:10:23, Info:  Writing free surface at time 6.65. Done.
+Tue May 16 22:10:32, Info:  Performance since the start: 0.277298 TFLOP/s (rank 0: 33.4949 GFLOP/s, average over ranks: 34.6622 GFLOP/s) 
+Tue May 16 22:10:32, Info:  Performance since last sync point: 1.08821 TFLOP/s (rank 0: 142.546 GFLOP/s, average over ranks: 136.026 GFLOP/s) 
+Tue May 16 22:10:43, Info:  Waiting for last wave field. 
+Tue May 16 22:10:43, Info:  Writing wave field at time 6.7.
+Tue May 16 22:11:11, Info:  Writing wave field at time 6.7. Done.
+Tue May 16 22:11:11, Info:  Writing free surface at time 6.7.
+Tue May 16 22:11:11, Info:  Writing free surface at time 6.7. Done.
+Tue May 16 22:11:19, Info:  Performance since the start: 0.27885 TFLOP/s (rank 0: 33.6869 GFLOP/s, average over ranks: 34.8563 GFLOP/s) 
+Tue May 16 22:11:19, Info:  Performance since last sync point: 1.11006 TFLOP/s (rank 0: 141.746 GFLOP/s, average over ranks: 138.757 GFLOP/s) 
+Tue May 16 22:11:30, Info:  Waiting for last wave field. 
+Tue May 16 22:11:30, Info:  Writing wave field at time 6.75.
+Tue May 16 22:12:05, Info:  Writing wave field at time 6.75. Done.
+Tue May 16 22:12:05, Info:  Writing free surface at time 6.75.
+Tue May 16 22:12:05, Info:  Writing free surface at time 6.75. Done.
+Tue May 16 22:12:12, Info:  Performance since the start: 0.280389 TFLOP/s (rank 0: 33.8707 GFLOP/s, average over ranks: 35.0487 GFLOP/s) 
+Tue May 16 22:12:12, Info:  Performance since last sync point: 1.07786 TFLOP/s (rank 0: 125.908 GFLOP/s, average over ranks: 134.732 GFLOP/s) 
+Tue May 16 22:12:22, Info:  Waiting for last wave field. 
+Tue May 16 22:12:22, Info:  Writing wave field at time 6.8.
+Tue May 16 22:12:44, Info:  Writing wave field at time 6.8. Done.
+Tue May 16 22:12:44, Info:  Writing free surface at time 6.8.
+Tue May 16 22:12:44, Info:  Writing free surface at time 6.8. Done.
+Tue May 16 22:12:55, Info:  Performance since the start: 0.282053 TFLOP/s (rank 0: 34.0731 GFLOP/s, average over ranks: 35.2566 GFLOP/s) 
+Tue May 16 22:12:55, Info:  Performance since last sync point: 1.43516 TFLOP/s (rank 0: 176.425 GFLOP/s, average over ranks: 179.395 GFLOP/s) 
+Tue May 16 22:13:05, Info:  Waiting for last wave field. 
+Tue May 16 22:13:05, Info:  Writing wave field at time 6.85.
+Tue May 16 22:13:24, Info:  Writing wave field at time 6.85. Done.
+Tue May 16 22:13:24, Info:  Writing free surface at time 6.85.
+Tue May 16 22:13:24, Info:  Writing free surface at time 6.85. Done.
+Tue May 16 22:13:25, Info:  Performance since the start: 0.283755 TFLOP/s (rank 0: 34.273 GFLOP/s, average over ranks: 35.4693 GFLOP/s) 
+Tue May 16 22:13:25, Info:  Performance since last sync point: 1.62534 TFLOP/s (rank 0: 169.595 GFLOP/s, average over ranks: 203.167 GFLOP/s) 
+Tue May 16 22:13:35, Info:  Waiting for last wave field. 
+Tue May 16 22:13:35, Info:  Writing wave field at time 6.9.
+Tue May 16 22:14:00, Info:  Writing wave field at time 6.9. Done.
+Tue May 16 22:14:00, Info:  Writing free surface at time 6.9.
+Tue May 16 22:14:00, Info:  Writing free surface at time 6.9. Done.
+Tue May 16 22:14:00, Info:  Performance since the start: 0.28542 TFLOP/s (rank 0: 34.4774 GFLOP/s, average over ranks: 35.6775 GFLOP/s) 
+Tue May 16 22:14:00, Info:  Performance since last sync point: 1.48398 TFLOP/s (rank 0: 188.201 GFLOP/s, average over ranks: 185.498 GFLOP/s) 
+Tue May 16 22:14:10, Info:  Waiting for last wave field. 
+Tue May 16 22:14:10, Info:  Writing wave field at time 6.95.
+Tue May 16 22:14:31, Info:  Writing wave field at time 6.95. Done.
+Tue May 16 22:14:31, Info:  Writing free surface at time 6.95.
+Tue May 16 22:14:31, Info:  Writing free surface at time 6.95. Done.
+Tue May 16 22:14:38, Info:  Performance since the start: 0.287166 TFLOP/s (rank 0: 34.688 GFLOP/s, average over ranks: 35.8957 GFLOP/s) 
+Tue May 16 22:14:38, Info:  Performance since last sync point: 2.05043 TFLOP/s (rank 0: 220.878 GFLOP/s, average over ranks: 256.303 GFLOP/s) 
+Tue May 16 22:14:48, Info:  Waiting for last wave field. 
+Tue May 16 22:14:48, Info:  Writing wave field at time 7.
+Tue May 16 22:15:55, Info:  Writing wave field at time 7. Done.
+Tue May 16 22:15:55, Info:  Writing free surface at time 7.
+Tue May 16 22:15:55, Info:  Writing free surface at time 7. Done.
+Tue May 16 22:16:02, Info:  Performance since the start: 0.288433 TFLOP/s (rank 0: 34.8298 GFLOP/s, average over ranks: 36.0541 GFLOP/s) 
+Tue May 16 22:16:02, Info:  Performance since last sync point: 0.783473 TFLOP/s (rank 0: 80.6826 GFLOP/s, average over ranks: 97.9341 GFLOP/s) 
+Tue May 16 22:16:11, Info:  Waiting for last wave field. 
+Tue May 16 22:16:11, Info:  Writing wave field at time 7.05.
+Tue May 16 22:16:52, Info:  Writing wave field at time 7.05. Done.
+Tue May 16 22:16:52, Info:  Writing free surface at time 7.05.
+Tue May 16 22:16:52, Info:  Writing free surface at time 7.05. Done.
+Tue May 16 22:16:57, Info:  Performance since the start: 0.289804 TFLOP/s (rank 0: 35.0054 GFLOP/s, average over ranks: 36.2255 GFLOP/s) 
+Tue May 16 22:16:57, Info:  Performance since last sync point: 0.90968 TFLOP/s (rank 0: 118.93 GFLOP/s, average over ranks: 113.71 GFLOP/s) 
+Tue May 16 22:17:06, Info:  Waiting for last wave field. 
+Tue May 16 22:17:06, Info:  Writing wave field at time 7.1.
+Tue May 16 22:17:43, Info:  Writing wave field at time 7.1. Done.
+Tue May 16 22:17:43, Info:  Writing free surface at time 7.1.
+Tue May 16 22:17:43, Info:  Writing free surface at time 7.1. Done.
+Tue May 16 22:17:43, Info:  Performance since the start: 0.291425 TFLOP/s (rank 0: 35.1893 GFLOP/s, average over ranks: 36.4281 GFLOP/s) 
+Tue May 16 22:17:43, Info:  Performance since last sync point: 1.39894 TFLOP/s (rank 0: 135.742 GFLOP/s, average over ranks: 174.868 GFLOP/s) 
+Tue May 16 22:17:52, Info:  Waiting for last wave field. 
+Tue May 16 22:17:52, Info:  Writing wave field at time 7.15.
+Tue May 16 22:18:47, Info:  Writing wave field at time 7.15. Done.
+Tue May 16 22:18:47, Info:  Writing free surface at time 7.15.
+Tue May 16 22:18:47, Info:  Writing free surface at time 7.15. Done.
+Tue May 16 22:18:51, Info:  Performance since the start: 0.292704 TFLOP/s (rank 0: 35.3543 GFLOP/s, average over ranks: 36.5881 GFLOP/s) 
+Tue May 16 22:18:51, Info:  Performance since last sync point: 0.781213 TFLOP/s (rank 0: 105.796 GFLOP/s, average over ranks: 97.6516 GFLOP/s) 
+Tue May 16 22:19:00, Info:  Waiting for last wave field. 
+Tue May 16 22:19:00, Info:  Writing wave field at time 7.2.
+Tue May 16 22:19:24, Info:  Writing wave field at time 7.2. Done.
+Tue May 16 22:19:24, Info:  Writing free surface at time 7.2.
+Tue May 16 22:19:24, Info:  Writing free surface at time 7.2. Done.
+Tue May 16 22:19:26, Info:  Performance since the start: 0.294311 TFLOP/s (rank 0: 35.5532 GFLOP/s, average over ranks: 36.7889 GFLOP/s) 
+Tue May 16 22:19:26, Info:  Performance since last sync point: 1.42054 TFLOP/s (rank 0: 182.147 GFLOP/s, average over ranks: 177.568 GFLOP/s) 
+Tue May 16 22:19:36, Info:  Waiting for last wave field. 
+Tue May 16 22:19:36, Info:  Writing wave field at time 7.25.
+Tue May 16 22:20:08, Info:  Writing wave field at time 7.25. Done.
+Tue May 16 22:20:08, Info:  Writing free surface at time 7.25.
+Tue May 16 22:20:08, Info:  Writing free surface at time 7.25. Done.
+Tue May 16 22:20:24, Info:  Performance since the start: 0.295883 TFLOP/s (rank 0: 35.7431 GFLOP/s, average over ranks: 36.9854 GFLOP/s) 
+Tue May 16 22:20:24, Info:  Performance since last sync point: 1.66845 TFLOP/s (rank 0: 154.62 GFLOP/s, average over ranks: 208.556 GFLOP/s) 
+Tue May 16 22:20:34, Info:  Waiting for last wave field. 
+Tue May 16 22:20:34, Info:  Writing wave field at time 7.3.
+Tue May 16 22:21:36, Info:  Writing wave field at time 7.3. Done.
+Tue May 16 22:21:36, Info:  Writing free surface at time 7.3.
+Tue May 16 22:21:36, Info:  Writing free surface at time 7.3. Done.
+Tue May 16 22:21:46, Info:  Performance since the start: 0.297078 TFLOP/s (rank 0: 35.8755 GFLOP/s, average over ranks: 37.1348 GFLOP/s) 
+Tue May 16 22:21:46, Info:  Performance since last sync point: 0.728359 TFLOP/s (rank 0: 77.5437 GFLOP/s, average over ranks: 91.0449 GFLOP/s) 
+Tue May 16 22:21:56, Info:  Waiting for last wave field. 
+Tue May 16 22:21:56, Info:  Writing wave field at time 7.35.
+Tue May 16 22:22:29, Info:  Writing wave field at time 7.35. Done.
+Tue May 16 22:22:29, Info:  Writing free surface at time 7.35.
+Tue May 16 22:22:29, Info:  Writing free surface at time 7.35. Done.
+Tue May 16 22:22:35, Info:  Performance since the start: 0.298496 TFLOP/s (rank 0: 36.0518 GFLOP/s, average over ranks: 37.3119 GFLOP/s) 
+Tue May 16 22:22:35, Info:  Performance since last sync point: 1.02056 TFLOP/s (rank 0: 127.594 GFLOP/s, average over ranks: 127.57 GFLOP/s) 
+Tue May 16 22:22:45, Info:  Waiting for last wave field. 
+Tue May 16 22:22:45, Info:  Writing wave field at time 7.4.
+Tue May 16 22:23:51, Info:  Writing wave field at time 7.4. Done.
+Tue May 16 22:23:51, Info:  Writing free surface at time 7.4.
+Tue May 16 22:23:51, Info:  Writing free surface at time 7.4. Done.
+Tue May 16 22:23:57, Info:  Performance since the start: 0.299717 TFLOP/s (rank 0: 36.1911 GFLOP/s, average over ranks: 37.4646 GFLOP/s) 
+Tue May 16 22:23:57, Info:  Performance since last sync point: 0.773712 TFLOP/s (rank 0: 83.7488 GFLOP/s, average over ranks: 96.714 GFLOP/s) 
+Tue May 16 22:24:07, Info:  Waiting for last wave field. 
+Tue May 16 22:24:07, Info:  Writing wave field at time 7.45.
+Tue May 16 22:24:27, Info:  Writing wave field at time 7.45. Done.
+Tue May 16 22:24:27, Info:  Writing free surface at time 7.45.
+Tue May 16 22:24:27, Info:  Writing free surface at time 7.45. Done.
+Tue May 16 22:24:48, Info:  Performance since the start: 0.301145 TFLOP/s (rank 0: 36.3887 GFLOP/s, average over ranks: 37.6431 GFLOP/s) 
+Tue May 16 22:24:48, Info:  Performance since last sync point: 1.11084 TFLOP/s (rank 0: 189.664 GFLOP/s, average over ranks: 138.855 GFLOP/s) 
+Tue May 16 22:24:58, Info:  Waiting for last wave field. 
+Tue May 16 22:24:58, Info:  Writing wave field at time 7.5.
+Tue May 16 22:25:18, Info:  Writing wave field at time 7.5. Done.
+Tue May 16 22:25:18, Info:  Writing free surface at time 7.5.
+Tue May 16 22:25:18, Info:  Writing free surface at time 7.5. Done.
+Tue May 16 22:25:41, Info:  Performance since the start: 0.302615 TFLOP/s (rank 0: 36.5651 GFLOP/s, average over ranks: 37.8268 GFLOP/s) 
+Tue May 16 22:25:41, Info:  Performance since last sync point: 1.11258 TFLOP/s (rank 0: 131.761 GFLOP/s, average over ranks: 139.072 GFLOP/s) 
+Tue May 16 22:25:51, Info:  Waiting for last wave field. 
+Tue May 16 22:25:51, Info:  Writing wave field at time 7.55.
+Tue May 16 22:26:41, Info:  Writing wave field at time 7.55. Done.
+Tue May 16 22:26:41, Info:  Writing free surface at time 7.55.
+Tue May 16 22:26:41, Info:  Writing free surface at time 7.55. Done.
+Tue May 16 22:26:46, Info:  Performance since the start: 0.303906 TFLOP/s (rank 0: 36.7003 GFLOP/s, average over ranks: 37.9882 GFLOP/s) 
+Tue May 16 22:26:46, Info:  Performance since last sync point: 0.862343 TFLOP/s (rank 0: 82.3732 GFLOP/s, average over ranks: 107.793 GFLOP/s) 
+Tue May 16 22:26:56, Info:  Waiting for last wave field. 
+Tue May 16 22:26:56, Info:  Writing wave field at time 7.6.
+Tue May 16 22:27:26, Info:  Writing wave field at time 7.6. Done.
+Tue May 16 22:27:26, Info:  Writing free surface at time 7.6.
+Tue May 16 22:27:26, Info:  Writing free surface at time 7.6. Done.
+Tue May 16 22:27:28, Info:  Performance since the start: 0.305399 TFLOP/s (rank 0: 36.8838 GFLOP/s, average over ranks: 38.1749 GFLOP/s) 
+Tue May 16 22:27:28, Info:  Performance since last sync point: 1.21253 TFLOP/s (rank 0: 150.449 GFLOP/s, average over ranks: 151.566 GFLOP/s) 
+Tue May 16 22:27:37, Info:  Waiting for last wave field. 
+Tue May 16 22:27:37, Info:  Writing wave field at time 7.65.
+Tue May 16 22:28:45, Info:  Writing wave field at time 7.65. Done.
+Tue May 16 22:28:45, Info:  Writing free surface at time 7.65.
+Tue May 16 22:28:45, Info:  Writing free surface at time 7.65. Done.
+Tue May 16 22:28:52, Info:  Performance since the start: 0.306558 TFLOP/s (rank 0: 37.0226 GFLOP/s, average over ranks: 38.3198 GFLOP/s) 
+Tue May 16 22:28:52, Info:  Performance since last sync point: 0.733736 TFLOP/s (rank 0: 86.5247 GFLOP/s, average over ranks: 91.717 GFLOP/s) 
+Tue May 16 22:29:02, Info:  Waiting for last wave field. 
+Tue May 16 22:29:02, Info:  Writing wave field at time 7.7.
+Tue May 16 22:29:36, Info:  Writing wave field at time 7.7. Done.
+Tue May 16 22:29:36, Info:  Writing free surface at time 7.7.
+Tue May 16 22:29:36, Info:  Writing free surface at time 7.7. Done.
+Tue May 16 22:29:47, Info:  Performance since the start: 0.307922 TFLOP/s (rank 0: 37.1965 GFLOP/s, average over ranks: 38.4902 GFLOP/s) 
+Tue May 16 22:29:47, Info:  Performance since last sync point: 0.98178 TFLOP/s (rank 0: 132.263 GFLOP/s, average over ranks: 122.722 GFLOP/s) 
+Tue May 16 22:29:57, Info:  Waiting for last wave field. 
+Tue May 16 22:29:57, Info:  Writing wave field at time 7.75.
+Tue May 16 22:30:18, Info:  Writing wave field at time 7.75. Done.
+Tue May 16 22:30:18, Info:  Writing free surface at time 7.75.
+Tue May 16 22:30:18, Info:  Writing free surface at time 7.75. Done.
+Tue May 16 22:30:21, Info:  Performance since the start: 0.309498 TFLOP/s (rank 0: 37.383 GFLOP/s, average over ranks: 38.6872 GFLOP/s) 
+Tue May 16 22:30:21, Info:  Performance since last sync point: 1.48236 TFLOP/s (rank 0: 163.956 GFLOP/s, average over ranks: 185.295 GFLOP/s) 
+Tue May 16 22:30:30, Info:  Waiting for last wave field. 
+Tue May 16 22:30:30, Info:  Writing wave field at time 7.8.
+Tue May 16 22:31:41, Info:  Writing wave field at time 7.8. Done.
+Tue May 16 22:31:41, Info:  Writing free surface at time 7.8.
+Tue May 16 22:31:41, Info:  Writing free surface at time 7.8. Done.
+Tue May 16 22:31:50, Info:  Performance since the start: 0.310681 TFLOP/s (rank 0: 37.5135 GFLOP/s, average over ranks: 38.8352 GFLOP/s) 
+Tue May 16 22:31:50, Info:  Performance since last sync point: 0.885223 TFLOP/s (rank 0: 81.7676 GFLOP/s, average over ranks: 110.653 GFLOP/s) 
+Tue May 16 22:31:59, Info:  Waiting for last wave field. 
+Tue May 16 22:31:59, Info:  Writing wave field at time 7.85.
+Tue May 16 22:32:40, Info:  Writing wave field at time 7.85. Done.
+Tue May 16 22:32:40, Info:  Writing free surface at time 7.85.
+Tue May 16 22:32:40, Info:  Writing free surface at time 7.85. Done.
+Tue May 16 22:32:54, Info:  Performance since the start: 0.31185 TFLOP/s (rank 0: 37.6757 GFLOP/s, average over ranks: 38.9812 GFLOP/s) 
+Tue May 16 22:32:54, Info:  Performance since last sync point: 0.804892 TFLOP/s (rank 0: 115.698 GFLOP/s, average over ranks: 100.612 GFLOP/s) 
+Tue May 16 22:33:03, Info:  Waiting for last wave field. 
+Tue May 16 22:33:03, Info:  Writing wave field at time 7.9.
+Tue May 16 22:33:45, Info:  Writing wave field at time 7.9. Done.
+Tue May 16 22:33:45, Info:  Writing free surface at time 7.9.
+Tue May 16 22:33:45, Info:  Writing free surface at time 7.9. Done.
+Tue May 16 22:33:52, Info:  Performance since the start: 0.313195 TFLOP/s (rank 0: 37.8286 GFLOP/s, average over ranks: 39.1494 GFLOP/s) 
+Tue May 16 22:33:52, Info:  Performance since last sync point: 0.979193 TFLOP/s (rank 0: 104.315 GFLOP/s, average over ranks: 122.399 GFLOP/s) 
+Tue May 16 22:34:02, Info:  Waiting for last wave field. 
+Tue May 16 22:34:02, Info:  Writing wave field at time 7.95.
+Tue May 16 22:34:23, Info:  Writing wave field at time 7.95. Done.
+Tue May 16 22:34:23, Info:  Writing free surface at time 7.95.
+Tue May 16 22:34:23, Info:  Writing free surface at time 7.95. Done.
+Tue May 16 22:34:25, Info:  Performance since the start: 0.314756 TFLOP/s (rank 0: 38.0172 GFLOP/s, average over ranks: 39.3445 GFLOP/s) 
+Tue May 16 22:34:25, Info:  Performance since last sync point: 1.52775 TFLOP/s (rank 0: 179.025 GFLOP/s, average over ranks: 190.969 GFLOP/s) 
+Tue May 16 22:34:34, Info:  Waiting for last wave field. 
+Tue May 16 22:34:34, Info:  Writing wave field at time 8.
+Tue May 16 22:34:39, Info:  Writing wave field at time 8. Done.
+Tue May 16 22:34:39, Info:  Writing free surface at time 8.
+Tue May 16 22:34:39, Info:  Writing free surface at time 8. Done.
+Tue May 16 22:34:41, Info:  Performance since the start: 0.316515 TFLOP/s (rank 0: 38.2355 GFLOP/s, average over ranks: 39.5644 GFLOP/s) 
+Tue May 16 22:34:41, Info:  Performance since last sync point: 3.08527 TFLOP/s (rank 0: 438.366 GFLOP/s, average over ranks: 385.659 GFLOP/s) 
+Tue May 16 22:34:50, Info:  Waiting for last wave field. 
+Tue May 16 22:34:50, Info:  Writing wave field at time 8.05.
+Tue May 16 22:35:23, Info:  Writing wave field at time 8.05. Done.
+Tue May 16 22:35:23, Info:  Writing free surface at time 8.05.
+Tue May 16 22:35:23, Info:  Writing free surface at time 8.05. Done.
+Tue May 16 22:35:30, Info:  Performance since the start: 0.318031 TFLOP/s (rank 0: 38.4151 GFLOP/s, average over ranks: 39.7539 GFLOP/s) 
+Tue May 16 22:35:30, Info:  Performance since last sync point: 1.5013 TFLOP/s (rank 0: 154.632 GFLOP/s, average over ranks: 187.663 GFLOP/s) 
+Tue May 16 22:35:39, Info:  Waiting for last wave field. 
+Tue May 16 22:35:39, Info:  Writing wave field at time 8.1.
+Tue May 16 22:36:06, Info:  Writing wave field at time 8.1. Done.
+Tue May 16 22:36:06, Info:  Writing free surface at time 8.1.
+Tue May 16 22:36:06, Info:  Writing free surface at time 8.1. Done.
+Tue May 16 22:36:21, Info:  Performance since the start: 0.31946 TFLOP/s (rank 0: 38.5949 GFLOP/s, average over ranks: 39.9325 GFLOP/s) 
+Tue May 16 22:36:21, Info:  Performance since last sync point: 1.15891 TFLOP/s (rank 0: 156.692 GFLOP/s, average over ranks: 144.864 GFLOP/s) 
+Tue May 16 22:36:31, Info:  Waiting for last wave field. 
+Tue May 16 22:36:31, Info:  Writing wave field at time 8.15.
+Tue May 16 22:37:28, Info:  Writing wave field at time 8.15. Done.
+Tue May 16 22:37:28, Info:  Writing free surface at time 8.15.
+Tue May 16 22:37:28, Info:  Writing free surface at time 8.15. Done.
+Tue May 16 22:37:51, Info:  Performance since the start: 0.320426 TFLOP/s (rank 0: 38.7228 GFLOP/s, average over ranks: 40.0533 GFLOP/s) 
+Tue May 16 22:37:51, Info:  Performance since last sync point: 0.631022 TFLOP/s (rank 0: 83.6297 GFLOP/s, average over ranks: 78.8777 GFLOP/s) 
+Tue May 16 22:38:00, Info:  Waiting for last wave field. 
+Tue May 16 22:38:00, Info:  Writing wave field at time 8.2.
+Tue May 16 22:39:09, Info:  Writing wave field at time 8.2. Done.
+Tue May 16 22:39:09, Info:  Writing free surface at time 8.2.
+Tue May 16 22:39:09, Info:  Writing free surface at time 8.2. Done.
+Tue May 16 22:39:17, Info:  Performance since the start: 0.321491 TFLOP/s (rank 0: 38.8225 GFLOP/s, average over ranks: 40.1864 GFLOP/s) 
+Tue May 16 22:39:17, Info:  Performance since last sync point: 0.762152 TFLOP/s (rank 0: 66.8832 GFLOP/s, average over ranks: 95.2691 GFLOP/s) 
+Tue May 16 22:39:27, Info:  Waiting for last wave field. 
+Tue May 16 22:39:27, Info:  Writing wave field at time 8.25.
+Tue May 16 22:40:31, Info:  Writing wave field at time 8.25. Done.
+Tue May 16 22:40:31, Info:  Writing free surface at time 8.25.
+Tue May 16 22:40:31, Info:  Writing free surface at time 8.25. Done.
+Tue May 16 22:40:40, Info:  Performance since the start: 0.322509 TFLOP/s (rank 0: 38.9485 GFLOP/s, average over ranks: 40.3137 GFLOP/s) 
+Tue May 16 22:40:40, Info:  Performance since last sync point: 0.671586 TFLOP/s (rank 0: 83.2526 GFLOP/s, average over ranks: 83.9482 GFLOP/s) 
+Tue May 16 22:40:50, Info:  Waiting for last wave field. 
+Tue May 16 22:40:50, Info:  Writing wave field at time 8.3.
+Tue May 16 22:41:47, Info:  Writing wave field at time 8.3. Done.
+Tue May 16 22:41:47, Info:  Writing free surface at time 8.3.
+Tue May 16 22:41:47, Info:  Writing free surface at time 8.3. Done.
+Tue May 16 22:41:47, Info:  Performance since the start: 0.32362 TFLOP/s (rank 0: 39.0813 GFLOP/s, average over ranks: 40.4525 GFLOP/s) 
+Tue May 16 22:41:47, Info:  Performance since last sync point: 0.76096 TFLOP/s (rank 0: 89.3957 GFLOP/s, average over ranks: 95.1199 GFLOP/s) 
+Tue May 16 22:41:57, Info:  Waiting for last wave field. 
+Tue May 16 22:41:57, Info:  Writing wave field at time 8.35.
+Tue May 16 22:42:16, Info:  Writing wave field at time 8.35. Done.
+Tue May 16 22:42:16, Info:  Writing free surface at time 8.35.
+Tue May 16 22:42:16, Info:  Writing free surface at time 8.35. Done.
+Tue May 16 22:42:29, Info:  Performance since the start: 0.325108 TFLOP/s (rank 0: 39.2772 GFLOP/s, average over ranks: 40.6385 GFLOP/s) 
+Tue May 16 22:42:29, Info:  Performance since last sync point: 1.43209 TFLOP/s (rank 0: 233.864 GFLOP/s, average over ranks: 179.011 GFLOP/s) 
+Tue May 16 22:42:38, Info:  Waiting for last wave field. 
+Tue May 16 22:42:38, Info:  Writing wave field at time 8.4.
+Tue May 16 22:42:57, Info:  Writing wave field at time 8.4. Done.
+Tue May 16 22:42:57, Info:  Writing free surface at time 8.4.
+Tue May 16 22:42:57, Info:  Writing free surface at time 8.4. Done.
+Tue May 16 22:43:08, Info:  Performance since the start: 0.326594 TFLOP/s (rank 0: 39.4577 GFLOP/s, average over ranks: 40.8243 GFLOP/s) 
+Tue May 16 22:43:08, Info:  Performance since last sync point: 1.38611 TFLOP/s (rank 0: 169.781 GFLOP/s, average over ranks: 173.264 GFLOP/s) 
+Tue May 16 22:43:17, Info:  Waiting for last wave field. 
+Tue May 16 22:43:17, Info:  Writing wave field at time 8.45.
+Tue May 16 22:44:10, Info:  Writing wave field at time 8.45. Done.
+Tue May 16 22:44:10, Info:  Writing free surface at time 8.45.
+Tue May 16 22:44:10, Info:  Writing free surface at time 8.45. Done.
+Tue May 16 22:44:20, Info:  Performance since the start: 0.327815 TFLOP/s (rank 0: 39.5918 GFLOP/s, average over ranks: 40.9768 GFLOP/s) 
+Tue May 16 22:44:20, Info:  Performance since last sync point: 0.955764 TFLOP/s (rank 0: 92.2802 GFLOP/s, average over ranks: 119.47 GFLOP/s) 
+Tue May 16 22:44:30, Info:  Waiting for last wave field. 
+Tue May 16 22:44:30, Info:  Writing wave field at time 8.5.
+Tue May 16 22:45:04, Info:  Writing wave field at time 8.5. Done.
+Tue May 16 22:45:04, Info:  Writing free surface at time 8.5.
+Tue May 16 22:45:04, Info:  Writing free surface at time 8.5. Done.
+Tue May 16 22:45:16, Info:  Performance since the start: 0.329035 TFLOP/s (rank 0: 39.7525 GFLOP/s, average over ranks: 41.1294 GFLOP/s) 
+Tue May 16 22:45:16, Info:  Performance since last sync point: 0.925133 TFLOP/s (rank 0: 126.564 GFLOP/s, average over ranks: 115.642 GFLOP/s) 
+Tue May 16 22:45:26, Info:  Waiting for last wave field. 
+Tue May 16 22:45:26, Info:  Writing wave field at time 8.55.
+Tue May 16 22:46:16, Info:  Writing wave field at time 8.55. Done.
+Tue May 16 22:46:16, Info:  Writing free surface at time 8.55.
+Tue May 16 22:46:16, Info:  Writing free surface at time 8.55. Done.
+Tue May 16 22:46:23, Info:  Performance since the start: 0.3303 TFLOP/s (rank 0: 39.8877 GFLOP/s, average over ranks: 41.2875 GFLOP/s) 
+Tue May 16 22:46:23, Info:  Performance since last sync point: 1.05661 TFLOP/s (rank 0: 94.5227 GFLOP/s, average over ranks: 132.077 GFLOP/s) 
+Tue May 16 22:46:32, Info:  Waiting for last wave field. 
+Tue May 16 22:46:32, Info:  Writing wave field at time 8.6.
+Tue May 16 22:47:37, Info:  Writing wave field at time 8.6. Done.
+Tue May 16 22:47:37, Info:  Writing free surface at time 8.6.
+Tue May 16 22:47:37, Info:  Writing free surface at time 8.6. Done.
+Tue May 16 22:47:38, Info:  Performance since the start: 0.331358 TFLOP/s (rank 0: 40.0095 GFLOP/s, average over ranks: 41.4197 GFLOP/s) 
+Tue May 16 22:47:38, Info:  Performance since last sync point: 0.733295 TFLOP/s (rank 0: 83.7663 GFLOP/s, average over ranks: 91.6618 GFLOP/s) 
+Tue May 16 22:47:47, Info:  Waiting for last wave field. 
+Tue May 16 22:47:47, Info:  Writing wave field at time 8.65.
+Tue May 16 22:48:47, Info:  Writing wave field at time 8.65. Done.
+Tue May 16 22:48:47, Info:  Writing free surface at time 8.65.
+Tue May 16 22:48:47, Info:  Writing free surface at time 8.65. Done.
+Tue May 16 22:48:48, Info:  Performance since the start: 0.332506 TFLOP/s (rank 0: 40.1469 GFLOP/s, average over ranks: 41.5633 GFLOP/s) 
+Tue May 16 22:48:48, Info:  Performance since last sync point: 0.824056 TFLOP/s (rank 0: 98.0468 GFLOP/s, average over ranks: 103.007 GFLOP/s) 
+Tue May 16 22:48:57, Info:  Waiting for last wave field. 
+Tue May 16 22:48:57, Info:  Writing wave field at time 8.7.
+Tue May 16 22:49:27, Info:  Writing wave field at time 8.7. Done.
+Tue May 16 22:49:27, Info:  Writing free surface at time 8.7.
+Tue May 16 22:49:27, Info:  Writing free surface at time 8.7. Done.
+Tue May 16 22:49:30, Info:  Performance since the start: 0.333842 TFLOP/s (rank 0: 40.3234 GFLOP/s, average over ranks: 41.7303 GFLOP/s) 
+Tue May 16 22:49:30, Info:  Performance since last sync point: 1.18377 TFLOP/s (rank 0: 168.45 GFLOP/s, average over ranks: 147.971 GFLOP/s) 
+Tue May 16 22:49:40, Info:  Waiting for last wave field. 
+Tue May 16 22:49:40, Info:  Writing wave field at time 8.75.
+Tue May 16 22:50:22, Info:  Writing wave field at time 8.75. Done.
+Tue May 16 22:50:22, Info:  Writing free surface at time 8.75.
+Tue May 16 22:50:22, Info:  Writing free surface at time 8.75. Done.
+Tue May 16 22:50:31, Info:  Performance since the start: 0.33513 TFLOP/s (rank 0: 40.4801 GFLOP/s, average over ranks: 41.8913 GFLOP/s) 
+Tue May 16 22:50:31, Info:  Performance since last sync point: 1.03587 TFLOP/s (rank 0: 124.94 GFLOP/s, average over ranks: 129.483 GFLOP/s) 
+Tue May 16 22:50:41, Info:  Waiting for last wave field. 
+Tue May 16 22:50:41, Info:  Writing wave field at time 8.8.
+Tue May 16 22:50:58, Info:  Writing wave field at time 8.8. Done.
+Tue May 16 22:50:58, Info:  Writing free surface at time 8.8.
+Tue May 16 22:50:58, Info:  Writing free surface at time 8.8. Done.
+Tue May 16 22:51:08, Info:  Performance since the start: 0.336581 TFLOP/s (rank 0: 40.6607 GFLOP/s, average over ranks: 42.0726 GFLOP/s) 
+Tue May 16 22:51:08, Info:  Performance since last sync point: 1.41877 TFLOP/s (rank 0: 185.654 GFLOP/s, average over ranks: 177.346 GFLOP/s) 
+Tue May 16 22:51:18, Info:  Waiting for last wave field. 
+Tue May 16 22:51:18, Info:  Writing wave field at time 8.85.
+Tue May 16 22:52:17, Info:  Writing wave field at time 8.85. Done.
+Tue May 16 22:52:17, Info:  Writing free surface at time 8.85.
+Tue May 16 22:52:17, Info:  Writing free surface at time 8.85. Done.
+Tue May 16 22:52:23, Info:  Performance since the start: 0.337708 TFLOP/s (rank 0: 40.7832 GFLOP/s, average over ranks: 42.2134 GFLOP/s) 
+Tue May 16 22:52:23, Info:  Performance since last sync point: 0.862433 TFLOP/s (rank 0: 86.8216 GFLOP/s, average over ranks: 107.804 GFLOP/s) 
+Tue May 16 22:52:33, Info:  Waiting for last wave field. 
+Tue May 16 22:52:33, Info:  Writing wave field at time 8.9.
+Tue May 16 22:53:00, Info:  Writing wave field at time 8.9. Done.
+Tue May 16 22:53:00, Info:  Writing free surface at time 8.9.
+Tue May 16 22:53:00, Info:  Writing free surface at time 8.9. Done.
+Tue May 16 22:53:07, Info:  Performance since the start: 0.339029 TFLOP/s (rank 0: 40.954 GFLOP/s, average over ranks: 42.3787 GFLOP/s) 
+Tue May 16 22:53:07, Info:  Performance since last sync point: 1.1605 TFLOP/s (rank 0: 158.083 GFLOP/s, average over ranks: 145.062 GFLOP/s) 
+Tue May 16 22:53:17, Info:  Waiting for last wave field. 
+Tue May 16 22:53:17, Info:  Writing wave field at time 8.95.
+Tue May 16 22:53:53, Info:  Writing wave field at time 8.95. Done.
+Tue May 16 22:53:53, Info:  Writing free surface at time 8.95.
+Tue May 16 22:53:53, Info:  Writing free surface at time 8.95. Done.
+Tue May 16 22:53:56, Info:  Performance since the start: 0.34034 TFLOP/s (rank 0: 41.1107 GFLOP/s, average over ranks: 42.5425 GFLOP/s) 
+Tue May 16 22:53:56, Info:  Performance since last sync point: 1.09441 TFLOP/s (rank 0: 129.032 GFLOP/s, average over ranks: 136.802 GFLOP/s) 
+Tue May 16 22:54:06, Info:  Waiting for last wave field. 
+Tue May 16 22:54:06, Info:  Writing wave field at time 9.
+Tue May 16 22:54:34, Info:  Writing wave field at time 9. Done.
+Tue May 16 22:54:34, Info:  Writing free surface at time 9.
+Tue May 16 22:54:34, Info:  Writing free surface at time 9. Done.
+Tue May 16 22:54:47, Info:  Performance since the start: 0.341702 TFLOP/s (rank 0: 41.2821 GFLOP/s, average over ranks: 42.7127 GFLOP/s) 
+Tue May 16 22:54:47, Info:  Performance since last sync point: 1.21385 TFLOP/s (rank 0: 162.52 GFLOP/s, average over ranks: 151.731 GFLOP/s) 
+Tue May 16 22:54:57, Info:  Waiting for last wave field. 
+Tue May 16 22:54:57, Info:  Writing wave field at time 9.05.
+Tue May 16 22:55:54, Info:  Writing wave field at time 9.05. Done.
+Tue May 16 22:55:54, Info:  Writing free surface at time 9.05.
+Tue May 16 22:55:54, Info:  Writing free surface at time 9.05. Done.
+Tue May 16 22:56:06, Info:  Performance since the start: 0.342785 TFLOP/s (rank 0: 41.4003 GFLOP/s, average over ranks: 42.8482 GFLOP/s) 
+Tue May 16 22:56:06, Info:  Performance since last sync point: 0.838443 TFLOP/s (rank 0: 85.4917 GFLOP/s, average over ranks: 104.805 GFLOP/s) 
+Tue May 16 22:56:15, Info:  Waiting for last wave field. 
+Tue May 16 22:56:15, Info:  Writing wave field at time 9.1.
+Tue May 16 22:56:49, Info:  Writing wave field at time 9.1. Done.
+Tue May 16 22:56:49, Info:  Writing free surface at time 9.1.
+Tue May 16 22:56:49, Info:  Writing free surface at time 9.1. Done.
+Tue May 16 22:56:49, Info:  Performance since the start: 0.344044 TFLOP/s (rank 0: 41.5517 GFLOP/s, average over ranks: 43.0055 GFLOP/s) 
+Tue May 16 22:56:49, Info:  Performance since last sync point: 1.07879 TFLOP/s (rank 0: 122.808 GFLOP/s, average over ranks: 134.849 GFLOP/s) 
+Tue May 16 22:56:59, Info:  Waiting for last wave field. 
+Tue May 16 22:56:59, Info:  Writing wave field at time 9.15.
+Tue May 16 22:57:30, Info:  Writing wave field at time 9.15. Done.
+Tue May 16 22:57:30, Info:  Writing free surface at time 9.15.
+Tue May 16 22:57:30, Info:  Writing free surface at time 9.15. Done.
+Tue May 16 22:57:39, Info:  Performance since the start: 0.345382 TFLOP/s (rank 0: 41.7238 GFLOP/s, average over ranks: 43.1728 GFLOP/s) 
+Tue May 16 22:57:39, Info:  Performance since last sync point: 1.19388 TFLOP/s (rank 0: 169.609 GFLOP/s, average over ranks: 149.235 GFLOP/s) 
+Tue May 16 22:57:49, Info:  Waiting for last wave field. 
+Tue May 16 22:57:49, Info:  Writing wave field at time 9.2.
+Tue May 16 22:58:56, Info:  Writing wave field at time 9.2. Done.
+Tue May 16 22:58:56, Info:  Writing free surface at time 9.2.
+Tue May 16 22:58:56, Info:  Writing free surface at time 9.2. Done.
+Tue May 16 22:59:06, Info:  Performance since the start: 0.346352 TFLOP/s (rank 0: 41.8304 GFLOP/s, average over ranks: 43.294 GFLOP/s) 
+Tue May 16 22:59:06, Info:  Performance since last sync point: 0.737224 TFLOP/s (rank 0: 78.5706 GFLOP/s, average over ranks: 92.153 GFLOP/s) 
+Tue May 16 22:59:15, Info:  Waiting for last wave field. 
+Tue May 16 22:59:15, Info:  Writing wave field at time 9.25.
+Tue May 16 22:59:42, Info:  Writing wave field at time 9.25. Done.
+Tue May 16 22:59:42, Info:  Writing free surface at time 9.25.
+Tue May 16 22:59:42, Info:  Writing free surface at time 9.25. Done.
+Tue May 16 22:59:55, Info:  Performance since the start: 0.347599 TFLOP/s (rank 0: 41.9942 GFLOP/s, average over ranks: 43.4498 GFLOP/s) 
+Tue May 16 22:59:55, Info:  Performance since last sync point: 1.07067 TFLOP/s (rank 0: 150.2 GFLOP/s, average over ranks: 133.833 GFLOP/s) 
+Tue May 16 23:00:04, Info:  Waiting for last wave field. 
+Tue May 16 23:00:04, Info:  Writing wave field at time 9.3.
+Tue May 16 23:00:59, Info:  Writing wave field at time 9.3. Done.
+Tue May 16 23:00:59, Info:  Writing free surface at time 9.3.
+Tue May 16 23:00:59, Info:  Writing free surface at time 9.3. Done.
+Tue May 16 23:01:03, Info:  Performance since the start: 0.348739 TFLOP/s (rank 0: 42.1132 GFLOP/s, average over ranks: 43.5923 GFLOP/s) 
+Tue May 16 23:01:03, Info:  Performance since last sync point: 0.940297 TFLOP/s (rank 0: 88.4719 GFLOP/s, average over ranks: 117.537 GFLOP/s) 
+Tue May 16 23:01:13, Info:  Waiting for last wave field. 
+Tue May 16 23:01:13, Info:  Writing wave field at time 9.35.
+Tue May 16 23:01:30, Info:  Writing wave field at time 9.35. Done.
+Tue May 16 23:01:30, Info:  Writing free surface at time 9.35.
+Tue May 16 23:01:30, Info:  Writing free surface at time 9.35. Done.
+Tue May 16 23:01:41, Info:  Performance since the start: 0.350085 TFLOP/s (rank 0: 42.2949 GFLOP/s, average over ranks: 43.7606 GFLOP/s) 
+Tue May 16 23:01:41, Info:  Performance since last sync point: 1.38574 TFLOP/s (rank 0: 214.407 GFLOP/s, average over ranks: 173.218 GFLOP/s) 
+Tue May 16 23:01:50, Info:  Waiting for last wave field. 
+Tue May 16 23:01:50, Info:  Writing wave field at time 9.4.
+Tue May 16 23:02:17, Info:  Writing wave field at time 9.4. Done.
+Tue May 16 23:02:17, Info:  Writing free surface at time 9.4.
+Tue May 16 23:02:17, Info:  Writing free surface at time 9.4. Done.
+Tue May 16 23:02:39, Info:  Performance since the start: 0.351353 TFLOP/s (rank 0: 42.4546 GFLOP/s, average over ranks: 43.9191 GFLOP/s) 
+Tue May 16 23:02:39, Info:  Performance since last sync point: 1.10638 TFLOP/s (rank 0: 144.357 GFLOP/s, average over ranks: 138.297 GFLOP/s) 
+Tue May 16 23:02:48, Info:  Waiting for last wave field. 
+Tue May 16 23:02:48, Info:  Writing wave field at time 9.45.
+Tue May 16 23:03:54, Info:  Writing wave field at time 9.45. Done.
+Tue May 16 23:03:54, Info:  Writing free surface at time 9.45.
+Tue May 16 23:03:54, Info:  Writing free surface at time 9.45. Done.
+Tue May 16 23:04:02, Info:  Performance since the start: 0.352274 TFLOP/s (rank 0: 42.5442 GFLOP/s, average over ranks: 44.0342 GFLOP/s) 
+Tue May 16 23:04:02, Info:  Performance since last sync point: 0.712519 TFLOP/s (rank 0: 70.5187 GFLOP/s, average over ranks: 89.0649 GFLOP/s) 
+Tue May 16 23:04:11, Info:  Waiting for last wave field. 
+Tue May 16 23:04:11, Info:  Writing wave field at time 9.5.
+Tue May 16 23:04:50, Info:  Writing wave field at time 9.5. Done.
+Tue May 16 23:04:50, Info:  Writing free surface at time 9.5.
+Tue May 16 23:04:50, Info:  Writing free surface at time 9.5. Done.
+Tue May 16 23:05:00, Info:  Performance since the start: 0.353373 TFLOP/s (rank 0: 42.6901 GFLOP/s, average over ranks: 44.1717 GFLOP/s) 
+Tue May 16 23:05:00, Info:  Performance since last sync point: 0.893223 TFLOP/s (rank 0: 121.406 GFLOP/s, average over ranks: 111.653 GFLOP/s) 
+Tue May 16 23:05:10, Info:  Waiting for last wave field. 
+Tue May 16 23:05:10, Info:  Writing wave field at time 9.55.
+Tue May 16 23:06:02, Info:  Writing wave field at time 9.55. Done.
+Tue May 16 23:06:02, Info:  Writing free surface at time 9.55.
+Tue May 16 23:06:02, Info:  Writing free surface at time 9.55. Done.
+Tue May 16 23:06:21, Info:  Performance since the start: 0.354309 TFLOP/s (rank 0: 42.8137 GFLOP/s, average over ranks: 44.2887 GFLOP/s) 
+Tue May 16 23:06:21, Info:  Performance since last sync point: 0.715515 TFLOP/s (rank 0: 95.1326 GFLOP/s, average over ranks: 89.4394 GFLOP/s) 
+Tue May 16 23:06:30, Info:  Waiting for last wave field. 
+Tue May 16 23:06:30, Info:  Writing wave field at time 9.6.
+Tue May 16 23:06:49, Info:  Writing wave field at time 9.6. Done.
+Tue May 16 23:06:49, Info:  Writing free surface at time 9.6.
+Tue May 16 23:06:49, Info:  Writing free surface at time 9.6. Done.
+Tue May 16 23:06:50, Info:  Performance since the start: 0.355755 TFLOP/s (rank 0: 42.97 GFLOP/s, average over ranks: 44.4694 GFLOP/s) 
+Tue May 16 23:06:50, Info:  Performance since last sync point: 1.67575 TFLOP/s (rank 0: 142.06 GFLOP/s, average over ranks: 209.468 GFLOP/s) 
+Tue May 16 23:07:00, Info:  Waiting for last wave field. 
+Tue May 16 23:07:00, Info:  Writing wave field at time 9.65.
+Tue May 16 23:07:33, Info:  Writing wave field at time 9.65. Done.
+Tue May 16 23:07:33, Info:  Writing free surface at time 9.65.
+Tue May 16 23:07:33, Info:  Writing free surface at time 9.65. Done.
+Tue May 16 23:07:33, Info:  Performance since the start: 0.357155 TFLOP/s (rank 0: 43.132 GFLOP/s, average over ranks: 44.6444 GFLOP/s) 
+Tue May 16 23:07:33, Info:  Performance since last sync point: 1.47627 TFLOP/s (rank 0: 156.131 GFLOP/s, average over ranks: 184.534 GFLOP/s) 
+Tue May 16 23:07:43, Info:  Waiting for last wave field. 
+Tue May 16 23:07:43, Info:  Writing wave field at time 9.7.
+Tue May 16 23:07:51, Info:  Writing wave field at time 9.7. Done.
+Tue May 16 23:07:51, Info:  Writing free surface at time 9.7.
+Tue May 16 23:07:51, Info:  Writing free surface at time 9.7. Done.
+Tue May 16 23:07:52, Info:  Performance since the start: 0.358692 TFLOP/s (rank 0: 43.3294 GFLOP/s, average over ranks: 44.8365 GFLOP/s) 
+Tue May 16 23:07:52, Info:  Performance since last sync point: 2.32178 TFLOP/s (rank 0: 371.319 GFLOP/s, average over ranks: 290.223 GFLOP/s) 
+Tue May 16 23:08:02, Info:  Waiting for last wave field. 
+Tue May 16 23:08:02, Info:  Writing wave field at time 9.75.
+Tue May 16 23:08:30, Info:  Writing wave field at time 9.75. Done.
+Tue May 16 23:08:30, Info:  Writing free surface at time 9.75.
+Tue May 16 23:08:30, Info:  Writing free surface at time 9.75. Done.
+Tue May 16 23:08:39, Info:  Performance since the start: 0.360109 TFLOP/s (rank 0: 43.4984 GFLOP/s, average over ranks: 45.0137 GFLOP/s) 
+Tue May 16 23:08:39, Info:  Performance since last sync point: 1.94898 TFLOP/s (rank 0: 178.658 GFLOP/s, average over ranks: 243.623 GFLOP/s) 
+Tue May 16 23:08:49, Info:  Waiting for last wave field. 
+Tue May 16 23:08:49, Info:  Writing wave field at time 9.8.
+Tue May 16 23:09:06, Info:  Writing wave field at time 9.8. Done.
+Tue May 16 23:09:06, Info:  Writing free surface at time 9.8.
+Tue May 16 23:09:06, Info:  Writing free surface at time 9.8. Done.
+Tue May 16 23:09:26, Info:  Performance since the start: 0.361413 TFLOP/s (rank 0: 43.6696 GFLOP/s, average over ranks: 45.1766 GFLOP/s) 
+Tue May 16 23:09:26, Info:  Performance since last sync point: 1.25213 TFLOP/s (rank 0: 187.783 GFLOP/s, average over ranks: 156.516 GFLOP/s) 
+Tue May 16 23:09:36, Info:  Waiting for last wave field. 
+Tue May 16 23:09:36, Info:  Writing wave field at time 9.85.
+Tue May 16 23:10:12, Info:  Writing wave field at time 9.85. Done.
+Tue May 16 23:10:12, Info:  Writing free surface at time 9.85.
+Tue May 16 23:10:12, Info:  Writing free surface at time 9.85. Done.
+Tue May 16 23:10:21, Info:  Performance since the start: 0.362569 TFLOP/s (rank 0: 43.7981 GFLOP/s, average over ranks: 45.3211 GFLOP/s) 
+Tue May 16 23:10:21, Info:  Performance since last sync point: 0.976768 TFLOP/s (rank 0: 103.523 GFLOP/s, average over ranks: 122.096 GFLOP/s) 
+Tue May 16 23:10:31, Info:  Waiting for last wave field. 
+Tue May 16 23:10:31, Info:  Writing wave field at time 9.9.
+Tue May 16 23:11:24, Info:  Writing wave field at time 9.9. Done.
+Tue May 16 23:11:24, Info:  Writing free surface at time 9.9.
+Tue May 16 23:11:24, Info:  Writing free surface at time 9.9. Done.
+Tue May 16 23:11:35, Info:  Performance since the start: 0.36349 TFLOP/s (rank 0: 43.9164 GFLOP/s, average over ranks: 45.4362 GFLOP/s) 
+Tue May 16 23:11:35, Info:  Performance since last sync point: 0.733189 TFLOP/s (rank 0: 93.839 GFLOP/s, average over ranks: 91.6486 GFLOP/s) 
+Tue May 16 23:11:44, Info:  Waiting for last wave field. 
+Tue May 16 23:11:44, Info:  Writing wave field at time 9.95.
+Tue May 16 23:12:44, Info:  Writing wave field at time 9.95. Done.
+Tue May 16 23:12:44, Info:  Writing free surface at time 9.95.
+Tue May 16 23:12:44, Info:  Writing free surface at time 9.95. Done.
+Tue May 16 23:12:53, Info:  Performance since the start: 0.364541 TFLOP/s (rank 0: 44.0233 GFLOP/s, average over ranks: 45.5676 GFLOP/s) 
+Tue May 16 23:12:53, Info:  Performance since last sync point: 1.01344 TFLOP/s (rank 0: 84.97 GFLOP/s, average over ranks: 126.68 GFLOP/s) 
+Tue May 16 23:13:02, Info:  Waiting for last wave field. 
+Tue May 16 23:13:02, Info:  Writing wave field at time 10.
+Tue May 16 23:14:18, Info:  Writing wave field at time 10. Done.
+Tue May 16 23:14:18, Info:  Writing free surface at time 10.
+Tue May 16 23:14:18, Info:  Writing free surface at time 10. Done.
+Tue May 16 23:14:27, Info:  Performance since the start: 0.365259 TFLOP/s (rank 0: 44.1099 GFLOP/s, average over ranks: 45.6574 GFLOP/s) 
+Tue May 16 23:14:27, Info:  Performance since last sync point: 0.600803 TFLOP/s (rank 0: 72.4954 GFLOP/s, average over ranks: 75.1004 GFLOP/s) 
+Tue May 16 23:14:36, Info:  Waiting for last wave field. 
+Tue May 16 23:14:36, Info:  Writing wave field at time 10.05.
+Tue May 16 23:15:23, Info:  Writing wave field at time 10.05. Done.
+Tue May 16 23:15:23, Info:  Writing free surface at time 10.05.
+Tue May 16 23:15:23, Info:  Writing free surface at time 10.05. Done.
+Tue May 16 23:15:28, Info:  Performance since the start: 0.36623 TFLOP/s (rank 0: 44.238 GFLOP/s, average over ranks: 45.7788 GFLOP/s) 
+Tue May 16 23:15:28, Info:  Performance since last sync point: 0.816793 TFLOP/s (rank 0: 105.524 GFLOP/s, average over ranks: 102.099 GFLOP/s) 
+Tue May 16 23:15:38, Info:  Waiting for last wave field. 
+Tue May 16 23:15:38, Info:  Writing wave field at time 10.1.
+Tue May 16 23:16:29, Info:  Writing wave field at time 10.1. Done.
+Tue May 16 23:16:29, Info:  Writing free surface at time 10.1.
+Tue May 16 23:16:29, Info:  Writing free surface at time 10.1. Done.
+Tue May 16 23:16:39, Info:  Performance since the start: 0.367311 TFLOP/s (rank 0: 44.3633 GFLOP/s, average over ranks: 45.9139 GFLOP/s) 
+Tue May 16 23:16:39, Info:  Performance since last sync point: 0.94733 TFLOP/s (rank 0: 103.003 GFLOP/s, average over ranks: 118.416 GFLOP/s) 
+Tue May 16 23:16:49, Info:  Waiting for last wave field. 
+Tue May 16 23:16:49, Info:  Writing wave field at time 10.15.
+Tue May 16 23:17:41, Info:  Writing wave field at time 10.15. Done.
+Tue May 16 23:17:41, Info:  Writing free surface at time 10.15.
+Tue May 16 23:17:41, Info:  Writing free surface at time 10.15. Done.
+Tue May 16 23:17:52, Info:  Performance since the start: 0.368189 TFLOP/s (rank 0: 44.4793 GFLOP/s, average over ranks: 46.0236 GFLOP/s) 
+Tue May 16 23:17:52, Info:  Performance since last sync point: 0.725026 TFLOP/s (rank 0: 94.2631 GFLOP/s, average over ranks: 90.6283 GFLOP/s) 
+Tue May 16 23:18:01, Info:  Waiting for last wave field. 
+Tue May 16 23:18:01, Info:  Writing wave field at time 10.2.
+Tue May 16 23:18:18, Info:  Writing wave field at time 10.2. Done.
+Tue May 16 23:18:18, Info:  Writing free surface at time 10.2.
+Tue May 16 23:18:18, Info:  Writing free surface at time 10.2. Done.
+Tue May 16 23:18:22, Info:  Performance since the start: 0.3696 TFLOP/s (rank 0: 44.6454 GFLOP/s, average over ranks: 46.2001 GFLOP/s) 
+Tue May 16 23:18:22, Info:  Performance since last sync point: 1.68518 TFLOP/s (rank 0: 184.767 GFLOP/s, average over ranks: 210.647 GFLOP/s) 
+Tue May 16 23:18:32, Info:  Waiting for last wave field. 
+Tue May 16 23:18:32, Info:  Writing wave field at time 10.25.
+Tue May 16 23:19:08, Info:  Writing wave field at time 10.25. Done.
+Tue May 16 23:19:08, Info:  Writing free surface at time 10.25.
+Tue May 16 23:19:08, Info:  Writing free surface at time 10.25. Done.
+Tue May 16 23:19:28, Info:  Performance since the start: 0.370708 TFLOP/s (rank 0: 44.7916 GFLOP/s, average over ranks: 46.3384 GFLOP/s) 
+Tue May 16 23:19:28, Info:  Performance since last sync point: 0.967659 TFLOP/s (rank 0: 134.787 GFLOP/s, average over ranks: 120.957 GFLOP/s) 
+Tue May 16 23:19:38, Info:  Waiting for last wave field. 
+Tue May 16 23:19:38, Info:  Writing wave field at time 10.3.
+Tue May 16 23:20:12, Info:  Writing wave field at time 10.3. Done.
+Tue May 16 23:20:12, Info:  Writing free surface at time 10.3.
+Tue May 16 23:20:12, Info:  Writing free surface at time 10.3. Done.
+Tue May 16 23:20:16, Info:  Performance since the start: 0.371891 TFLOP/s (rank 0: 44.9181 GFLOP/s, average over ranks: 46.4863 GFLOP/s) 
+Tue May 16 23:20:16, Info:  Performance since last sync point: 1.09205 TFLOP/s (rank 0: 106.791 GFLOP/s, average over ranks: 136.507 GFLOP/s) 
+Tue May 16 23:20:25, Info:  Waiting for last wave field. 
+Tue May 16 23:20:25, Info:  Writing wave field at time 10.35.
+Tue May 16 23:20:46, Info:  Writing wave field at time 10.35. Done.
+Tue May 16 23:20:46, Info:  Writing free surface at time 10.35.
+Tue May 16 23:20:46, Info:  Writing free surface at time 10.35. Done.
+Tue May 16 23:20:58, Info:  Performance since the start: 0.373181 TFLOP/s (rank 0: 45.0869 GFLOP/s, average over ranks: 46.6476 GFLOP/s) 
+Tue May 16 23:20:58, Info:  Performance since last sync point: 1.33798 TFLOP/s (rank 0: 199.616 GFLOP/s, average over ranks: 167.248 GFLOP/s) 
+Tue May 16 23:21:08, Info:  Waiting for last wave field. 
+Tue May 16 23:21:08, Info:  Writing wave field at time 10.4.
+Tue May 16 23:21:41, Info:  Writing wave field at time 10.4. Done.
+Tue May 16 23:21:41, Info:  Writing free surface at time 10.4.
+Tue May 16 23:21:41, Info:  Writing free surface at time 10.4. Done.
+Tue May 16 23:21:42, Info:  Performance since the start: 0.37443 TFLOP/s (rank 0: 45.2257 GFLOP/s, average over ranks: 46.8037 GFLOP/s) 
+Tue May 16 23:21:42, Info:  Performance since last sync point: 1.23001 TFLOP/s (rank 0: 124.588 GFLOP/s, average over ranks: 153.752 GFLOP/s) 
+Tue May 16 23:21:52, Info:  Waiting for last wave field. 
+Tue May 16 23:21:52, Info:  Writing wave field at time 10.45.
+Tue May 16 23:22:41, Info:  Writing wave field at time 10.45. Done.
+Tue May 16 23:22:41, Info:  Writing free surface at time 10.45.
+Tue May 16 23:22:41, Info:  Writing free surface at time 10.45. Done.
+Tue May 16 23:22:52, Info:  Performance since the start: 0.375524 TFLOP/s (rank 0: 45.3565 GFLOP/s, average over ranks: 46.9405 GFLOP/s) 
+Tue May 16 23:22:52, Info:  Performance since last sync point: 1.03433 TFLOP/s (rank 0: 113.784 GFLOP/s, average over ranks: 129.292 GFLOP/s) 
+Tue May 16 23:23:02, Info:  Waiting for last wave field. 
+Tue May 16 23:23:02, Info:  Writing wave field at time 10.5.
+Tue May 16 23:23:31, Info:  Writing wave field at time 10.5. Done.
+Tue May 16 23:23:31, Info:  Writing free surface at time 10.5.
+Tue May 16 23:23:31, Info:  Writing free surface at time 10.5. Done.
+Tue May 16 23:23:39, Info:  Performance since the start: 0.376659 TFLOP/s (rank 0: 45.5001 GFLOP/s, average over ranks: 47.0823 GFLOP/s) 
+Tue May 16 23:23:39, Info:  Performance since last sync point: 1.06853 TFLOP/s (rank 0: 134.593 GFLOP/s, average over ranks: 133.567 GFLOP/s) 
+Tue May 16 23:23:48, Info:  Waiting for last wave field. 
+Tue May 16 23:23:48, Info:  Writing wave field at time 10.55.
+Tue May 16 23:24:29, Info:  Writing wave field at time 10.55. Done.
+Tue May 16 23:24:29, Info:  Writing free surface at time 10.55.
+Tue May 16 23:24:29, Info:  Writing free surface at time 10.55. Done.
+Tue May 16 23:24:40, Info:  Performance since the start: 0.377783 TFLOP/s (rank 0: 45.6334 GFLOP/s, average over ranks: 47.2229 GFLOP/s) 
+Tue May 16 23:24:40, Info:  Performance since last sync point: 1.03091 TFLOP/s (rank 0: 118.631 GFLOP/s, average over ranks: 128.864 GFLOP/s) 
+Tue May 16 23:24:49, Info:  Waiting for last wave field. 
+Tue May 16 23:24:49, Info:  Writing wave field at time 10.6.
+Tue May 16 23:25:11, Info:  Writing wave field at time 10.6. Done.
+Tue May 16 23:25:11, Info:  Writing free surface at time 10.6.
+Tue May 16 23:25:11, Info:  Writing free surface at time 10.6. Done.
+Tue May 16 23:25:31, Info:  Performance since the start: 0.37898 TFLOP/s (rank 0: 45.7881 GFLOP/s, average over ranks: 47.3725 GFLOP/s) 
+Tue May 16 23:25:31, Info:  Performance since last sync point: 1.15158 TFLOP/s (rank 0: 160.846 GFLOP/s, average over ranks: 143.948 GFLOP/s) 
+Tue May 16 23:25:41, Info:  Waiting for last wave field. 
+Tue May 16 23:25:41, Info:  Writing wave field at time 10.65.
+Tue May 16 23:26:02, Info:  Writing wave field at time 10.65. Done.
+Tue May 16 23:26:02, Info:  Writing free surface at time 10.65.
+Tue May 16 23:26:02, Info:  Writing free surface at time 10.65. Done.
+Tue May 16 23:26:36, Info:  Performance since the start: 0.380065 TFLOP/s (rank 0: 45.9298 GFLOP/s, average over ranks: 47.5081 GFLOP/s) 
+Tue May 16 23:26:36, Info:  Performance since last sync point: 0.977382 TFLOP/s (rank 0: 133.426 GFLOP/s, average over ranks: 122.173 GFLOP/s) 
+Tue May 16 23:26:45, Info:  Waiting for last wave field. 
+Tue May 16 23:26:45, Info:  Writing wave field at time 10.7.
+Tue May 16 23:27:20, Info:  Writing wave field at time 10.7. Done.
+Tue May 16 23:27:20, Info:  Writing free surface at time 10.7.
+Tue May 16 23:27:20, Info:  Writing free surface at time 10.7. Done.
+Tue May 16 23:27:34, Info:  Performance since the start: 0.381074 TFLOP/s (rank 0: 46.0316 GFLOP/s, average over ranks: 47.6343 GFLOP/s) 
+Tue May 16 23:27:34, Info:  Performance since last sync point: 0.890941 TFLOP/s (rank 0: 87.2433 GFLOP/s, average over ranks: 111.368 GFLOP/s) 
+Tue May 16 23:27:43, Info:  Waiting for last wave field. 
+Tue May 16 23:27:43, Info:  Writing wave field at time 10.75.
+Tue May 16 23:28:25, Info:  Writing wave field at time 10.75. Done.
+Tue May 16 23:28:25, Info:  Writing free surface at time 10.75.
+Tue May 16 23:28:25, Info:  Writing free surface at time 10.75. Done.
+Tue May 16 23:28:25, Info:  Performance since the start: 0.382104 TFLOP/s (rank 0: 46.1522 GFLOP/s, average over ranks: 47.763 GFLOP/s) 
+Tue May 16 23:28:25, Info:  Performance since last sync point: 0.960419 TFLOP/s (rank 0: 105.005 GFLOP/s, average over ranks: 120.052 GFLOP/s) 
+Tue May 16 23:28:34, Info:  Waiting for last wave field. 
+Tue May 16 23:28:34, Info:  Writing wave field at time 10.8.
+Tue May 16 23:29:28, Info:  Writing wave field at time 10.8. Done.
+Tue May 16 23:29:28, Info:  Writing free surface at time 10.8.
+Tue May 16 23:29:28, Info:  Writing free surface at time 10.8. Done.
+Tue May 16 23:29:35, Info:  Performance since the start: 0.383163 TFLOP/s (rank 0: 46.2751 GFLOP/s, average over ranks: 47.8954 GFLOP/s) 
+Tue May 16 23:29:35, Info:  Performance since last sync point: 1.10232 TFLOP/s (rank 0: 108.223 GFLOP/s, average over ranks: 137.791 GFLOP/s) 
+Tue May 16 23:29:45, Info:  Waiting for last wave field. 
+Tue May 16 23:29:45, Info:  Writing wave field at time 10.85.
+Tue May 16 23:30:58, Info:  Writing wave field at time 10.85. Done.
+Tue May 16 23:30:58, Info:  Writing free surface at time 10.85.
+Tue May 16 23:30:58, Info:  Writing free surface at time 10.85. Done.
+Tue May 16 23:31:21, Info:  Performance since the start: 0.383602 TFLOP/s (rank 0: 46.358 GFLOP/s, average over ranks: 47.9503 GFLOP/s) 
+Tue May 16 23:31:21, Info:  Performance since last sync point: 0.522604 TFLOP/s (rank 0: 75.6484 GFLOP/s, average over ranks: 65.3255 GFLOP/s) 
+Tue May 16 23:31:31, Info:  Waiting for last wave field. 
+Tue May 16 23:31:31, Info:  Writing wave field at time 10.9.
+Tue May 16 23:32:22, Info:  Writing wave field at time 10.9. Done.
+Tue May 16 23:32:22, Info:  Writing free surface at time 10.9.
+Tue May 16 23:32:22, Info:  Writing free surface at time 10.9. Done.
+Tue May 16 23:32:22, Info:  Performance since the start: 0.384557 TFLOP/s (rank 0: 46.4487 GFLOP/s, average over ranks: 48.0697 GFLOP/s) 
+Tue May 16 23:32:22, Info:  Performance since last sync point: 0.8564 TFLOP/s (rank 0: 80.6875 GFLOP/s, average over ranks: 107.05 GFLOP/s) 
+Tue May 16 23:32:31, Info:  Waiting for last wave field. 
+Tue May 16 23:32:31, Info:  Writing wave field at time 10.95.
+Tue May 16 23:33:09, Info:  Writing wave field at time 10.95. Done.
+Tue May 16 23:33:09, Info:  Writing free surface at time 10.95.
+Tue May 16 23:33:09, Info:  Writing free surface at time 10.95. Done.
+Tue May 16 23:33:09, Info:  Performance since the start: 0.385783 TFLOP/s (rank 0: 46.5936 GFLOP/s, average over ranks: 48.2229 GFLOP/s) 
+Tue May 16 23:33:09, Info:  Performance since last sync point: 1.30935 TFLOP/s (rank 0: 145.632 GFLOP/s, average over ranks: 163.669 GFLOP/s) 
+Tue May 16 23:33:19, Info:  Waiting for last wave field. 
+Tue May 16 23:33:19, Info:  Writing wave field at time 11.
+Tue May 16 23:34:12, Info:  Writing wave field at time 11. Done.
+Tue May 16 23:34:12, Info:  Writing free surface at time 11.
+Tue May 16 23:34:12, Info:  Writing free surface at time 11. Done.
+Tue May 16 23:34:18, Info:  Performance since the start: 0.386802 TFLOP/s (rank 0: 46.7146 GFLOP/s, average over ranks: 48.3502 GFLOP/s) 
+Tue May 16 23:34:18, Info:  Performance since last sync point: 0.942933 TFLOP/s (rank 0: 108.347 GFLOP/s, average over ranks: 117.867 GFLOP/s) 
+Tue May 16 23:34:28, Info:  Waiting for last wave field. 
+Tue May 16 23:34:28, Info:  Writing wave field at time 11.05.
+Tue May 16 23:35:26, Info:  Writing wave field at time 11.05. Done.
+Tue May 16 23:35:26, Info:  Writing free surface at time 11.05.
+Tue May 16 23:35:26, Info:  Writing free surface at time 11.05. Done.
+Tue May 16 23:35:39, Info:  Performance since the start: 0.387654 TFLOP/s (rank 0: 46.8186 GFLOP/s, average over ranks: 48.4568 GFLOP/s) 
+Tue May 16 23:35:39, Info:  Performance since last sync point: 0.759871 TFLOP/s (rank 0: 91.7542 GFLOP/s, average over ranks: 94.9838 GFLOP/s) 
+Tue May 16 23:35:49, Info:  Waiting for last wave field. 
+Tue May 16 23:35:49, Info:  Writing wave field at time 11.1.
+Tue May 16 23:36:35, Info:  Writing wave field at time 11.1. Done.
+Tue May 16 23:36:35, Info:  Writing free surface at time 11.1.
+Tue May 16 23:36:35, Info:  Writing free surface at time 11.1. Done.
+Tue May 16 23:36:51, Info:  Performance since the start: 0.388433 TFLOP/s (rank 0: 46.9291 GFLOP/s, average over ranks: 48.5542 GFLOP/s) 
+Tue May 16 23:36:51, Info:  Performance since last sync point: 0.722285 TFLOP/s (rank 0: 98.0841 GFLOP/s, average over ranks: 90.2856 GFLOP/s) 
+Tue May 16 23:37:01, Info:  Waiting for last wave field. 
+Tue May 16 23:37:01, Info:  Writing wave field at time 11.15.
+Tue May 16 23:37:26, Info:  Writing wave field at time 11.15. Done.
+Tue May 16 23:37:26, Info:  Writing free surface at time 11.15.
+Tue May 16 23:37:26, Info:  Writing free surface at time 11.15. Done.
+Tue May 16 23:37:28, Info:  Performance since the start: 0.389642 TFLOP/s (rank 0: 47.0655 GFLOP/s, average over ranks: 48.7053 GFLOP/s) 
+Tue May 16 23:37:28, Info:  Performance since last sync point: 1.30337 TFLOP/s (rank 0: 132.734 GFLOP/s, average over ranks: 162.921 GFLOP/s) 
+Tue May 16 23:37:38, Info:  Waiting for last wave field. 
+Tue May 16 23:37:38, Info:  Writing wave field at time 11.2.
+Tue May 16 23:38:14, Info:  Writing wave field at time 11.2. Done.
+Tue May 16 23:38:14, Info:  Writing free surface at time 11.2.
+Tue May 16 23:38:14, Info:  Writing free surface at time 11.2. Done.
+Tue May 16 23:38:20, Info:  Performance since the start: 0.390832 TFLOP/s (rank 0: 47.2066 GFLOP/s, average over ranks: 48.854 GFLOP/s) 
+Tue May 16 23:38:20, Info:  Performance since last sync point: 1.28036 TFLOP/s (rank 0: 142.355 GFLOP/s, average over ranks: 160.045 GFLOP/s) 
+Tue May 16 23:38:30, Info:  Waiting for last wave field. 
+Tue May 16 23:38:30, Info:  Writing wave field at time 11.25.
+Tue May 16 23:38:48, Info:  Writing wave field at time 11.25. Done.
+Tue May 16 23:38:48, Info:  Writing free surface at time 11.25.
+Tue May 16 23:38:48, Info:  Writing free surface at time 11.25. Done.
+Tue May 16 23:39:01, Info:  Performance since the start: 0.39207 TFLOP/s (rank 0: 47.3677 GFLOP/s, average over ranks: 49.0087 GFLOP/s) 
+Tue May 16 23:39:01, Info:  Performance since last sync point: 1.37725 TFLOP/s (rank 0: 201.116 GFLOP/s, average over ranks: 172.156 GFLOP/s) 
+Tue May 16 23:39:11, Info:  Waiting for last wave field. 
+Tue May 16 23:39:11, Info:  Writing wave field at time 11.3.
+Tue May 16 23:40:28, Info:  Writing wave field at time 11.3. Done.
+Tue May 16 23:40:28, Info:  Writing free surface at time 11.3.
+Tue May 16 23:40:28, Info:  Writing free surface at time 11.3. Done.
+Tue May 16 23:40:38, Info:  Performance since the start: 0.392808 TFLOP/s (rank 0: 47.4322 GFLOP/s, average over ranks: 49.101 GFLOP/s) 
+Tue May 16 23:40:38, Info:  Performance since last sync point: 0.79014 TFLOP/s (rank 0: 68.4025 GFLOP/s, average over ranks: 98.7675 GFLOP/s) 
+Tue May 16 23:40:47, Info:  Waiting for last wave field. 
+Tue May 16 23:40:47, Info:  Writing wave field at time 11.35.
+Tue May 16 23:41:41, Info:  Writing wave field at time 11.35. Done.
+Tue May 16 23:41:41, Info:  Writing free surface at time 11.35.
+Tue May 16 23:41:41, Info:  Writing free surface at time 11.35. Done.
+Tue May 16 23:41:47, Info:  Performance since the start: 0.39358 TFLOP/s (rank 0: 47.5346 GFLOP/s, average over ranks: 49.1974 GFLOP/s) 
+Tue May 16 23:41:47, Info:  Performance since last sync point: 0.729702 TFLOP/s (rank 0: 92.8439 GFLOP/s, average over ranks: 91.2128 GFLOP/s) 
+Tue May 16 23:41:57, Info:  Waiting for last wave field. 
+Tue May 16 23:41:57, Info:  Writing wave field at time 11.4.
+Tue May 16 23:42:43, Info:  Writing wave field at time 11.4. Done.
+Tue May 16 23:42:43, Info:  Writing free surface at time 11.4.
+Tue May 16 23:42:43, Info:  Writing free surface at time 11.4. Done.
+Tue May 16 23:42:50, Info:  Performance since the start: 0.394521 TFLOP/s (rank 0: 47.6523 GFLOP/s, average over ranks: 49.3152 GFLOP/s) 
+Tue May 16 23:42:50, Info:  Performance since last sync point: 0.866314 TFLOP/s (rank 0: 108.822 GFLOP/s, average over ranks: 108.289 GFLOP/s) 
+Tue May 16 23:43:00, Info:  Waiting for last wave field. 
+Tue May 16 23:43:00, Info:  Writing wave field at time 11.45.
+Tue May 16 23:43:32, Info:  Writing wave field at time 11.45. Done.
+Tue May 16 23:43:32, Info:  Writing free surface at time 11.45.
+Tue May 16 23:43:32, Info:  Writing free surface at time 11.45. Done.
+Tue May 16 23:43:45, Info:  Performance since the start: 0.395583 TFLOP/s (rank 0: 47.7904 GFLOP/s, average over ranks: 49.4479 GFLOP/s) 
+Tue May 16 23:43:45, Info:  Performance since last sync point: 1.03231 TFLOP/s (rank 0: 140.802 GFLOP/s, average over ranks: 129.039 GFLOP/s) 
+Tue May 16 23:43:54, Info:  Waiting for last wave field. 
+Tue May 16 23:43:54, Info:  Writing wave field at time 11.5.
+Tue May 16 23:44:29, Info:  Writing wave field at time 11.5. Done.
+Tue May 16 23:44:29, Info:  Writing free surface at time 11.5.
+Tue May 16 23:44:29, Info:  Writing free surface at time 11.5. Done.
+Tue May 16 23:44:37, Info:  Performance since the start: 0.396633 TFLOP/s (rank 0: 47.9153 GFLOP/s, average over ranks: 49.5792 GFLOP/s) 
+Tue May 16 23:44:37, Info:  Performance since last sync point: 1.0181 TFLOP/s (rank 0: 119.38 GFLOP/s, average over ranks: 127.263 GFLOP/s) 
+Tue May 16 23:44:46, Info:  Waiting for last wave field. 
+Tue May 16 23:44:46, Info:  Writing wave field at time 11.55.
+Tue May 16 23:45:06, Info:  Writing wave field at time 11.55. Done.
+Tue May 16 23:45:06, Info:  Writing free surface at time 11.55.
+Tue May 16 23:45:06, Info:  Writing free surface at time 11.55. Done.
+Tue May 16 23:45:20, Info:  Performance since the start: 0.397866 TFLOP/s (rank 0: 48.0694 GFLOP/s, average over ranks: 49.7332 GFLOP/s) 
+Tue May 16 23:45:20, Info:  Performance since last sync point: 1.40229 TFLOP/s (rank 0: 184.39 GFLOP/s, average over ranks: 175.286 GFLOP/s) 
+Tue May 16 23:45:30, Info:  Waiting for last wave field. 
+Tue May 16 23:45:30, Info:  Writing wave field at time 11.6.
+Tue May 16 23:45:55, Info:  Writing wave field at time 11.6. Done.
+Tue May 16 23:45:55, Info:  Writing free surface at time 11.6.
+Tue May 16 23:45:55, Info:  Writing free surface at time 11.6. Done.
+Tue May 16 23:46:14, Info:  Performance since the start: 0.398973 TFLOP/s (rank 0: 48.2048 GFLOP/s, average over ranks: 49.8717 GFLOP/s) 
+Tue May 16 23:46:14, Info:  Performance since last sync point: 1.1247 TFLOP/s (rank 0: 138.05 GFLOP/s, average over ranks: 140.587 GFLOP/s) 
+Tue May 16 23:46:24, Info:  Waiting for last wave field. 
+Tue May 16 23:46:24, Info:  Writing wave field at time 11.65.
+Tue May 16 23:47:02, Info:  Writing wave field at time 11.65. Done.
+Tue May 16 23:47:02, Info:  Writing free surface at time 11.65.
+Tue May 16 23:47:02, Info:  Writing free surface at time 11.65. Done.
+Tue May 16 23:47:02, Info:  Performance since the start: 0.400004 TFLOP/s (rank 0: 48.3142 GFLOP/s, average over ranks: 50.0005 GFLOP/s) 
+Tue May 16 23:47:02, Info:  Performance since last sync point: 1.0202 TFLOP/s (rank 0: 102.022 GFLOP/s, average over ranks: 127.525 GFLOP/s) 
+Tue May 16 23:47:12, Info:  Waiting for last wave field. 
+Tue May 16 23:47:12, Info:  Writing wave field at time 11.7.
+Tue May 16 23:47:39, Info:  Writing wave field at time 11.7. Done.
+Tue May 16 23:47:39, Info:  Writing free surface at time 11.7.
+Tue May 16 23:47:39, Info:  Writing free surface at time 11.7. Done.
+Tue May 16 23:47:57, Info:  Performance since the start: 0.401165 TFLOP/s (rank 0: 48.466 GFLOP/s, average over ranks: 50.1456 GFLOP/s) 
+Tue May 16 23:47:57, Info:  Performance since last sync point: 1.28809 TFLOP/s (rank 0: 180.973 GFLOP/s, average over ranks: 161.011 GFLOP/s) 
+Tue May 16 23:48:06, Info:  Waiting for last wave field. 
+Tue May 16 23:48:06, Info:  Writing wave field at time 11.75.
+Tue May 16 23:48:49, Info:  Writing wave field at time 11.75. Done.
+Tue May 16 23:48:49, Info:  Writing free surface at time 11.75.
+Tue May 16 23:48:49, Info:  Writing free surface at time 11.75. Done.
+Tue May 16 23:48:49, Info:  Performance since the start: 0.402131 TFLOP/s (rank 0: 48.5704 GFLOP/s, average over ranks: 50.2663 GFLOP/s) 
+Tue May 16 23:48:49, Info:  Performance since last sync point: 0.949955 TFLOP/s (rank 0: 97.9375 GFLOP/s, average over ranks: 118.744 GFLOP/s) 
+Tue May 16 23:48:58, Info:  Waiting for last wave field. 
+Tue May 16 23:48:58, Info:  Writing wave field at time 11.8.
+Tue May 16 23:49:28, Info:  Writing wave field at time 11.8. Done.
+Tue May 16 23:49:28, Info:  Writing free surface at time 11.8.
+Tue May 16 23:49:28, Info:  Writing free surface at time 11.8. Done.
+Tue May 16 23:49:38, Info:  Performance since the start: 0.403296 TFLOP/s (rank 0: 48.7189 GFLOP/s, average over ranks: 50.412 GFLOP/s) 
+Tue May 16 23:49:38, Info:  Performance since last sync point: 1.29569 TFLOP/s (rank 0: 173.193 GFLOP/s, average over ranks: 161.961 GFLOP/s) 
+Tue May 16 23:49:48, Info:  Waiting for last wave field. 
+Tue May 16 23:49:48, Info:  Writing wave field at time 11.85.
+Tue May 16 23:50:54, Info:  Writing wave field at time 11.85. Done.
+Tue May 16 23:50:54, Info:  Writing free surface at time 11.85.
+Tue May 16 23:50:54, Info:  Writing free surface at time 11.85. Done.
+Tue May 16 23:50:54, Info:  Performance since the start: 0.404161 TFLOP/s (rank 0: 48.7991 GFLOP/s, average over ranks: 50.5201 GFLOP/s) 
+Tue May 16 23:50:54, Info:  Performance since last sync point: 0.895271 TFLOP/s (rank 0: 79.7475 GFLOP/s, average over ranks: 111.909 GFLOP/s) 
+Tue May 16 23:51:04, Info:  Waiting for last wave field. 
+Tue May 16 23:51:04, Info:  Writing wave field at time 11.9.
+Tue May 16 23:51:18, Info:  Writing wave field at time 11.9. Done.
+Tue May 16 23:51:18, Info:  Writing free surface at time 11.9.
+Tue May 16 23:51:18, Info:  Writing free surface at time 11.9. Done.
+Tue May 16 23:51:25, Info:  Performance since the start: 0.405367 TFLOP/s (rank 0: 48.9693 GFLOP/s, average over ranks: 50.6709 GFLOP/s) 
+Tue May 16 23:51:25, Info:  Performance since last sync point: 1.6838 TFLOP/s (rank 0: 283.155 GFLOP/s, average over ranks: 210.475 GFLOP/s) 
+Tue May 16 23:51:34, Info:  Waiting for last wave field. 
+Tue May 16 23:51:34, Info:  Writing wave field at time 11.95.
+Tue May 16 23:52:10, Info:  Writing wave field at time 11.95. Done.
+Tue May 16 23:52:10, Info:  Writing free surface at time 11.95.
+Tue May 16 23:52:10, Info:  Writing free surface at time 11.95. Done.
+Tue May 16 23:52:10, Info:  Performance since the start: 0.406475 TFLOP/s (rank 0: 49.0967 GFLOP/s, average over ranks: 50.8093 GFLOP/s) 
+Tue May 16 23:52:10, Info:  Performance since last sync point: 1.17423 TFLOP/s (rank 0: 128.818 GFLOP/s, average over ranks: 146.778 GFLOP/s) 
+Tue May 16 23:52:20, Info:  Waiting for last wave field. 
+Tue May 16 23:52:20, Info:  Writing wave field at time 12.
+Tue May 16 23:52:57, Info:  Writing wave field at time 12. Done.
+Tue May 16 23:52:57, Info:  Writing free surface at time 12.
+Tue May 16 23:52:57, Info:  Writing free surface at time 12. Done.
+Tue May 16 23:53:08, Info:  Performance since the start: 0.407494 TFLOP/s (rank 0: 49.2323 GFLOP/s, average over ranks: 50.9367 GFLOP/s) 
+Tue May 16 23:53:08, Info:  Performance since last sync point: 1.02659 TFLOP/s (rank 0: 144.789 GFLOP/s, average over ranks: 128.324 GFLOP/s) 
+Tue May 16 23:53:18, Info:  Waiting for last wave field. 
+Tue May 16 23:53:18, Info:  Writing wave field at time 12.05.
+Tue May 16 23:53:28, Info:  Writing wave field at time 12.05. Done.
+Tue May 16 23:53:28, Info:  Writing free surface at time 12.05.
+Tue May 16 23:53:28, Info:  Writing free surface at time 12.05. Done.
+Tue May 16 23:53:41, Info:  Performance since the start: 0.408824 TFLOP/s (rank 0: 49.3925 GFLOP/s, average over ranks: 51.103 GFLOP/s) 
+Tue May 16 23:53:41, Info:  Performance since last sync point: 1.9074 TFLOP/s (rank 0: 225.558 GFLOP/s, average over ranks: 238.425 GFLOP/s) 
+Tue May 16 23:53:50, Info:  Waiting for last wave field. 
+Tue May 16 23:53:50, Info:  Writing wave field at time 12.1.
+Tue May 16 23:54:24, Info:  Writing wave field at time 12.1. Done.
+Tue May 16 23:54:24, Info:  Writing free surface at time 12.1.
+Tue May 16 23:54:24, Info:  Writing free surface at time 12.1. Done.
+Tue May 16 23:54:24, Info:  Performance since the start: 0.409948 TFLOP/s (rank 0: 49.5127 GFLOP/s, average over ranks: 51.2435 GFLOP/s) 
+Tue May 16 23:54:24, Info:  Performance since last sync point: 1.23402 TFLOP/s (rank 0: 119.747 GFLOP/s, average over ranks: 154.253 GFLOP/s) 
+Tue May 16 23:54:34, Info:  Waiting for last wave field. 
+Tue May 16 23:54:34, Info:  Writing wave field at time 12.15.
+Tue May 16 23:55:06, Info:  Writing wave field at time 12.15. Done.
+Tue May 16 23:55:06, Info:  Writing free surface at time 12.15.
+Tue May 16 23:55:06, Info:  Writing free surface at time 12.15. Done.
+Tue May 16 23:55:19, Info:  Performance since the start: 0.411028 TFLOP/s (rank 0: 49.6554 GFLOP/s, average over ranks: 51.3785 GFLOP/s) 
+Tue May 16 23:55:19, Info:  Performance since last sync point: 1.15693 TFLOP/s (rank 0: 164.257 GFLOP/s, average over ranks: 144.616 GFLOP/s) 
+Tue May 16 23:55:29, Info:  Waiting for last wave field. 
+Tue May 16 23:55:29, Info:  Writing wave field at time 12.2.
+Tue May 16 23:56:08, Info:  Writing wave field at time 12.2. Done.
+Tue May 16 23:56:08, Info:  Writing free surface at time 12.2.
+Tue May 16 23:56:08, Info:  Writing free surface at time 12.2. Done.
+Tue May 16 23:56:15, Info:  Performance since the start: 0.412055 TFLOP/s (rank 0: 49.7666 GFLOP/s, average over ranks: 51.5069 GFLOP/s) 
+Tue May 16 23:56:15, Info:  Performance since last sync point: 1.07312 TFLOP/s (rank 0: 109.171 GFLOP/s, average over ranks: 134.141 GFLOP/s) 
+Tue May 16 23:56:24, Info:  Waiting for last wave field. 
+Tue May 16 23:56:24, Info:  Writing wave field at time 12.25.
+Tue May 16 23:56:47, Info:  Writing wave field at time 12.25. Done.
+Tue May 16 23:56:47, Info:  Writing free surface at time 12.25.
+Tue May 16 23:56:47, Info:  Writing free surface at time 12.25. Done.
+Tue May 16 23:57:01, Info:  Performance since the start: 0.413139 TFLOP/s (rank 0: 49.9131 GFLOP/s, average over ranks: 51.6424 GFLOP/s) 
+Tue May 16 23:57:01, Info:  Performance since last sync point: 1.1976 TFLOP/s (rank 0: 177.129 GFLOP/s, average over ranks: 149.7 GFLOP/s) 
+Tue May 16 23:57:10, Info:  Waiting for last wave field. 
+Tue May 16 23:57:10, Info:  Writing wave field at time 12.3.
+Tue May 16 23:57:57, Info:  Writing wave field at time 12.3. Done.
+Tue May 16 23:57:57, Info:  Writing free surface at time 12.3.
+Tue May 16 23:57:57, Info:  Writing free surface at time 12.3. Done.
+Tue May 16 23:58:23, Info:  Performance since the start: 0.413866 TFLOP/s (rank 0: 50.0109 GFLOP/s, average over ranks: 51.7333 GFLOP/s) 
+Tue May 16 23:58:23, Info:  Performance since last sync point: 0.730459 TFLOP/s (rank 0: 96.2043 GFLOP/s, average over ranks: 91.3074 GFLOP/s) 
+Tue May 16 23:58:32, Info:  Waiting for last wave field. 
+Tue May 16 23:58:32, Info:  Writing wave field at time 12.35.
+Tue May 16 23:59:42, Info:  Writing wave field at time 12.35. Done.
+Tue May 16 23:59:42, Info:  Writing free surface at time 12.35.
+Tue May 16 23:59:42, Info:  Writing free surface at time 12.35. Done.
+Tue May 16 23:59:50, Info:  Performance since the start: 0.414512 TFLOP/s (rank 0: 50.0586 GFLOP/s, average over ranks: 51.814 GFLOP/s) 
+Tue May 16 23:59:50, Info:  Performance since last sync point: 0.706368 TFLOP/s (rank 0: 65.4046 GFLOP/s, average over ranks: 88.296 GFLOP/s) 
+Wed May 17 00:00:00, Info:  Waiting for last wave field. 
+Wed May 17 00:00:00, Info:  Writing wave field at time 12.4.
+Wed May 17 00:00:28, Info:  Writing wave field at time 12.4. Done.
+Wed May 17 00:00:28, Info:  Writing free surface at time 12.4.
+Wed May 17 00:00:28, Info:  Writing free surface at time 12.4. Done.
+Wed May 17 00:00:37, Info:  Performance since the start: 0.415504 TFLOP/s (rank 0: 50.1919 GFLOP/s, average over ranks: 51.938 GFLOP/s) 
+Wed May 17 00:00:37, Info:  Performance since last sync point: 1.08113 TFLOP/s (rank 0: 146.641 GFLOP/s, average over ranks: 135.141 GFLOP/s) 
+Wed May 17 00:00:46, Info:  Waiting for last wave field. 
+Wed May 17 00:00:46, Info:  Writing wave field at time 12.45.
+Wed May 17 00:01:09, Info:  Writing wave field at time 12.45. Done.
+Wed May 17 00:01:09, Info:  Writing free surface at time 12.45.
+Wed May 17 00:01:09, Info:  Writing free surface at time 12.45. Done.
+Wed May 17 00:01:14, Info:  Performance since the start: 0.416692 TFLOP/s (rank 0: 50.3327 GFLOP/s, average over ranks: 52.0866 GFLOP/s) 
+Wed May 17 00:01:14, Info:  Performance since last sync point: 1.43627 TFLOP/s (rank 0: 165.356 GFLOP/s, average over ranks: 179.534 GFLOP/s) 
+Wed May 17 00:01:24, Info:  Waiting for last wave field. 
+Wed May 17 00:01:24, Info:  Writing wave field at time 12.5.
+Wed May 17 00:02:17, Info:  Writing wave field at time 12.5. Done.
+Wed May 17 00:02:17, Info:  Writing free surface at time 12.5.
+Wed May 17 00:02:17, Info:  Writing free surface at time 12.5. Done.
+Wed May 17 00:02:26, Info:  Performance since the start: 0.417543 TFLOP/s (rank 0: 50.4332 GFLOP/s, average over ranks: 52.1929 GFLOP/s) 
+Wed May 17 00:02:26, Info:  Performance since last sync point: 0.861186 TFLOP/s (rank 0: 100.293 GFLOP/s, average over ranks: 107.648 GFLOP/s) 
+Wed May 17 00:02:36, Info:  Waiting for last wave field. 
+Wed May 17 00:02:36, Info:  Writing wave field at time 12.55.
+Wed May 17 00:03:23, Info:  Writing wave field at time 12.55. Done.
+Wed May 17 00:03:23, Info:  Writing free surface at time 12.55.
+Wed May 17 00:03:23, Info:  Writing free surface at time 12.55. Done.
+Wed May 17 00:03:45, Info:  Performance since the start: 0.418211 TFLOP/s (rank 0: 50.5361 GFLOP/s, average over ranks: 52.2764 GFLOP/s) 
+Wed May 17 00:03:45, Info:  Performance since last sync point: 0.71174 TFLOP/s (rank 0: 103.181 GFLOP/s, average over ranks: 88.9675 GFLOP/s) 
+Wed May 17 00:03:55, Info:  Waiting for last wave field. 
+Wed May 17 00:03:55, Info:  Writing wave field at time 12.6.
+Wed May 17 00:04:35, Info:  Writing wave field at time 12.6. Done.
+Wed May 17 00:04:35, Info:  Writing free surface at time 12.6.
+Wed May 17 00:04:35, Info:  Writing free surface at time 12.6. Done.
+Wed May 17 00:04:46, Info:  Performance since the start: 0.419128 TFLOP/s (rank 0: 50.6294 GFLOP/s, average over ranks: 52.3911 GFLOP/s) 
+Wed May 17 00:04:46, Info:  Performance since last sync point: 0.9491 TFLOP/s (rank 0: 94.3304 GFLOP/s, average over ranks: 118.638 GFLOP/s) 
+Wed May 17 00:04:55, Info:  Waiting for last wave field. 
+Wed May 17 00:04:55, Info:  Writing wave field at time 12.65.
+Wed May 17 00:06:06, Info:  Writing wave field at time 12.65. Done.
+Wed May 17 00:06:06, Info:  Writing free surface at time 12.65.
+Wed May 17 00:06:06, Info:  Writing free surface at time 12.65. Done.
+Wed May 17 00:06:15, Info:  Performance since the start: 0.419815 TFLOP/s (rank 0: 50.6948 GFLOP/s, average over ranks: 52.4768 GFLOP/s) 
+Wed May 17 00:06:15, Info:  Performance since last sync point: 0.771466 TFLOP/s (rank 0: 75.1478 GFLOP/s, average over ranks: 96.4332 GFLOP/s) 
+Wed May 17 00:06:24, Info:  Waiting for last wave field. 
+Wed May 17 00:06:24, Info:  Writing wave field at time 12.7.
+Wed May 17 00:07:31, Info:  Writing wave field at time 12.7. Done.
+Wed May 17 00:07:31, Info:  Writing free surface at time 12.7.
+Wed May 17 00:07:31, Info:  Writing free surface at time 12.7. Done.
+Wed May 17 00:07:34, Info:  Performance since the start: 0.420435 TFLOP/s (rank 0: 50.7681 GFLOP/s, average over ranks: 52.5544 GFLOP/s) 
+Wed May 17 00:07:34, Info:  Performance since last sync point: 0.674188 TFLOP/s (rank 0: 80.0872 GFLOP/s, average over ranks: 84.2735 GFLOP/s) 
+Wed May 17 00:07:44, Info:  Waiting for last wave field. 
+Wed May 17 00:07:44, Info:  Writing wave field at time 12.75.
+Wed May 17 00:08:07, Info:  Writing wave field at time 12.75. Done.
+Wed May 17 00:08:07, Info:  Writing free surface at time 12.75.
+Wed May 17 00:08:07, Info:  Writing free surface at time 12.75. Done.
+Wed May 17 00:08:32, Info:  Performance since the start: 0.421384 TFLOP/s (rank 0: 50.9131 GFLOP/s, average over ranks: 52.673 GFLOP/s) 
+Wed May 17 00:08:32, Info:  Performance since last sync point: 1.0549 TFLOP/s (rank 0: 185.314 GFLOP/s, average over ranks: 131.863 GFLOP/s) 
+Wed May 17 00:08:41, Info:  Waiting for last wave field. 
+Wed May 17 00:08:41, Info:  Writing wave field at time 12.8.
+Wed May 17 00:09:58, Info:  Writing wave field at time 12.8. Done.
+Wed May 17 00:09:58, Info:  Writing free surface at time 12.8.
+Wed May 17 00:09:58, Info:  Writing free surface at time 12.8. Done.
+Wed May 17 00:10:07, Info:  Performance since the start: 0.421905 TFLOP/s (rank 0: 50.9471 GFLOP/s, average over ranks: 52.7381 GFLOP/s) 
+Wed May 17 00:10:07, Info:  Performance since last sync point: 0.638997 TFLOP/s (rank 0: 61.3939 GFLOP/s, average over ranks: 79.8747 GFLOP/s) 
+Wed May 17 00:10:16, Info:  Waiting for last wave field. 
+Wed May 17 00:10:16, Info:  Writing wave field at time 12.85.
+Wed May 17 00:11:13, Info:  Writing wave field at time 12.85. Done.
+Wed May 17 00:11:13, Info:  Writing free surface at time 12.85.
+Wed May 17 00:11:13, Info:  Writing free surface at time 12.85. Done.
+Wed May 17 00:11:16, Info:  Performance since the start: 0.422599 TFLOP/s (rank 0: 51.0348 GFLOP/s, average over ranks: 52.8249 GFLOP/s) 
+Wed May 17 00:11:16, Info:  Performance since last sync point: 0.744644 TFLOP/s (rank 0: 91.2515 GFLOP/s, average over ranks: 93.0804 GFLOP/s) 
+Wed May 17 00:11:25, Info:  Waiting for last wave field. 
+Wed May 17 00:11:25, Info:  Writing wave field at time 12.9.
+Wed May 17 00:12:36, Info:  Writing wave field at time 12.9. Done.
+Wed May 17 00:12:36, Info:  Writing free surface at time 12.9.
+Wed May 17 00:12:36, Info:  Writing free surface at time 12.9. Done.
+Wed May 17 00:12:43, Info:  Performance since the start: 0.423194 TFLOP/s (rank 0: 51.11 GFLOP/s, average over ranks: 52.8993 GFLOP/s) 
+Wed May 17 00:12:43, Info:  Performance since last sync point: 0.663482 TFLOP/s (rank 0: 82.2821 GFLOP/s, average over ranks: 82.9352 GFLOP/s) 
+Wed May 17 00:12:52, Info:  Waiting for last wave field. 
+Wed May 17 00:12:52, Info:  Writing wave field at time 12.95.
+Wed May 17 00:13:47, Info:  Writing wave field at time 12.95. Done.
+Wed May 17 00:13:47, Info:  Writing free surface at time 12.95.
+Wed May 17 00:13:47, Info:  Writing free surface at time 12.95. Done.
+Wed May 17 00:13:57, Info:  Performance since the start: 0.42392 TFLOP/s (rank 0: 51.2011 GFLOP/s, average over ranks: 52.99 GFLOP/s) 
+Wed May 17 00:13:57, Info:  Performance since last sync point: 0.760844 TFLOP/s (rank 0: 94.781 GFLOP/s, average over ranks: 95.1055 GFLOP/s) 
+Wed May 17 00:14:06, Info:  Waiting for last wave field. 
+Wed May 17 00:14:06, Info:  Writing wave field at time 13.
+Wed May 17 00:15:10, Info:  Writing wave field at time 13. Done.
+Wed May 17 00:15:10, Info:  Writing free surface at time 13.
+Wed May 17 00:15:10, Info:  Writing free surface at time 13. Done.
+Wed May 17 00:15:19, Info:  Performance since the start: 0.424611 TFLOP/s (rank 0: 51.2753 GFLOP/s, average over ranks: 53.0764 GFLOP/s) 
+Wed May 17 00:15:19, Info:  Performance since last sync point: 0.74843 TFLOP/s (rank 0: 82.061 GFLOP/s, average over ranks: 93.5538 GFLOP/s) 
+Wed May 17 00:15:28, Info:  Waiting for last wave field. 
+Wed May 17 00:15:28, Info:  Writing wave field at time 13.05.
+Wed May 17 00:16:32, Info:  Writing wave field at time 13.05. Done.
+Wed May 17 00:16:32, Info:  Writing free surface at time 13.05.
+Wed May 17 00:16:32, Info:  Writing free surface at time 13.05. Done.
+Wed May 17 00:16:37, Info:  Performance since the start: 0.425216 TFLOP/s (rank 0: 51.3514 GFLOP/s, average over ranks: 53.152 GFLOP/s) 
+Wed May 17 00:16:37, Info:  Performance since last sync point: 0.680359 TFLOP/s (rank 0: 83.6775 GFLOP/s, average over ranks: 85.0449 GFLOP/s) 
+Wed May 17 00:16:46, Info:  Waiting for last wave field. 
+Wed May 17 00:16:46, Info:  Writing wave field at time 13.1.
+Wed May 17 00:17:03, Info:  Writing wave field at time 13.1. Done.
+Wed May 17 00:17:03, Info:  Writing free surface at time 13.1.
+Wed May 17 00:17:03, Info:  Writing free surface at time 13.1. Done.
+Wed May 17 00:17:17, Info:  Performance since the start: 0.426281 TFLOP/s (rank 0: 51.501 GFLOP/s, average over ranks: 53.2852 GFLOP/s) 
+Wed May 17 00:17:17, Info:  Performance since last sync point: 1.34405 TFLOP/s (rank 0: 214.745 GFLOP/s, average over ranks: 168.006 GFLOP/s) 
+Wed May 17 00:17:26, Info:  Waiting for last wave field. 
+Wed May 17 00:17:26, Info:  Writing wave field at time 13.15.
+Wed May 17 00:18:21, Info:  Writing wave field at time 13.15. Done.
+Wed May 17 00:18:21, Info:  Writing free surface at time 13.15.
+Wed May 17 00:18:21, Info:  Writing free surface at time 13.15. Done.
+Wed May 17 00:18:41, Info:  Performance since the start: 0.426885 TFLOP/s (rank 0: 51.5828 GFLOP/s, average over ranks: 53.3607 GFLOP/s) 
+Wed May 17 00:18:41, Info:  Performance since last sync point: 0.680214 TFLOP/s (rank 0: 88.3094 GFLOP/s, average over ranks: 85.0267 GFLOP/s) 
+Wed May 17 00:18:50, Info:  Waiting for last wave field. 
+Wed May 17 00:18:50, Info:  Writing wave field at time 13.2.
+Wed May 17 00:19:27, Info:  Writing wave field at time 13.2. Done.
+Wed May 17 00:19:27, Info:  Writing free surface at time 13.2.
+Wed May 17 00:19:27, Info:  Writing free surface at time 13.2. Done.
+Wed May 17 00:19:27, Info:  Performance since the start: 0.427877 TFLOP/s (rank 0: 51.6796 GFLOP/s, average over ranks: 53.4846 GFLOP/s) 
+Wed May 17 00:19:27, Info:  Performance since last sync point: 1.12784 TFLOP/s (rank 0: 102.128 GFLOP/s, average over ranks: 140.979 GFLOP/s) 
+Wed May 17 00:19:37, Info:  Waiting for last wave field. 
+Wed May 17 00:19:37, Info:  Writing wave field at time 13.25.
+Wed May 17 00:19:45, Info:  Writing wave field at time 13.25. Done.
+Wed May 17 00:19:45, Info:  Writing free surface at time 13.25.
+Wed May 17 00:19:45, Info:  Writing free surface at time 13.25. Done.
+Wed May 17 00:20:07, Info:  Performance since the start: 0.429096 TFLOP/s (rank 0: 51.8484 GFLOP/s, average over ranks: 53.637 GFLOP/s) 
+Wed May 17 00:20:07, Info:  Performance since last sync point: 1.91908 TFLOP/s (rank 0: 376.629 GFLOP/s, average over ranks: 239.885 GFLOP/s) 
+Wed May 17 00:20:16, Info:  Waiting for last wave field. 
+Wed May 17 00:20:16, Info:  Writing wave field at time 13.3.
+Wed May 17 00:20:47, Info:  Writing wave field at time 13.3. Done.
+Wed May 17 00:20:47, Info:  Writing free surface at time 13.3.
+Wed May 17 00:20:47, Info:  Writing free surface at time 13.3. Done.
+Wed May 17 00:20:51, Info:  Performance since the start: 0.4301 TFLOP/s (rank 0: 51.9522 GFLOP/s, average over ranks: 53.7625 GFLOP/s) 
+Wed May 17 00:20:51, Info:  Performance since last sync point: 1.15327 TFLOP/s (rank 0: 110.585 GFLOP/s, average over ranks: 144.159 GFLOP/s) 
+Wed May 17 00:21:01, Info:  Waiting for last wave field. 
+Wed May 17 00:21:01, Info:  Writing wave field at time 13.35.
+Wed May 17 00:21:49, Info:  Writing wave field at time 13.35. Done.
+Wed May 17 00:21:49, Info:  Writing free surface at time 13.35.
+Wed May 17 00:21:49, Info:  Writing free surface at time 13.35. Done.
+Wed May 17 00:21:52, Info:  Performance since the start: 0.431032 TFLOP/s (rank 0: 52.0554 GFLOP/s, average over ranks: 53.879 GFLOP/s) 
+Wed May 17 00:21:52, Info:  Performance since last sync point: 1.05573 TFLOP/s (rank 0: 110.357 GFLOP/s, average over ranks: 131.966 GFLOP/s) 
+Wed May 17 00:22:01, Info:  Waiting for last wave field. 
+Wed May 17 00:22:01, Info:  Writing wave field at time 13.4.
+Wed May 17 00:22:43, Info:  Writing wave field at time 13.4. Done.
+Wed May 17 00:22:43, Info:  Writing free surface at time 13.4.
+Wed May 17 00:22:43, Info:  Writing free surface at time 13.4. Done.
+Wed May 17 00:22:43, Info:  Performance since the start: 0.431882 TFLOP/s (rank 0: 52.1687 GFLOP/s, average over ranks: 53.9852 GFLOP/s) 
+Wed May 17 00:22:43, Info:  Performance since last sync point: 0.967002 TFLOP/s (rank 0: 124.657 GFLOP/s, average over ranks: 120.875 GFLOP/s) 
+Wed May 17 00:22:53, Info:  Waiting for last wave field. 
+Wed May 17 00:22:53, Info:  Writing wave field at time 13.45.
+Wed May 17 00:23:13, Info:  Writing wave field at time 13.45. Done.
+Wed May 17 00:23:13, Info:  Writing free surface at time 13.45.
+Wed May 17 00:23:13, Info:  Writing free surface at time 13.45. Done.
+Wed May 17 00:23:29, Info:  Performance since the start: 0.433036 TFLOP/s (rank 0: 52.3193 GFLOP/s, average over ranks: 54.1295 GFLOP/s) 
+Wed May 17 00:23:29, Info:  Performance since last sync point: 1.6562 TFLOP/s (rank 0: 231.012 GFLOP/s, average over ranks: 207.024 GFLOP/s) 
+Wed May 17 00:23:39, Info:  Waiting for last wave field. 
+Wed May 17 00:23:39, Info:  Writing wave field at time 13.5.
+Wed May 17 00:24:28, Info:  Writing wave field at time 13.5. Done.
+Wed May 17 00:24:28, Info:  Writing free surface at time 13.5.
+Wed May 17 00:24:28, Info:  Writing free surface at time 13.5. Done.
+Wed May 17 00:24:36, Info:  Performance since the start: 0.433841 TFLOP/s (rank 0: 52.4014 GFLOP/s, average over ranks: 54.2301 GFLOP/s) 
+Wed May 17 00:24:36, Info:  Performance since last sync point: 0.885167 TFLOP/s (rank 0: 90.632 GFLOP/s, average over ranks: 110.646 GFLOP/s) 
+Wed May 17 00:24:46, Info:  Waiting for last wave field. 
+Wed May 17 00:24:46, Info:  Writing wave field at time 13.55.
+Wed May 17 00:25:29, Info:  Writing wave field at time 13.55. Done.
+Wed May 17 00:25:29, Info:  Writing free surface at time 13.55.
+Wed May 17 00:25:29, Info:  Writing free surface at time 13.55. Done.
+Wed May 17 00:25:40, Info:  Performance since the start: 0.434581 TFLOP/s (rank 0: 52.5032 GFLOP/s, average over ranks: 54.3226 GFLOP/s) 
+Wed May 17 00:25:40, Info:  Performance since last sync point: 0.825707 TFLOP/s (rank 0: 110.497 GFLOP/s, average over ranks: 103.213 GFLOP/s) 
+Wed May 17 00:25:50, Info:  Waiting for last wave field. 
+Wed May 17 00:25:50, Info:  Writing wave field at time 13.6.
+Wed May 17 00:25:59, Info:  Writing wave field at time 13.6. Done.
+Wed May 17 00:25:59, Info:  Writing free surface at time 13.6.
+Wed May 17 00:25:59, Info:  Writing free surface at time 13.6. Done.
+Wed May 17 00:26:16, Info:  Performance since the start: 0.435777 TFLOP/s (rank 0: 52.6521 GFLOP/s, average over ranks: 54.4722 GFLOP/s) 
+Wed May 17 00:26:16, Info:  Performance since last sync point: 1.72606 TFLOP/s (rank 0: 227.25 GFLOP/s, average over ranks: 215.757 GFLOP/s) 
+Wed May 17 00:26:25, Info:  Waiting for last wave field. 
+Wed May 17 00:26:25, Info:  Writing wave field at time 13.65.
+Wed May 17 00:26:39, Info:  Writing wave field at time 13.65. Done.
+Wed May 17 00:26:39, Info:  Writing free surface at time 13.65.
+Wed May 17 00:26:39, Info:  Writing free surface at time 13.65. Done.
+Wed May 17 00:26:58, Info:  Performance since the start: 0.436846 TFLOP/s (rank 0: 52.7866 GFLOP/s, average over ranks: 54.6057 GFLOP/s) 
+Wed May 17 00:26:58, Info:  Performance since last sync point: 1.31846 TFLOP/s (rank 0: 172.994 GFLOP/s, average over ranks: 164.808 GFLOP/s) 
+Wed May 17 00:27:07, Info:  Waiting for last wave field. 
+Wed May 17 00:27:07, Info:  Writing wave field at time 13.7.
+Wed May 17 00:27:31, Info:  Writing wave field at time 13.7. Done.
+Wed May 17 00:27:31, Info:  Writing free surface at time 13.7.
+Wed May 17 00:27:31, Info:  Writing free surface at time 13.7. Done.
+Wed May 17 00:27:41, Info:  Performance since the start: 0.437912 TFLOP/s (rank 0: 52.9011 GFLOP/s, average over ranks: 54.739 GFLOP/s) 
+Wed May 17 00:27:41, Info:  Performance since last sync point: 1.3487 TFLOP/s (rank 0: 129.804 GFLOP/s, average over ranks: 168.588 GFLOP/s) 
+Wed May 17 00:27:50, Info:  Waiting for last wave field. 
+Wed May 17 00:27:50, Info:  Writing wave field at time 13.75.
+Wed May 17 00:28:05, Info:  Writing wave field at time 13.75. Done.
+Wed May 17 00:28:05, Info:  Writing free surface at time 13.75.
+Wed May 17 00:28:05, Info:  Writing free surface at time 13.75. Done.
+Wed May 17 00:28:30, Info:  Performance since the start: 0.438981 TFLOP/s (rank 0: 53.0434 GFLOP/s, average over ranks: 54.8726 GFLOP/s) 
+Wed May 17 00:28:30, Info:  Performance since last sync point: 1.36322 TFLOP/s (rank 0: 201.727 GFLOP/s, average over ranks: 170.403 GFLOP/s) 
+Wed May 17 00:28:40, Info:  Waiting for last wave field. 
+Wed May 17 00:28:40, Info:  Writing wave field at time 13.8.
+Wed May 17 00:29:27, Info:  Writing wave field at time 13.8. Done.
+Wed May 17 00:29:27, Info:  Writing free surface at time 13.8.
+Wed May 17 00:29:27, Info:  Writing free surface at time 13.8. Done.
+Wed May 17 00:29:32, Info:  Performance since the start: 0.439657 TFLOP/s (rank 0: 53.1122 GFLOP/s, average over ranks: 54.9572 GFLOP/s) 
+Wed May 17 00:29:32, Info:  Performance since last sync point: 0.782965 TFLOP/s (rank 0: 82.516 GFLOP/s, average over ranks: 97.8706 GFLOP/s) 
+Wed May 17 00:29:42, Info:  Waiting for last wave field. 
+Wed May 17 00:29:42, Info:  Writing wave field at time 13.85.
+Wed May 17 00:30:43, Info:  Writing wave field at time 13.85. Done.
+Wed May 17 00:30:43, Info:  Writing free surface at time 13.85.
+Wed May 17 00:30:43, Info:  Writing free surface at time 13.85. Done.
+Wed May 17 00:30:46, Info:  Performance since the start: 0.440464 TFLOP/s (rank 0: 53.1911 GFLOP/s, average over ranks: 55.058 GFLOP/s) 
+Wed May 17 00:30:46, Info:  Performance since last sync point: 1.03336 TFLOP/s (rank 0: 90.145 GFLOP/s, average over ranks: 129.17 GFLOP/s) 
+Wed May 17 00:30:56, Info:  Waiting for last wave field. 
+Wed May 17 00:30:56, Info:  Writing wave field at time 13.9.
+Wed May 17 00:31:21, Info:  Writing wave field at time 13.9. Done.
+Wed May 17 00:31:21, Info:  Writing free surface at time 13.9.
+Wed May 17 00:31:21, Info:  Writing free surface at time 13.9. Done.
+Wed May 17 00:32:00, Info:  Performance since the start: 0.441224 TFLOP/s (rank 0: 53.3258 GFLOP/s, average over ranks: 55.153 GFLOP/s) 
+Wed May 17 00:32:00, Info:  Performance since last sync point: 0.923938 TFLOP/s (rank 0: 178.811 GFLOP/s, average over ranks: 115.492 GFLOP/s) 
+Wed May 17 00:32:09, Info:  Waiting for last wave field. 
+Wed May 17 00:32:09, Info:  Writing wave field at time 13.95.
+Wed May 17 00:32:58, Info:  Writing wave field at time 13.95. Done.
+Wed May 17 00:32:58, Info:  Writing free surface at time 13.95.
+Wed May 17 00:32:58, Info:  Writing free surface at time 13.95. Done.
+Wed May 17 00:32:58, Info:  Performance since the start: 0.441858 TFLOP/s (rank 0: 53.3715 GFLOP/s, average over ranks: 55.2323 GFLOP/s) 
+Wed May 17 00:32:58, Info:  Performance since last sync point: 0.779832 TFLOP/s (rank 0: 70.0617 GFLOP/s, average over ranks: 97.479 GFLOP/s) 
+Wed May 17 00:33:07, Info:  Waiting for last wave field. 
+Wed May 17 00:33:07, Info:  Writing wave field at time 14.
+Wed May 17 00:33:29, Info:  Writing wave field at time 14. Done.
+Wed May 17 00:33:29, Info:  Writing free surface at time 14.
+Wed May 17 00:33:29, Info:  Writing free surface at time 14. Done.
+Wed May 17 00:33:52, Info:  Performance since the start: 0.442894 TFLOP/s (rank 0: 53.5165 GFLOP/s, average over ranks: 55.3617 GFLOP/s) 
+Wed May 17 00:33:52, Info:  Performance since last sync point: 1.35628 TFLOP/s (rank 0: 221.216 GFLOP/s, average over ranks: 169.535 GFLOP/s) 
+Wed May 17 00:34:02, Info:  Waiting for last wave field. 
+Wed May 17 00:34:02, Info:  Writing wave field at time 14.05.
+Wed May 17 00:34:32, Info:  Writing wave field at time 14.05. Done.
+Wed May 17 00:34:32, Info:  Writing free surface at time 14.05.
+Wed May 17 00:34:32, Info:  Writing free surface at time 14.05. Done.
+Wed May 17 00:34:54, Info:  Performance since the start: 0.443697 TFLOP/s (rank 0: 53.6123 GFLOP/s, average over ranks: 55.4622 GFLOP/s) 
+Wed May 17 00:34:54, Info:  Performance since last sync point: 0.902351 TFLOP/s (rank 0: 107.412 GFLOP/s, average over ranks: 112.794 GFLOP/s) 
+Wed May 17 00:35:04, Info:  Waiting for last wave field. 
+Wed May 17 00:35:04, Info:  Writing wave field at time 14.1.
+Wed May 17 00:36:04, Info:  Writing wave field at time 14.1. Done.
+Wed May 17 00:36:04, Info:  Writing free surface at time 14.1.
+Wed May 17 00:36:04, Info:  Writing free surface at time 14.1. Done.
+Wed May 17 00:36:17, Info:  Performance since the start: 0.444208 TFLOP/s (rank 0: 53.665 GFLOP/s, average over ranks: 55.526 GFLOP/s) 
+Wed May 17 00:36:17, Info:  Performance since last sync point: 0.657732 TFLOP/s (rank 0: 74.1556 GFLOP/s, average over ranks: 82.2165 GFLOP/s) 
+Wed May 17 00:36:26, Info:  Waiting for last wave field. 
+Wed May 17 00:36:26, Info:  Writing wave field at time 14.15.
+Wed May 17 00:36:53, Info:  Writing wave field at time 14.15. Done.
+Wed May 17 00:36:53, Info:  Writing free surface at time 14.15.
+Wed May 17 00:36:53, Info:  Writing free surface at time 14.15. Done.
+Wed May 17 00:37:10, Info:  Performance since the start: 0.445157 TFLOP/s (rank 0: 53.7816 GFLOP/s, average over ranks: 55.6446 GFLOP/s) 
+Wed May 17 00:37:10, Info:  Performance since last sync point: 1.12393 TFLOP/s (rank 0: 138.938 GFLOP/s, average over ranks: 140.492 GFLOP/s) 
+Wed May 17 00:37:19, Info:  Waiting for last wave field. 
+Wed May 17 00:37:19, Info:  Writing wave field at time 14.2.
+Wed May 17 00:37:38, Info:  Writing wave field at time 14.2. Done.
+Wed May 17 00:37:38, Info:  Writing free surface at time 14.2.
+Wed May 17 00:37:38, Info:  Writing free surface at time 14.2. Done.
+Wed May 17 00:38:03, Info:  Performance since the start: 0.446113 TFLOP/s (rank 0: 53.9033 GFLOP/s, average over ranks: 55.7642 GFLOP/s) 
+Wed May 17 00:38:03, Info:  Performance since last sync point: 1.14256 TFLOP/s (rank 0: 149.969 GFLOP/s, average over ranks: 142.821 GFLOP/s) 
+Wed May 17 00:38:12, Info:  Waiting for last wave field. 
+Wed May 17 00:38:12, Info:  Writing wave field at time 14.25.
+Wed May 17 00:38:53, Info:  Writing wave field at time 14.25. Done.
+Wed May 17 00:38:53, Info:  Writing free surface at time 14.25.
+Wed May 17 00:38:53, Info:  Writing free surface at time 14.25. Done.
+Wed May 17 00:39:02, Info:  Performance since the start: 0.446875 TFLOP/s (rank 0: 53.9805 GFLOP/s, average over ranks: 55.8594 GFLOP/s) 
+Wed May 17 00:39:02, Info:  Performance since last sync point: 0.876042 TFLOP/s (rank 0: 90.9637 GFLOP/s, average over ranks: 109.505 GFLOP/s) 
+Wed May 17 00:39:12, Info:  Waiting for last wave field. 
+Wed May 17 00:39:12, Info:  Writing wave field at time 14.3.
+Wed May 17 00:39:29, Info:  Writing wave field at time 14.3. Done.
+Wed May 17 00:39:29, Info:  Writing free surface at time 14.3.
+Wed May 17 00:39:29, Info:  Writing free surface at time 14.3. Done.
+Wed May 17 00:39:46, Info:  Performance since the start: 0.447904 TFLOP/s (rank 0: 54.1152 GFLOP/s, average over ranks: 55.988 GFLOP/s) 
+Wed May 17 00:39:46, Info:  Performance since last sync point: 1.31632 TFLOP/s (rank 0: 187.442 GFLOP/s, average over ranks: 164.54 GFLOP/s) 
+Wed May 17 00:39:56, Info:  Waiting for last wave field. 
+Wed May 17 00:39:56, Info:  Writing wave field at time 14.35.
+Wed May 17 00:40:34, Info:  Writing wave field at time 14.35. Done.
+Wed May 17 00:40:34, Info:  Writing free surface at time 14.35.
+Wed May 17 00:40:34, Info:  Writing free surface at time 14.35. Done.
+Wed May 17 00:40:50, Info:  Performance since the start: 0.448665 TFLOP/s (rank 0: 54.2074 GFLOP/s, average over ranks: 56.0832 GFLOP/s) 
+Wed May 17 00:40:50, Info:  Performance since last sync point: 0.873353 TFLOP/s (rank 0: 105.692 GFLOP/s, average over ranks: 109.169 GFLOP/s) 
+Wed May 17 00:40:59, Info:  Waiting for last wave field. 
+Wed May 17 00:40:59, Info:  Writing wave field at time 14.4.
+Wed May 17 00:41:35, Info:  Writing wave field at time 14.4. Done.
+Wed May 17 00:41:35, Info:  Writing free surface at time 14.4.
+Wed May 17 00:41:35, Info:  Writing free surface at time 14.4. Done.
+Wed May 17 00:41:35, Info:  Performance since the start: 0.449645 TFLOP/s (rank 0: 54.3043 GFLOP/s, average over ranks: 56.2057 GFLOP/s) 
+Wed May 17 00:41:35, Info:  Performance since last sync point: 1.24206 TFLOP/s (rank 0: 111.562 GFLOP/s, average over ranks: 155.258 GFLOP/s) 
+Wed May 17 00:41:44, Info:  Waiting for last wave field. 
+Wed May 17 00:41:44, Info:  Writing wave field at time 14.45.
+Wed May 17 00:42:07, Info:  Writing wave field at time 14.45. Done.
+Wed May 17 00:42:07, Info:  Writing free surface at time 14.45.
+Wed May 17 00:42:07, Info:  Writing free surface at time 14.45. Done.
+Wed May 17 00:42:27, Info:  Performance since the start: 0.45064 TFLOP/s (rank 0: 54.4445 GFLOP/s, average over ranks: 56.33 GFLOP/s) 
+Wed May 17 00:42:27, Info:  Performance since last sync point: 1.29519 TFLOP/s (rank 0: 212.014 GFLOP/s, average over ranks: 161.899 GFLOP/s) 
+Wed May 17 00:42:37, Info:  Waiting for last wave field. 
+Wed May 17 00:42:37, Info:  Writing wave field at time 14.5.
+Wed May 17 00:43:22, Info:  Writing wave field at time 14.5. Done.
+Wed May 17 00:43:22, Info:  Writing free surface at time 14.5.
+Wed May 17 00:43:22, Info:  Writing free surface at time 14.5. Done.
+Wed May 17 00:43:37, Info:  Performance since the start: 0.451333 TFLOP/s (rank 0: 54.5193 GFLOP/s, average over ranks: 56.4166 GFLOP/s) 
+Wed May 17 00:43:37, Info:  Performance since last sync point: 0.814765 TFLOP/s (rank 0: 90.4725 GFLOP/s, average over ranks: 101.846 GFLOP/s) 
+Wed May 17 00:43:46, Info:  Waiting for last wave field. 
+Wed May 17 00:43:46, Info:  Writing wave field at time 14.55.
+Wed May 17 00:44:47, Info:  Writing wave field at time 14.55. Done.
+Wed May 17 00:44:47, Info:  Writing free surface at time 14.55.
+Wed May 17 00:44:47, Info:  Writing free surface at time 14.55. Done.
+Wed May 17 00:45:00, Info:  Performance since the start: 0.451891 TFLOP/s (rank 0: 54.58 GFLOP/s, average over ranks: 56.4864 GFLOP/s) 
+Wed May 17 00:45:00, Info:  Performance since last sync point: 0.709685 TFLOP/s (rank 0: 80.5635 GFLOP/s, average over ranks: 88.7107 GFLOP/s) 
+Wed May 17 00:45:09, Info:  Waiting for last wave field. 
+Wed May 17 00:45:09, Info:  Writing wave field at time 14.6.
+Wed May 17 00:45:40, Info:  Writing wave field at time 14.6. Done.
+Wed May 17 00:45:40, Info:  Writing free surface at time 14.6.
+Wed May 17 00:45:40, Info:  Writing free surface at time 14.6. Done.
+Wed May 17 00:45:50, Info:  Performance since the start: 0.452732 TFLOP/s (rank 0: 54.687 GFLOP/s, average over ranks: 56.5915 GFLOP/s) 
+Wed May 17 00:45:50, Info:  Performance since last sync point: 1.01599 TFLOP/s (rank 0: 127.293 GFLOP/s, average over ranks: 126.999 GFLOP/s) 
+Wed May 17 00:45:59, Info:  Waiting for last wave field. 
+Wed May 17 00:45:59, Info:  Writing wave field at time 14.65.
+Wed May 17 00:46:35, Info:  Writing wave field at time 14.65. Done.
+Wed May 17 00:46:35, Info:  Writing free surface at time 14.65.
+Wed May 17 00:46:35, Info:  Writing free surface at time 14.65. Done.
+Wed May 17 00:46:43, Info:  Performance since the start: 0.453617 TFLOP/s (rank 0: 54.7924 GFLOP/s, average over ranks: 56.7021 GFLOP/s) 
+Wed May 17 00:46:43, Info:  Performance since last sync point: 1.05671 TFLOP/s (rank 0: 125.329 GFLOP/s, average over ranks: 132.088 GFLOP/s) 
+Wed May 17 00:46:53, Info:  Waiting for last wave field. 
+Wed May 17 00:46:53, Info:  Writing wave field at time 14.7.
+Wed May 17 00:47:19, Info:  Writing wave field at time 14.7. Done.
+Wed May 17 00:47:19, Info:  Writing free surface at time 14.7.
+Wed May 17 00:47:19, Info:  Writing free surface at time 14.7. Done.
+Wed May 17 00:47:35, Info:  Performance since the start: 0.45454 TFLOP/s (rank 0: 54.913 GFLOP/s, average over ranks: 56.8175 GFLOP/s) 
+Wed May 17 00:47:35, Info:  Performance since last sync point: 1.13161 TFLOP/s (rank 0: 154.687 GFLOP/s, average over ranks: 141.451 GFLOP/s) 
+Wed May 17 00:47:44, Info:  Waiting for last wave field. 
+Wed May 17 00:47:44, Info:  Writing wave field at time 14.75.
+Wed May 17 00:48:02, Info:  Writing wave field at time 14.75. Done.
+Wed May 17 00:48:02, Info:  Writing free surface at time 14.75.
+Wed May 17 00:48:02, Info:  Writing free surface at time 14.75. Done.
+Wed May 17 00:48:15, Info:  Performance since the start: 0.455513 TFLOP/s (rank 0: 55.0345 GFLOP/s, average over ranks: 56.9391 GFLOP/s) 
+Wed May 17 00:48:15, Info:  Performance since last sync point: 1.26027 TFLOP/s (rank 0: 157.619 GFLOP/s, average over ranks: 157.533 GFLOP/s) 
+Wed May 17 00:48:24, Info:  Waiting for last wave field. 
+Wed May 17 00:48:24, Info:  Writing wave field at time 14.8.
+Wed May 17 00:48:39, Info:  Writing wave field at time 14.8. Done.
+Wed May 17 00:48:39, Info:  Writing free surface at time 14.8.
+Wed May 17 00:48:39, Info:  Writing free surface at time 14.8. Done.
+Wed May 17 00:48:58, Info:  Performance since the start: 0.456584 TFLOP/s (rank 0: 55.1649 GFLOP/s, average over ranks: 57.073 GFLOP/s) 
+Wed May 17 00:48:58, Info:  Performance since last sync point: 1.53676 TFLOP/s (rank 0: 183.198 GFLOP/s, average over ranks: 192.096 GFLOP/s) 
+Wed May 17 00:49:08, Info:  Waiting for last wave field. 
+Wed May 17 00:49:08, Info:  Writing wave field at time 14.85.
+Wed May 17 00:49:28, Info:  Writing wave field at time 14.85. Done.
+Wed May 17 00:49:28, Info:  Writing free surface at time 14.85.
+Wed May 17 00:49:28, Info:  Writing free surface at time 14.85. Done.
+Wed May 17 00:49:42, Info:  Performance since the start: 0.457526 TFLOP/s (rank 0: 55.2772 GFLOP/s, average over ranks: 57.1908 GFLOP/s) 
+Wed May 17 00:49:42, Info:  Performance since last sync point: 1.18855 TFLOP/s (rank 0: 139.099 GFLOP/s, average over ranks: 148.568 GFLOP/s) 
+Wed May 17 00:49:51, Info:  Waiting for last wave field. 
+Wed May 17 00:49:51, Info:  Writing wave field at time 14.9.
+Wed May 17 00:50:19, Info:  Writing wave field at time 14.9. Done.
+Wed May 17 00:50:19, Info:  Writing free surface at time 14.9.
+Wed May 17 00:50:19, Info:  Writing free surface at time 14.9. Done.
+Wed May 17 00:50:26, Info:  Performance since the start: 0.458511 TFLOP/s (rank 0: 55.3857 GFLOP/s, average over ranks: 57.3138 GFLOP/s) 
+Wed May 17 00:50:26, Info:  Performance since last sync point: 1.28196 TFLOP/s (rank 0: 132.683 GFLOP/s, average over ranks: 160.245 GFLOP/s) 
+Wed May 17 00:50:35, Info:  Waiting for last wave field. 
+Wed May 17 00:50:35, Info:  Writing wave field at time 14.95.
+Wed May 17 00:51:39, Info:  Writing wave field at time 14.95. Done.
+Wed May 17 00:51:39, Info:  Writing free surface at time 14.95.
+Wed May 17 00:51:39, Info:  Writing free surface at time 14.95. Done.
+Wed May 17 00:51:48, Info:  Performance since the start: 0.459132 TFLOP/s (rank 0: 55.451 GFLOP/s, average over ranks: 57.3915 GFLOP/s) 
+Wed May 17 00:51:48, Info:  Performance since last sync point: 0.811889 TFLOP/s (rank 0: 85.5161 GFLOP/s, average over ranks: 101.486 GFLOP/s) 
+Wed May 17 00:51:58, Info:  Waiting for last wave field. 
+Wed May 17 00:51:58, Info:  Writing wave field at time 15.
+Wed May 17 00:52:30, Info:  Writing wave field at time 15. Done.
+Wed May 17 00:52:30, Info:  Writing free surface at time 15.
+Wed May 17 00:52:30, Info:  Writing free surface at time 15. Done.
+Wed May 17 00:52:38, Info:  Wrote receivers in 7.95482 seconds. 
+Wed May 17 00:52:45, Info:  Performance since the start: 0.459877 TFLOP/s (rank 0: 55.5473 GFLOP/s, average over ranks: 57.4847 GFLOP/s) 
+Wed May 17 00:52:45, Info:  Performance since last sync point: 0.94653 TFLOP/s (rank 0: 115.522 GFLOP/s, average over ranks: 118.316 GFLOP/s) 
+Wed May 17 00:52:45, Info:  Ignoring duplicate synchronisation point at time 15 ; the last sync point was at  15 
+Wed May 17 00:52:45, Info:  Ignoring duplicate synchronisation point at time 15 ; the last sync point was at  15 
+Wed May 17 00:52:45, Info:  Ignoring duplicate synchronisation point at time 15 ; the last sync point was at  15 
+Wed May 17 00:52:45, Info:  Elapsed time (via clock_gettime): 36771.2 seconds. 
+Wed May 17 00:52:45, Info:  Time spent in compute kernels: mean = 13986.7  std = 4253.03  min = 5935.8  median = 14770.4  max = 19938.6 
+Wed May 17 00:52:45, Info:  Load imbalance: 29.8514 % 
+Wed May 17 00:52:45, Info:  Regression analysis of compute kernels: 
+Wed May 17 00:52:45, Info:  "computeLocalIntegration" ( constant ): 0.0062447 (sample size: 757200 , standard error: 1.66043e-09 ) 
+Wed May 17 00:52:45, Info:  "computeLocalIntegration" ( per element ): 5.33939e-07 (sample size: 757200 , standard error: 1.66043e-09 ) 
+Wed May 17 00:52:45, Info:  "computeNeighboringIntegration" ( constant ): 0.0071638 (sample size: 757200 , standard error: 1.42757e-09 ) 
+Wed May 17 00:52:45, Info:  "computeNeighboringIntegration" ( per element ): 4.67067e-07 (sample size: 757200 , standard error: 1.42757e-09 ) 
+Wed May 17 00:52:45, Info:  "computeDynamicRupture" ( constant ): -nan (sample size: 0 , standard error: -nan ) 
+Wed May 17 00:52:45, Info:  "computeDynamicRupture" ( per element ): -nan (sample size: 0 , standard error: -nan ) 
+Wed May 17 00:52:45, Info:  "stateCorrected" ( constant ): -nan (sample size: 0 , standard error: -nan ) 
+Wed May 17 00:52:45, Info:  "stateCorrected" ( per element ): -nan (sample size: 0 , standard error: -nan ) 
+Wed May 17 00:52:45, Info:  "statePredicted" ( constant ): -nan (sample size: 0 , standard error: -nan ) 
+Wed May 17 00:52:45, Info:  "statePredicted" ( per element ): -nan (sample size: 0 , standard error: -nan ) 
+Wed May 17 00:52:45, Info:  "stateSynced" ( constant ): -nan (sample size: 0 , standard error: -nan ) 
+Wed May 17 00:52:45, Info:  "stateSynced" ( per element ): -nan (sample size: 0 , standard error: -nan ) 
+Wed May 17 00:52:45, Info:  "Synced" ( constant ): inf (sample size: 22200 , standard error: -nan ) 
+Wed May 17 00:52:45, Info:  "Synced" ( per element ): -inf (sample size: 22200 , standard error: -nan ) 
+Wed May 17 00:52:45, Info:  "Corrected" ( constant ): -inf (sample size: 779400 , standard error: -nan ) 
+Wed May 17 00:52:45, Info:  "Corrected" ( per element ): inf (sample size: 779400 , standard error: -nan ) 
+Wed May 17 00:52:45, Info:  "Predicted" ( constant ): inf (sample size: 757200 , standard error: -nan ) 
+Wed May 17 00:52:45, Info:  "Predicted" ( per element ): -inf (sample size: 757200 , standard error: -nan ) 
+Wed May 17 00:52:45, Info:  Total time spent in compute kernels: 2.83068e+06 
+Wed May 17 00:52:45, Info:  Total time spent in Dynamic Rupture iteration:  0 
+Wed May 17 00:52:45, Info:  Total calculated HW-GFLOP:  1.69055e+07 
+Wed May 17 00:52:45, Info:  Total calculated NZ-GFLOP:  5.16439e+06 
+Wed May 17 00:52:45, Info:  Total calculated HW-GFLOP/s:  459.747 
+Wed May 17 00:52:45, Info:  Total calculated NZ-GFLOP/s:  140.447 
+Wed May 17 00:52:45, Info:  WP calculated HW-GFLOP:  1.69055e+07 
+Wed May 17 00:52:45, Info:  WP calculated NZ-GFLOP:  5.16439e+06 
+Wed May 17 00:52:45, Info:  DR calculated HW-GFLOP:  0 
+Wed May 17 00:52:45, Info:  DR calculated NZ-GFLOP:  0 
+Wed May 17 00:52:45, Info:  PL calculated HW-GFLOP:  0 
+Wed May 17 00:52:45, Info:  PL calculated NZ-GFLOP:  0 
+Rank:        0 | Info    | total number of performed time steps:            0
+Rank:        0 | Info    | final time of the simulation:    15.000000000000000     
+Rank:        0 | Info    | <--------------------------------------------------------->
+Rank:        0 | Info    | <     Start close_SeisSol ...                             >
+Rank:        0 | Info    | <--------------------------------------------------------->
+Wed May 17 00:52:45, Info:  Time wave field writer backend: 9082.27 (min: 4325.98, max: 11812.1)
+Wed May 17 00:52:45, Info:  Time wave field writer frontend: 9139.35 (min: 4369.53, max: 11859.8)
+Wed May 17 00:52:45, Info:  Time free surface writer frontend: 0.00653325 (min: 0.00557261, max: 0.0116103)
+Wed May 17 00:52:46, Info:  SeisSol done. Goodbye. 
